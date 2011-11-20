@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_i377_team29_entities_Objekt_intsidendis" object="${objekt_intsidendis}" path="/objekt_intsidendises" z="Bzadayd2/ci+ynWgcGnO/HcG+jw=">
+        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_kommentaar" object="${objekt_intsidendis}" z="HcPQdGZ/z6GpJPwrMDBM9mOABB0="/>
+        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_avaja" object="${objekt_intsidendis}" z="Lik3D+weVKuOx0f90LtHo5IREqw="/>
+        <field:display date="true" dateTimePattern="${objekt_intsidendis_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_avatud" object="${objekt_intsidendis}" z="InM+T9MFLp/vO8/VavmVUXZjtho="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_sulgeja" object="${objekt_intsidendis}" z="6upRrEUtWitYmvizts3PpZ7Js4E="/>
+        <field:display date="true" dateTimePattern="${objekt_intsidendis_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_suletud" object="${objekt_intsidendis}" z="BSBlsGX9UwNWNN2IfTgq6JjbZ6M="/>
+        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_muutja" object="${objekt_intsidendis}" z="jhJXqVD6a4d8LJab9q6aVzLdW4Y="/>
+        <field:display date="true" dateTimePattern="${objekt_intsidendis_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_muudetud" object="${objekt_intsidendis}" z="GDnuteBKyl0pUrK/LZUMQ2lVhMk="/>
+        <field:display date="true" dateTimePattern="${objekt_intsidendis_alates_date_format}" field="alates" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_alates" object="${objekt_intsidendis}" z="Oavi7H46Cx+4sMylqhUqUxZt2AE="/>
+        <field:display date="true" dateTimePattern="${objekt_intsidendis_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_kuni" object="${objekt_intsidendis}" z="TXfcOrNTszuix7qpzzPMUnrMqkg="/>
+        <field:display field="kirjeldus" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_kirjeldus" object="${objekt_intsidendis}" z="ea8Jkp0wI3Bqxu9Blc7exoM6noA="/>
+        <field:display field="intsident" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_intsident" object="${objekt_intsidendis}" z="gILDyRENt4MuY6WhPqgu7mUYofg="/>
+        <field:display field="objekt" id="s_ee_itcollege_i377_team29_entities_Objekt_intsidendis_objekt" object="${objekt_intsidendis}" z="LgQdq+5mlCHEPJwIB/6d6J2ykWM="/>
+    </page:show>
+</div>

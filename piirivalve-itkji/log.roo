@@ -1,0 +1,8 @@
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-20 04:47:58
+project --topLevelPackage ee.itcollege.i377.team29 --projectName piirivalve-itkji --java 6
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-20 04:47:59
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-20 04:48:03
+persistence setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE
+web mvc setup
+web mvc all --package ~.web
+security setup

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_i377_team29_entities_Seadus" modelAttribute="seadus" path="/seaduses" render="${empty dependencies}" z="Ka7e46dlaWTaafTHfKFaR5mEzeo=">
+        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Seadus_kommentaar" z="BwYyU3fMdMgZ7BM3t99sUQhZsuU="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Seadus_avaja" required="true" z="fuaK2EKoehw0KDLYA2CfSUIfEVY="/>
+        <field:datetime dateTimePattern="${seadus_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Seadus_avatud" required="true" z="baDxptQBGawkceyYWrfvtl5ovEs="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Seadus_sulgeja" z="W/zgodwnwqXj1zztVc/7x4NgMAI="/>
+        <field:datetime dateTimePattern="${seadus_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Seadus_suletud" required="true" z="tYlEXz3We+YMhrUjl7JtHlp97nM="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Seadus_muutja" required="true" z="8Weskw4KdahC0CwiC0MHgjdqM9k="/>
+        <field:datetime dateTimePattern="${seadus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Seadus_muudetud" required="true" z="StrG3RXhA5VlotzUBmtkkzk3UVM="/>
+        <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Seadus_kood" required="true" z="Xck2btv/9QY1EiGMfq7rc7dxBf0="/>
+        <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Seadus_nimetus" required="true" z="y980AYiq9tFwpAFH13rFyQ3YYg4="/>
+        <field:input field="kehtiv_alates" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_alates" z="+HfUXbrz+8Yhy2k+DrDRFv8nzFs="/>
+        <field:input field="kehtiv_kuni" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_kuni" z="qo16iyf643p2oRgANQnB41O6YTc="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team29_entities_Seadus" render="${not empty dependencies}" z="scr6a6qOqHQUQsDnytcYoIZjCq8="/>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_i377_team29_entities_Intsidendi_liik" idField="intsidendi_liik_ID" modelAttribute="intsidendi_liik" path="/intsidendi_liiks" versionField="Version" z="n8TBa81gUDnyuq2N5l9lmwXz92I=">
+        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_kommentaar" z="+8+4tOzoulalKw3fV2Qhw4n2VRM="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_avaja" required="true" z="QtaM23aBkLcV9q9i5R66BcSCvBw="/>
+        <field:datetime dateTimePattern="${intsidendi_liik_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_avatud" required="true" z="+vVfNutI+fqM+Dd0oaiPwwZ2d0I="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_sulgeja" z="PajNZ42BZnVY+z+KHlAdF/Clc3g="/>
+        <field:datetime dateTimePattern="${intsidendi_liik_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_suletud" required="true" z="LCUROrAAS2Z0b52ZeGVJhRqMNpA="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_muutja" required="true" z="DZSuDz1P+2wsBpc0vZ4XJ7j7Xbs="/>
+        <field:datetime dateTimePattern="${intsidendi_liik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_muudetud" required="true" z="ryggQco6v2nMmVgBgpPfUsu7QKA="/>
+        <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_kood" max="18" min="0" required="true" z="8Tf9+Y+HHNTr3YzxnNuf9IFTnho="/>
+        <field:textarea field="nimetus" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_nimetus" z="JCTAodQ4VnfRlaKHQ4aP9MFFsnU="/>
+        <field:simple field="intsident" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_intsident" messageCode="entity_reference_not_managed" messageCodeAttribute="Intsident" z="iiP5ooqBuaezYB2QmnLgjy9vqZg="/>
+    </form:update>
+</div>

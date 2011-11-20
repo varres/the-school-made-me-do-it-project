@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik" modelAttribute="riigi_admin_yksuse_liik" path="/riigi_admin_yksuse_liiks" render="${empty dependencies}" z="ZskhQP7MwUylaYDVkp4LNKtcxBg=">
+        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_kommentaar" z="OhNHu7pxXnntjFwRFpgvu47qfGc="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_avaja" required="true" z="8Q3LdMdeFTQKBEo9IUY8Of0qOZM="/>
+        <field:datetime dateTimePattern="${riigi_admin_yksuse_liik_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_avatud" required="true" z="pBNb/c//n8DVSYVIwBo6n2Qhvmg="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_sulgeja" z="oOZSkNAhxxL86DOG3+ddUm+azHM="/>
+        <field:datetime dateTimePattern="${riigi_admin_yksuse_liik_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_suletud" required="true" z="uuxBh077aclCQ+oiY9zhG5bD84c="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_muutja" required="true" z="V/NTwled/+mPrcnzkxUuXGh1Lvc="/>
+        <field:datetime dateTimePattern="${riigi_admin_yksuse_liik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_muudetud" required="true" z="okvLGbzsWL22J41tTiFwaFVvv/0="/>
+        <field:datetime dateTimePattern="${riigi_admin_yksuse_liik_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_alates" required="true" z="PxreM96gmSe8sSnbYg56vXW5PP0="/>
+        <field:datetime dateTimePattern="${riigi_admin_yksuse_liik_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_kuni" required="true" z="hg1SnreNlCOOimNPnoqdoP3Uvb4="/>
+        <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_kood" required="true" z="J8YKlr+F20hlWljzaaRp9O4Kn3I="/>
+        <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_nimetus" required="true" z="yh5fN+TFiTnbCezKnv/gaPjamLM="/>
+        <field:simple field="riigi_admin_yksus" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_riigi_admin_yksus" messageCode="entity_reference_not_managed" messageCodeAttribute="Riigi_admin_yksus" z="OXAnCKIKwyU+vxN5QC3arh0enq8="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik" render="${not empty dependencies}" z="7yUZOKpgd5VDGpuJEjcRXN7YEXY="/>
+</div>

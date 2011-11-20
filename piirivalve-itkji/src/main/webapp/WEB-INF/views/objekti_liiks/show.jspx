@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_i377_team29_entities_Objekti_liik" object="${objekti_liik}" path="/objekti_liiks" z="N2xjddP2jxCHPdZ2HnNMEvvbVv0=">
+        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_kommentaar" object="${objekti_liik}" z="CHuIs4V8uuaTEpT8pCeRRYw9zi8="/>
+        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_avaja" object="${objekti_liik}" z="kKBrPRiqFxUfJfw+IGhnXkzEv+U="/>
+        <field:display date="true" dateTimePattern="${objekti_liik_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_avatud" object="${objekti_liik}" z="QeWHpz3mofJVzetPR2Z6z1os/DQ="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_sulgeja" object="${objekti_liik}" z="2TOQ2R2nxaH3bKjVGZZsh8SqXrs="/>
+        <field:display date="true" dateTimePattern="${objekti_liik_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_suletud" object="${objekti_liik}" z="uieDuc6spXVjcoZ3vMaPpWDj5cg="/>
+        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_muutja" object="${objekti_liik}" z="RCeZNLMPWLX3jgxa6N8O1tqsk9w="/>
+        <field:display date="true" dateTimePattern="${objekti_liik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_muudetud" object="${objekti_liik}" z="SnOiKfpkHpsS7wmm2ylCp1M+dwQ="/>
+        <field:display field="kood" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_kood" object="${objekti_liik}" z="L4GcxOVqEMPYh7CY4az1WSs0h3w="/>
+        <field:display field="nimetus" id="s_ee_itcollege_i377_team29_entities_Objekti_liik_nimetus" object="${objekti_liik}" z="xugHWY10TyCeEKDbWJSmZ9JBbAU="/>
+    </page:show>
+</div>

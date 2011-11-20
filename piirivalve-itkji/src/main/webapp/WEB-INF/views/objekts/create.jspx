@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_i377_team29_entities_Objekt" modelAttribute="objekt" path="/objekts" render="${empty dependencies}" z="WIDKrVVNXT7/FYXui/1TIOtOdZE=">
+        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Objekt_kommentaar" z="gQBqOkZxw+jNepwWiFfHTIk+Vas="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Objekt_avaja" required="true" z="AakFCb5xZmnAXSFlzAj7nva35mw="/>
+        <field:datetime dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Objekt_avatud" required="true" z="/5t/q6AubZAwp8ZsA1aoxaH2tEA="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Objekt_sulgeja" z="sWuX/CfPJqqHruVc3Kb3etLNBF8="/>
+        <field:datetime dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Objekt_suletud" required="true" z="r6qZttEmGX/ULzg95d2zTn0Hhkc="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Objekt_muutja" required="true" z="HRDZtFczRK1r7ultAQ+QrPpKl5g="/>
+        <field:datetime dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Objekt_muudetud" required="true" z="KBmaeRXw8NqgNDwKAJqAVeKV/AI="/>
+        <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Objekt_nimetus" z="DtoSIrxorvpjWP2jxV6ZlAp35d0="/>
+        <field:select field="objekti_liik" id="c_ee_itcollege_i377_team29_entities_Objekt_objekti_liik" itemValue="objekt_liik_ID" items="${objekti_liiks}" path="/objekti_liiks" required="true" z="1OicSYRLpWY7Mz2Voy8DrDFKQDg="/>
+        <field:simple field="objekt_intsidendis" id="c_ee_itcollege_i377_team29_entities_Objekt_objekt_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt_intsidendis" z="jMLuORtYaAYsFRym+nkq8RjlWzk="/>
+        <field:simple field="piiririkkuja" id="c_ee_itcollege_i377_team29_entities_Objekt_piiririkkuja" messageCode="entity_reference_not_managed" messageCodeAttribute="Piiririkkuja" z="c1RiQH92ST5iOrafg4MkjrupUVE="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_i377_team29_entities_Objekt" render="${not empty dependencies}" z="VFBmldB1nTfSvExkOQeQdMvnRN0="/>
+</div>

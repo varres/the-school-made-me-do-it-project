@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_i377_team29_entities_Vahtkonna_liige" items="${vahtkonna_liiges}" z="XnFNZ8h2y+z3UgGWUdKpmyizxw0=">
+        <table:table data="${vahtkonna_liiges}" id="l_ee_itcollege_i377_team29_entities_Vahtkonna_liige" path="/vahtkonna_liiges" typeIdFieldName="vahtkonna_liige_ID" z="+T9y46dk6WPEnrg+0YbXflOt5To=">
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkonna_liige_kommentaar" property="kommentaar" z="cP1C5b1HOgduCgzdni5agozuXvQ="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkonna_liige_avaja" property="avaja" z="BF5L7H5Ig981WmkK2w+pKpcKxnc="/>
+            <table:column date="true" dateTimePattern="${vahtkonna_liige_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkonna_liige_avatud" property="avatud" z="jc1M7NzyIc0Ok7beaFHj0oUBARg="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkonna_liige_sulgeja" property="sulgeja" z="saOx0dGhAV1nw6WofSGRNRd3lIA="/>
+            <table:column date="true" dateTimePattern="${vahtkonna_liige_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkonna_liige_suletud" property="suletud" z="ijhjvuZWQVJ9jilb87XOXkkC0z8="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkonna_liige_muutja" property="muutja" z="d3sc4cS+GS1QEax858YQ4eerLz0="/>
+        </table:table>
+    </page:list>
+</div>
