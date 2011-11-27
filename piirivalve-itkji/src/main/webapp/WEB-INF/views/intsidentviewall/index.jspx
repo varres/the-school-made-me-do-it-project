@@ -6,6 +6,7 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
 	xmlns:springform="http://www.springframework.org/tags/form"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
 	version="2.0"
 	>
 	
@@ -39,20 +40,32 @@
 	  </div>
 </springform:form>
 	 
-	 <div>
-	 <c:out value="${piiriloikList}"></c:out>
-	 </div>
-	 
+
+	<c:forEach var="intsidentTuple" items="${intsidentList}">
+	<!--  <springform:form method="POST" action=""> -->
 	  <div>
 	  <table>
-	  <c:forEach var="intsident" items="${intsidentList}">
-		  <tr>
-		  <td>ROFL!</td>
-		  </tr>
-	  </c:forEach>
+		<tr>
+		  <td><strong>${intsidentTuple.piirivalvur.soduri_kood} : ${intsidentTuple.piirivalvur.eesnimed}, ${intsidentTuple.piirivalvur.perekonnanimi}</strong></td>
+		</tr>
+		
+		<c:forEach var="intsident" items="${intsidentTuple.intsidents}">
+		<tr>
+		  <td>
+		  ${intsident.nimetus}
+		  <input id="vaata" type="button" value="Vaata" class="right" onclick="location.href='/piirivalve-itkji/intsidentedit/edit/${intsident.intsident_ID}';" />
+		  </td>
+		</tr>
+		</c:forEach>
+		
+		<tr>
+		  <td>Intsidentide arv kokku - <c:out value="${fn:length(intsidentTuple.intsidents)}"/></td>
+		</tr>
 	  </table>
 	  </div>
- 
+	 <!-- </springform:form>-->
+ 	</c:forEach>
+ 	
   <!-- 
   
   <s:form action="resultAction" namespace="/" method="POST" >

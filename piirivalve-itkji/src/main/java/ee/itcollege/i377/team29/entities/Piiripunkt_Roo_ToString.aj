@@ -24,7 +24,8 @@ privileged aspect Piiripunkt_Roo_ToString {
         sb.append("Piiripunkt_ID: ").append(getPiiripunkt_ID()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vahtkond: ").append(getVahtkond() == null ? "null" : getVahtkond().size());
+        sb.append("Vahtkond: ").append(getVahtkond() == null ? "null" : getVahtkond().size()).append(", ");
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

@@ -22,7 +22,8 @@ privileged aspect Vahtkond_intsidendis_Roo_ToString {
         sb.append("Piirivalvurid_intsidendis: ").append(getPiirivalvurid_intsidendis() == null ? "null" : getPiirivalvurid_intsidendis().size()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vahtkond: ").append(getVahtkond());
+        sb.append("Vahtkond: ").append(getVahtkond()).append(", ");
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

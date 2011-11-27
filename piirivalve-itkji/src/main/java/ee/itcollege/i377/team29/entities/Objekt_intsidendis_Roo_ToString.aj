@@ -21,7 +21,8 @@ privileged aspect Objekt_intsidendis_Roo_ToString {
         sb.append("Objekt: ").append(getObjekt()).append(", ");
         sb.append("Objekt_intsidendis_ID: ").append(getObjekt_intsidendis_ID()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
-        sb.append("Sulgeja: ").append(getSulgeja());
+        sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

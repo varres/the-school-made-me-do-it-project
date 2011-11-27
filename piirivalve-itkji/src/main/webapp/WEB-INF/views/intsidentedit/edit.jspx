@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:springform="http://www.springframework.org/tags/form"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	version="2.0"
+	>
+	
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+  <c:set var="notImplementedMessage" value=
+"
+Never gonna give you up\n
+Never gonna let you down\n
+Never gonna run around and desert you\n
+Never gonna make you cry\n
+Never gonna say goodbye\n
+Never gonna tell a lie and hurt you\n\n
+[Not implemented!]
+" 
+scope="page" />
+
+<div>
+<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong></div>
+<br />
+<div class="leftcolumn">
+<table>
+	<tr><td><strong>Isikud</strong></td></tr>
+	<c:forEach var="isik" items="${intsident.isik_intsidendis}">
+	<tr>
+	<td>
+	Isik intsidendis
+	<div class="right">
+		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert(${notImplementedMessage})" />
+		<input type="button" value="X" class="infoEemaldaButton"  onclick="alert('${notImplementedMessage}')"  />
+	</div>
+	</td>
+	</tr>
+	</c:forEach>
+</table>
+<div><input type="button" value="Lisa" class="lisaButton"  onclick="alert('${notImplementedMessage}')" /></div>
+</div>
+
+<div class="rightcolumn"> <!-- hazz no webdesigner skillz -->
+<table>
+	<tr><td><strong>Objektid</strong></td></tr>
+	<c:forEach var="objekt" items="${intsident.objekt_intsidendis}">
+	<tr>
+	<td>
+	Objekt intsidendis
+	<div class="right">
+		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+	</div>
+	</td>
+	</tr>
+	</c:forEach>
+</table>
+<div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')" /></div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div>
+<div class="leftcolumn">
+<table>
+	<tr><td><strong>Vahtkonnad</strong></td></tr>
+	<c:forEach var="vahtkond" items="${intsident.vahtkond_intsidendis}">
+	<tr>
+	<td>
+	Vahtkond intsidendis
+	<div class="right">
+		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+	</div>
+	</td>
+	</tr>
+	</c:forEach>
+</table>
+<div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')" /></div>
+</div>
+
+<div class="rightcolumn">
+<table>
+	<tr><td><strong>Piirivalvurid</strong></td></tr>
+	<c:forEach var="piirivalvurInts" items="${intsident.piirivalvur_intsidendis}">
+	<tr>
+	<td>
+	${piirivalvurInts.piirivalvur.eesnimed}, ${piirivalvurInts.piirivalvur.perekonnanimi}
+	<div class="right">
+		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
+		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+	</div> <!--   onclick="location.href='/piirivalve-itkji/intsidentedit/edit/${intsident.intsident_ID}';" />-->
+	
+	</td>
+	</tr>
+	</c:forEach>
+</table>
+<div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')"/></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>

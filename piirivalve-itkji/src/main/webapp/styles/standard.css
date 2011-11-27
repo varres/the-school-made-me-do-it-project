@@ -371,3 +371,10 @@ fieldset th {
 	height: 11px;
 	width: 16px;
 }
+
+.infoEemaldaButton {width: 50px; height: 25px }
+.lisaButton { width: 100px; height: 25px; float: right; margin: 3px }
+.right { float: right}
+.leftcolumn { width: 270px; float: left}
+.rightcolumn { width: 270px; float: right}
+.clear { clear: both;}

@@ -75,6 +75,10 @@
         </sec:authorize>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__intsidentviewallindex_id" messageCode="global_generic" url="/intsidentviewall/index" z="MHNyEZNiaABQETHcHsaZyi8L12I="/>
+            <!-- 
+            Not ment to be accessed directly, but as a redirect with id param
+            <menu:item id="i_controller__intsidenteditindex_id" messageCode="global_generic" url="/intsidentedit/edit" z="CX6ZEmpQOfCyAoddVDBhz/MRH5g="/> 
+            -->
         </menu:category>
         <menu:category id="c_piirivalvur_intsidendis" z="X2moFkxWn2BwxZnToZKocIKYHSs=">
             <menu:item id="i_piirivalvur_intsidendis_new" messageCode="global_menu_new" url="/piirivalvur_intsidendises?form" z="PEEX/EA7xPvEhkiUAdYoUPWkgQ8="/>

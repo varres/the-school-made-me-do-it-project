@@ -63,10 +63,10 @@ public class Intsident extends AbstractEntity implements Serializable {
 	private Collection<Isik_intsidendis> isik_intsidendis;
 	
 	@OneToMany(mappedBy = "intsident")
-	private Collection<Vahtkond_intsidendis> vahtkonnad_intsidendis;
+	private Collection<Vahtkond_intsidendis> vahtkond_intsidendis;
 	
 	@OneToMany(mappedBy = "intsident")
-	private Collection<Piirivalvur_intsidendis> piirivalvurid_intsidendis;
+	private Collection<Piirivalvur_intsidendis> piirivalvur_intsidendis;
 
 
 	@SuppressWarnings("unchecked")
@@ -125,22 +125,22 @@ public class Intsident extends AbstractEntity implements Serializable {
     	return sb.toString();
     }
 	
-    public Collection<Vahtkond_intsidendis> getVahtkonnad_intsidendis() {
-		return vahtkonnad_intsidendis;
+    public Collection<Vahtkond_intsidendis> getVahtkond_intsidendis() {
+		return vahtkond_intsidendis;
 	}
 
 	public void setVahtkonnad_intsidendis(
-			Collection<Vahtkond_intsidendis> vahtkonnad_intsidendis) {
-		this.vahtkonnad_intsidendis = vahtkonnad_intsidendis;
+			Collection<Vahtkond_intsidendis> vahtkond_intsidendis) {
+		this.vahtkond_intsidendis = vahtkond_intsidendis;
 	}
 
-	public Collection<Piirivalvur_intsidendis> getPiirivalvurid_intsidendis() {
-		return piirivalvurid_intsidendis;
+	public Collection<Piirivalvur_intsidendis> getPiirivalvur_intsidendis() {
+		return piirivalvur_intsidendis;
 	}
 
 	public void setPiirivalvurid_intsidendis(
-			Collection<Piirivalvur_intsidendis> piirivalvurid_intsidendis) {
-		this.piirivalvurid_intsidendis = piirivalvurid_intsidendis;
+			Collection<Piirivalvur_intsidendis> piirivalvur_intsidendis) {
+		this.piirivalvur_intsidendis = piirivalvur_intsidendis;
 	}
 
 	public static long getSerialversionuid() {

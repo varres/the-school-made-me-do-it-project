@@ -28,10 +28,14 @@ public class Piiririkkuja extends AbstractEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)   
 	@Id
 	private Long piiririkkuja_ID;
+	@NotNull
 	private String isikukood;
+	@NotNull
 	private String eesnimi;
+	@NotNull
 	private String perek_nimi;
-	private String sugu;
+	@NotNull
+	private Character sugu;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date synniaeg;
 
@@ -73,11 +77,11 @@ public class Piiririkkuja extends AbstractEntity implements Serializable {
 		this.perek_nimi = perek_nimi;
 	}
 
-	public String getSugu() {
+	public Character getSugu() {
 		return sugu;
 	}
 
-	public void setSugu(String sugu) {
+	public void setSugu(Character sugu) {
 		this.sugu = sugu;
 	}
 

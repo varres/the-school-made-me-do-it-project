@@ -1,27 +1,18 @@
 package ee.itcollege.i377.team29.web;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import ee.itcollege.i377.team29.commands.intsidentviewall.FilterPiiriloikCommand;
-import ee.itcollege.i377.team29.entities.Intsidendi_liik;
 import ee.itcollege.i377.team29.entities.Intsident;
 import ee.itcollege.i377.team29.entities.Piiriloik;
 import ee.itcollege.i377.team29.generic.Common;
@@ -51,9 +42,6 @@ public class IntsidentViewAllController {
 		
     	if(command != null && command.getPiiriloikSelectedId() != null) {
     		
-    		boolean hasErrors = binding.hasErrors();
-    		
-    		_log.debug("Has errors: " + hasErrors);
     		_log.debug("id: " + command.getPiiriloikSelectedId());
     		_log.debug("begin: " + command.getBegin());
     		_log.debug("end: " + command.getEnd());
