@@ -5,26 +5,24 @@ package ee.itcollege.i377.team29.entities;
 
 import java.lang.String;
 
-privileged aspect Piiripunkt_Roo_ToString {
+privileged aspect Vahtkond_intsidendis_Roo_ToString {
     
-    public String Piiripunkt.toString() {
+    public String Vahtkond_intsidendis.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
-        sb.append("GPS_latitude: ").append(getGPS_latitude()).append(", ");
-        sb.append("GPS_longitude: ").append(getGPS_longitude()).append(", ");
+        sb.append("Intsident: ").append(getIntsident()).append(", ");
+        sb.append("Kirjeldus: ").append(getKirjeldus()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
-        sb.append("Kood: ").append(getKood()).append(", ");
-        sb.append("Korgus_merepinnast: ").append(getKorgus_merepinnast()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
-        sb.append("Nimetus: ").append(getNimetus()).append(", ");
-        sb.append("Piiripunkt_ID: ").append(getPiiripunkt_ID()).append(", ");
+        sb.append("Piirivalvur_intsidendis_ID: ").append(getPiirivalvur_intsidendis_ID()).append(", ");
+        sb.append("Piirivalvurid_intsidendis: ").append(getPiirivalvurid_intsidendis() == null ? "null" : getPiirivalvurid_intsidendis().size()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vahtkond: ").append(getVahtkond() == null ? "null" : getVahtkond().size());
+        sb.append("Vahtkond: ").append(getVahtkond());
         return sb.toString();
     }
     

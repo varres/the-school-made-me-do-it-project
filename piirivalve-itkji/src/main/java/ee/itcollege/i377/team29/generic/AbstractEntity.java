@@ -15,7 +15,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
-	// test
+	
+	protected static org.slf4j.Logger _log = org.slf4j.LoggerFactory.getLogger(AbstractEntity.class);
+	
 	private static final long serialVersionUID = 1L;
 	
 	@Size(min = 0, max = 255)
@@ -25,23 +27,23 @@ public abstract class AbstractEntity implements Serializable {
 	@Size(min = 0, max = 32)
 	private String avaja;
 	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date avatud;
 	
 	@Size(min = 0, max = 32)
 	private String sulgeja;
 	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date suletud;
 	
 	@NotNull
 	@Size(min = 0, max = 32)
 	private String muutja;
 	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date muudetud;
 	
     @PrePersist
@@ -69,8 +71,6 @@ public abstract class AbstractEntity implements Serializable {
     public void preventRemove() {
         throw new SecurityException("Permanent deletion of entities is not permitted! Didn't you read the requirements @Moodle ??");
     }
-    
-    /* Getters/Setters ******************************************************************************************************************/
     
 	public String getKommentaar() {
 		return kommentaar;

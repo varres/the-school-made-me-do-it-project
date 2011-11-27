@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Query;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,8 +30,8 @@ public class Intsident extends AbstractEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long intsident_ID;
 	@Size(min = 0, max = 20)
 	private String kood;
@@ -59,7 +61,128 @@ public class Intsident extends AbstractEntity implements Serializable {
 
 	@OneToMany(mappedBy = "intsident")
 	private Collection<Isik_intsidendis> isik_intsidendis;
+	
+	@OneToMany(mappedBy = "intsident")
+	private Collection<Vahtkond_intsidendis> vahtkonnad_intsidendis;
+	
+	@OneToMany(mappedBy = "intsident")
+	private Collection<Piirivalvur_intsidendis> piirivalvurid_intsidendis;
 
+
+	@SuppressWarnings("unchecked")
+	public static List<Intsident> findAllIntsidents(Long piiriloikId, Date begin, Date end) {
+    	Query query = findAllConstructQuery(piiriloikId, begin, end);
+    	return query.getResultList();
+    }
+    
+    private static Query findAllConstructQuery(Long piiriloikId, Date begin, Date end) {
+    	Query query = entityManager().createQuery(findAllConstructQueryString(piiriloikId, begin, end), Intsident.class);
+    	if(begin != null) {
+    		query.setParameter("begin", begin);
+    	}
+    	if(end != null) {
+    		query.setParameter("end", end);
+    	}
+    	if(piiriloikId > 0) {
+    		query.setParameter("piiriloikID", Piiriloik.findPiiriloik(piiriloikId));
+    	}
+    	
+    	return query;
+    }
+    
+    private static String findAllConstructQueryString(Long piiriloikId, Date begin, Date end) {
+    	boolean isWhereUsed = false;
+    	StringBuilder sb = new StringBuilder(300);
+    	sb.append("SELECT o FROM Intsident o");
+    	
+    	if(piiriloikId > 0) {
+    		isWhereUsed = true;
+    		sb.append(" WHERE o.piiriloik = ");
+    		sb.append(":piiriloikID");
+    	}
+    	
+    	if(begin != null) {
+    		if(isWhereUsed) {
+    			sb.append(" AND o.toimumise_algus >= ");
+    		} else {
+    			sb.append(" WHERE o.toimumise_algus >= ");
+    			isWhereUsed = true;
+    		}
+    		sb.append(":begin");
+    	}
+    	
+    	if(end != null) {
+    		if(isWhereUsed) {
+    			sb.append(" AND o.toimumise_lopp <= ");
+    		} else {
+    			sb.append(" WHERE o.toimumise_lopp <= ");
+    		}
+    		sb.append(":end");
+    	}
+    	
+    	_log.debug("SQL Query: " + sb.toString(), ":begin=" + begin + ":end=" + end + "id=" + piiriloikId);
+    	
+    	return sb.toString();
+    }
+	
+    public Collection<Vahtkond_intsidendis> getVahtkonnad_intsidendis() {
+		return vahtkonnad_intsidendis;
+	}
+
+	public void setVahtkonnad_intsidendis(
+			Collection<Vahtkond_intsidendis> vahtkonnad_intsidendis) {
+		this.vahtkonnad_intsidendis = vahtkonnad_intsidendis;
+	}
+
+	public Collection<Piirivalvur_intsidendis> getPiirivalvurid_intsidendis() {
+		return piirivalvurid_intsidendis;
+	}
+
+	public void setPiirivalvurid_intsidendis(
+			Collection<Piirivalvur_intsidendis> piirivalvurid_intsidendis) {
+		this.piirivalvurid_intsidendis = piirivalvurid_intsidendis;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	/*
+    public static List<Intsident> findAllIntsidents(Long piiriloikId, Date begin, Date end) {
+    	boolean isWhereUsed = false;
+    	StringBuilder sb = new StringBuilder(300);
+    	sb.append("SELECT o FROM Intsident o");
+    	
+    	if(piiriloikId > 0) {
+    		isWhereUsed = true;
+    		sb.append(" WHERE o.piiriloik = ");
+    		sb.append(piiriloikId);
+    	}
+    	
+    	if(begin != null) {
+    		if(isWhereUsed) {
+    			sb.append(" AND o.toimumise_algus >= ");
+    		} else {
+    			sb.append(" WHERE o.toimumise_algus >= ");
+    			isWhereUsed = true;
+    		}
+    		sb.append(Common.getPersistenceFormattedDate(begin));
+    	}
+    	
+    	if(end != null) {
+    		if(isWhereUsed) {
+    			sb.append(" AND o.toimumise_lopp <= ");
+    		} else {
+    			sb.append(" WHERE o.toimumise_lopp <= ");
+    		}
+    		sb.append(Common.getPersistenceFormattedDate(end));
+    	}
+    	
+    	return entityManager().createQuery(sb.toString(), Intsident.class).getResultList();
+    }
+	*/
+	
+	
 	public Long getIntsident_ID() {
 		return intsident_ID;
 	}

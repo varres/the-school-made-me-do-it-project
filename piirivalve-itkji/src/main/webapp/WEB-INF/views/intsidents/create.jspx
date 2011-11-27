@@ -19,6 +19,8 @@
         <field:input field="GPS_latituud" id="c_ee_itcollege_i377_team29_entities_Intsident_GPS_latituud" validationMessageCode="field_invalid_number" z="wppp9p1YSDZ+Y1dg/CaR89xjoFc="/>
         <field:select field="piiriloik" id="c_ee_itcollege_i377_team29_entities_Intsident_piiriloik" itemValue="piiriloik_ID" items="${piiriloiks}" path="/piiriloiks" z="WGDYJm4dEPKYKxk6z2/eSvSDhgY="/>
         <field:select field="intsidendi_liik" id="c_ee_itcollege_i377_team29_entities_Intsident_intsidendi_liik" itemValue="intsidendi_liik_ID" items="${intsidendi_liiks}" path="/intsidendi_liiks" required="true" z="GCnxKUhQSdg/lM4BJ61O979avIc="/>
+        <field:simple field="vahtkonnad_intsidendis" id="c_ee_itcollege_i377_team29_entities_Intsident_vahtkonnad_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond_intsidendis" z="ykAnDbwla7LKj1LdHLaPU0qBL/I="/>
+        <field:simple field="piirivalvurid_intsidendis" id="c_ee_itcollege_i377_team29_entities_Intsident_piirivalvurid_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Piirivalvur_intsidendis" z="nA0xgcBrLvgu1QXIiUEBZNV6ZfU="/>
         <field:simple field="objekt_intsidendis" id="c_ee_itcollege_i377_team29_entities_Intsident_objekt_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt_intsidendis" z="X0R+HXXYI/X9jvTMzyDGuTZ0+kc="/>
         <field:simple field="isik_intsidendis" id="c_ee_itcollege_i377_team29_entities_Intsident_isik_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Isik_intsidendis" z="8Nd80SRpbSr+DnJZwUuC7FIqZOY="/>
     </form:create>

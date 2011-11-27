@@ -22,8 +22,7 @@ privileged aspect Piirivalvur_Roo_ToString {
         sb.append("Sugu: ").append(getSugu()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vahtkonna_liige: ").append(getVahtkonna_liige() == null ? "null" : getVahtkonna_liige().size()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Vahtkonna_liige: ").append(getVahtkonna_liige() == null ? "null" : getVahtkonna_liige().size());
         return sb.toString();
     }
     

@@ -8,6 +8,7 @@
         <class>ee.itcollege.i377.team29.entities.Piiripunkt</class>
         <class>ee.itcollege.i377.team29.entities.Riigi_admin_yksuse_liik</class>
         <class>ee.itcollege.i377.team29.entities.Riigi_admin_yksus</class>
+        <class>ee.itcollege.i377.team29.entities.Piirivalvur_intsidendis</class>
         <class>ee.itcollege.i377.team29.entities.Intsident</class>
         <class>ee.itcollege.i377.team29.entities.Intsidendi_liik</class>
         <class>ee.itcollege.i377.team29.entities.Piiriloik</class>
@@ -16,6 +17,7 @@
         <class>ee.itcollege.i377.team29.entities.Seadus</class>
         <class>ee.itcollege.i377.team29.entities.Vaeosa</class>
         <class>ee.itcollege.i377.team29.entities.Vahtkond</class>
+        <class>ee.itcollege.i377.team29.entities.Vahtkond_intsidendis</class>
         <class>ee.itcollege.i377.team29.entities.Vahtkonna_liige</class>
         <class>ee.itcollege.i377.team29.entities.Objekt_intsidendis</class>
         <class>ee.itcollege.i377.team29.entities.Vahtkond_piiriloigul</class>
@@ -25,7 +27,7 @@
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
             <!-- value="create" to build a new database on each run; value="update" to modify an existing database; value="create-drop" means the same as "create" but also drops tables when Hibernate closes; value="validate" makes no changes to the database -->
-            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
             <property name="hibernate.connection.charSet" value="UTF-8"/>
             <!-- Uncomment the following two properties for JBoss only -->

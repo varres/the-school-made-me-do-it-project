@@ -9,3 +9,9 @@ security setup
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-20 05:38:53
 web mvc controller --class ~.web.IntsidentViewAllController
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-20 05:49:48
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-25 13:17:30
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-25 13:43:24
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 02:49:24
+entity --class ~.entities.Piirivalvur_intsidendis
+entity --class ~.entities.Vahtkond_intsidendis
+web mvc all --package ~.web

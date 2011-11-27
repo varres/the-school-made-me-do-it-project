@@ -27,10 +27,15 @@ public class Piirivalvur extends AbstractEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private Long piirivalvur_ID;
+	@NotNull
 	private String isikukood;
+	@NotNull
 	private String eesnimed;
+	@NotNull
 	private String perekonnanimi;
-	private String sugu;
+	@NotNull
+	private Character sugu;
+	@NotNull
 	private String soduri_kood;
 
 	@OneToMany(mappedBy = "piirivalvur")
@@ -72,11 +77,11 @@ public class Piirivalvur extends AbstractEntity implements Serializable {
 		this.perekonnanimi = perekonnanimi;
 	}
 
-	public String getSugu() {
+	public Character getSugu() {
 		return this.sugu;
 	}
 
-	public void setSugu(String sugu) {
+	public void setSugu(Character sugu) {
 		this.sugu = sugu;
 	}
 

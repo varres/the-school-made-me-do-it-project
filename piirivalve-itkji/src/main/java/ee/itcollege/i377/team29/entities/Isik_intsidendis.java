@@ -38,10 +38,6 @@ public class Isik_intsidendis extends HistoricalEntity implements Serializable {
 	@ManyToOne
 	private Piiririkkuja piiririkkuja;
 
-	public Isik_intsidendis() {
-		super();
-	}
-
 	public Long getIsik_intsidendis_ID() {
 		return isik_intsidendis_ID;
 	}
@@ -89,6 +85,4 @@ public class Isik_intsidendis extends HistoricalEntity implements Serializable {
 	public void setPiiririkkuja(Piiririkkuja param) {
 	    this.piiririkkuja = param;
 	}
-
-	
 }

@@ -10,11 +10,11 @@
         <field:datetime dateTimePattern="${piirivalvur_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_suletud" required="true" z="5ld5Sl1Poa0bes0wtCO/Z/tcKkU="/>
         <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_muutja" required="true" z="4s/aMZ87bY86IPBiiNG1xmRZli0="/>
         <field:datetime dateTimePattern="${piirivalvur_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_muudetud" required="true" z="+ZndfTkba6mLFmJUSN4YsIpljfI="/>
-        <field:input field="isikukood" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_isikukood" z="b73/a5JKK5JxwnJbNSRkSjFfnGk="/>
-        <field:input field="eesnimed" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_eesnimed" z="lyqIgsf5h3XGHZs/9ZY26m7Wmlk="/>
-        <field:input field="perekonnanimi" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_perekonnanimi" z="mZTDqTT7001qDH69ZaJDzzwL5GQ="/>
-        <field:input field="sugu" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_sugu" z="AqZ/uGnwhWR14v03rQKdJR+KFCk="/>
-        <field:input field="soduri_kood" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_soduri_kood" z="pS4mMJtz80YdsjhQItF/6COY/+A="/>
+        <field:input field="isikukood" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_isikukood" required="true" z="LR1Hzkyktx1EL9U3cbCvXbL5/KE="/>
+        <field:input field="eesnimed" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_eesnimed" required="true" z="kszbYkILZFuts6KCUQyh6y8N0Lg="/>
+        <field:input field="perekonnanimi" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_perekonnanimi" required="true" z="tmmZTDCprbIu7+bouCyFH1nTD7Y="/>
+        <field:input field="sugu" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_sugu" required="true" z="mkMv7DRI2ejpyljhX7+gazQpRLU="/>
+        <field:input field="soduri_kood" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_soduri_kood" required="true" z="4j6mXpJB4tFX1C3ZrnB9umztk3g="/>
         <field:simple field="vahtkonna_liige" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_vahtkonna_liige" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkonna_liige" z="GAR5vUEZw4NDgNMIlC3xVVs6q9I="/>
     </form:update>
 </div>

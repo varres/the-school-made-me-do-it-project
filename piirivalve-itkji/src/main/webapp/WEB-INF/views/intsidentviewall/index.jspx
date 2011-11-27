@@ -12,7 +12,9 @@
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
   
-  <springform:form method="POST" commandName="intsidentViewAllCommand">
+  <!-- TODO: Not translatable  -->
+  
+  <springform:form method="GET" commandName="intsidentViewAllCommand">
 	    <div>
 		  <table>
 		  <tr>
@@ -24,18 +26,28 @@
 		  <tr>
 		  <td><springform:input path="begin" /></td>
 		  <td><springform:input path="end" /></td>
-		  <td>Piiriloik</td>
-		  <td><input id="varskenda" type="submit"/></td>
+		  <td>
+		  <springform:select path="piiriloikSelectedId">
+		  <springform:option value="0" label="--- Kõik ---" />
+		  <springform:options items="${piiriloikList}" itemLabel="nimetus" itemValue="piiriloik_ID" />
+		  </springform:select>
+		  </td>
+		  
+		  <td><input id="varskenda" type="submit" value="Värskenda" /></td>
 		  </tr>
 		  </table>
 	  </div>
 </springform:form>
 	 
+	 <div>
+	 <c:out value="${piiriloikList}"></c:out>
+	 </div>
+	 
 	  <div>
 	  <table>
 	  <c:forEach var="intsident" items="${intsidentList}">
 		  <tr>
-		  <td>${intsident.nimetus}</td>
+		  <td>ROFL!</td>
 		  </tr>
 	  </c:forEach>
 	  </table>

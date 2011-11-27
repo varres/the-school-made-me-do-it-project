@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis" items="${vahtkond_intsidendises}" z="FSsrrBMfrwBTtPAq3OE8Bq5oAQo=">
+        <table:table data="${vahtkond_intsidendises}" id="l_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis" path="/vahtkond_intsidendises" typeIdFieldName="piirivalvur_intsidendis_ID" z="vTtSNpOhXf7iI7XOAFNM6VO/KGQ=">
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kommentaar" property="kommentaar" z="f0gHxEZ9+uoklPZTt5pI54dBSJ8="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_avaja" property="avaja" z="8eID4yOsDIA2bHLmyZbjF+arPw0="/>
+            <table:column date="true" dateTimePattern="${vahtkond_intsidendis_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_avatud" property="avatud" z="e6tyYMBxI++W3cDSdg7+uRVhvwc="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_sulgeja" property="sulgeja" z="H29EeNaQWr1N8+kH9Xoq3629R5Q="/>
+            <table:column date="true" dateTimePattern="${vahtkond_intsidendis_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_suletud" property="suletud" z="/DSKwYM+2TMTaj6+MVoIbYe0DUA="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_muutja" property="muutja" z="1Wg8cTMFwVnJcGtuvficd9gjLoc="/>
+        </table:table>
+    </page:list>
+</div>
