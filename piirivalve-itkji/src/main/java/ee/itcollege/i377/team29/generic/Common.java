@@ -2,7 +2,6 @@ package ee.itcollege.i377.team29.generic;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import ee.itcollege.i377.team29.entities.Intsidendi_liik;
@@ -14,8 +13,11 @@ import ee.itcollege.i377.team29.entities.Piiriloik;
 import ee.itcollege.i377.team29.entities.Piiririkkuja;
 import ee.itcollege.i377.team29.entities.Piirivalvur;
 import ee.itcollege.i377.team29.entities.Piirivalvur_intsidendis;
+import ee.itcollege.i377.team29.entities.Piirivalvuri_seadus_intsidendi;
 import ee.itcollege.i377.team29.entities.Riigi_admin_yksus;
 import ee.itcollege.i377.team29.entities.Riigi_admin_yksuse_liik;
+import ee.itcollege.i377.team29.entities.Seadus;
+import ee.itcollege.i377.team29.entities.Seaduse_punkt;
 import ee.itcollege.i377.team29.entities.Vaeosa;
 import ee.itcollege.i377.team29.entities.Vahtkond;
 import ee.itcollege.i377.team29.entities.Vahtkond_intsidendis;
@@ -25,43 +27,24 @@ public class Common {
 	
 	protected static org.slf4j.Logger _log = org.slf4j.LoggerFactory.getLogger(Common.class);
 	
-	public static boolean isLong(String input) {
-		try {
-			Long.parseLong(input); 
-		} catch(Exception e) {
-			return false;
-		}
-		return true;
-	}
-	
-	/**
-	 * 
-	 * @param possibleDate
-	 * @return null if possibleDate is not a valid date
-	 */
-	public static Date parsePersistenceDate(String possibleDate) {
-		if(possibleDate == null || possibleDate.trim().equals("")) {
-			return null;
-		}
-		
-		try {
-			return _yyyymmdd.parse(possibleDate);
-		} catch (Exception e) {
-			return null;
-		}
-	}
-	
 	public static void ADD_TEST_DATA_IF_FIRST_RUN() {
 		
-		if(Intsidendi_liik.findIntsidendi_liik(new Long(1)) != null) { // sue me
+		if(Intsidendi_liik.findIntsidendi_liik(new Long(1)) != null) { // too drunk, fix later
 			return;
 		}
-		_log.error(" ** First run. Adding test data. Remove this method call in production ** ");
+		_log.error(" ** First run. Adding test data. Remove this method call in '''production''' ** ");
 		
 		TEST_DATA1();
 		
 	}
 	
+	/**
+	 * Returns a tuple list of each piirivalvur being associated
+	 * to a given number of Intsidents.
+	 * 
+	 * @param intsidents Intsidents to group by Piirivalvur
+	 * @return
+	 */
 	public static List<PiirivalvurIntsidentsTuple> groupByPiirivalvur(List<Intsident> intsidents) {
 		List<PiirivalvurIntsidentsTuple> tupleList = new ArrayList<PiirivalvurIntsidentsTuple>();
 		
@@ -72,6 +55,13 @@ public class Common {
 		return tupleList;
 	}
 	
+	/**
+	 * Chooses correct association logic for the new Intsident and existing
+	 * tuples of Piirivalvur :: IntsidentList.
+	 * 
+	 * @param tupleList
+	 * @param i
+	 */
 	private static void addIntsidentByPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i) {
 		List<Piirivalvur> valvuridIntsidendist = extractValvurid(i);
 		
@@ -89,6 +79,13 @@ public class Common {
 		}
 	}
 	
+	/**
+	 * Adds a new Intsident to the existing Intsident list, already associated with 'Piirivalvur' entity.
+	 * 
+	 * @param tupleList
+	 * @param newIntsident
+	 * @param existingValvur
+	 */
 	private static void insertIntsToExistingPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident newIntsident, Piirivalvur existingValvur) {
 		for(PiirivalvurIntsidentsTuple tuple : tupleList) {
 			if(tuple.getPiirivalvur() == existingValvur) {
@@ -97,6 +94,13 @@ public class Common {
 		}
 	}
 	
+	/**
+	 * Inserts a new tuple to the tuple list.
+	 * 
+	 * @param tupleList
+	 * @param i
+	 * @param v
+	 */
 	private static void insertNewPiirIntsTuple(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i, Piirivalvur v) {
 		PiirivalvurIntsidentsTuple newTuple = new PiirivalvurIntsidentsTuple();
 		List<Intsident> intsidentList = new ArrayList<Intsident>();
@@ -108,6 +112,11 @@ public class Common {
 		tupleList.add(newTuple);
 	}
 	
+	/**
+	 * Gets all associated PValvur entities from the Intsident entity
+	 * @param i
+	 * @return
+	 */
 	private static List<Piirivalvur> extractValvurid(Intsident i) {
 		List<Piirivalvur> v2rdjad = new ArrayList<Piirivalvur>();
 		for(Piirivalvur_intsidendis valvur : Piirivalvur_intsidendis.findAllPiirivalvurIntsidendis(i)) {
@@ -116,16 +125,17 @@ public class Common {
 		return v2rdjad;
 	}
 	
+	/**
+	 * Gets all associated PValvur entities from the tuplelist
+	 * @param tupleList
+	 * @return
+	 */
 	private static List<Piirivalvur> extractValvurid(List<PiirivalvurIntsidentsTuple> tupleList) {
 		List<Piirivalvur> v2rdjad = new ArrayList<Piirivalvur>();
 		for(PiirivalvurIntsidentsTuple valvur : tupleList) {
 			v2rdjad.add(valvur.getPiirivalvur());
 		}
 		return v2rdjad;
-	}
-
-	public static String getPersistenceFormattedDate(Date date) {
-		return _yyyymmdd.format(date);
 	}
 	
 	public static void TEST_DATA1() {
@@ -176,7 +186,7 @@ public class Common {
 		Piirivalvur_intsidendis pIntsidendis = new Piirivalvur_intsidendis();
 		pIntsidendis.setPiirivalvur(valvur);
 		pIntsidendis.setIntsident(ints);
-		pIntsidendis.setKirjeldus("Mingi loll p6der jäi mulle ette. Peitsin laiba ära, kustutasin s6idudata, panin bemmile uued kummid, pühkisin sõrmejäljed, põletasin riided/jalatsid, hankisin alibi ning viisin auto pesulasse. Sellega on kõik OK!");
+		pIntsidendis.setKirjeldus("Mingi loll p6der j2i mulle ette, kuid selle on k6ik OK! Kuna ma olen k6ik senised Dexteri hooajad usinalt 2ra vaadanud, siis polnud laibast lahti saamisega mingeid probleeme. P6der on Soome lahes ja seitsmes tykis.");
 		pIntsidendis = pIntsidendis.merge();
 		
 		Objekti_liik oLiik = new Objekti_liik();
@@ -234,5 +244,55 @@ public class Common {
 		vIntsis.setVahtkond(vahtkond);
 		vIntsis.setKirjeldus("LOLOLOLOLOL");
 		vIntsis = vIntsis.merge();
+		
+		Seadus seadus = new Seadus();
+		seadus.setKood("seadus001");
+		seadus.setNimetus("Joobes juhtimine");
+		seadus.setKehtiv_alates("T2nasest");
+		seadus.setKehtiv_kuni("Homseni");
+		seadus.setKommentaar("Joobes juhtimine ei ole hea");
+		seadus = seadus.merge();
+		
+		Seadus seadus2 = new Seadus();
+		seadus2.setKood("seadus002");
+		seadus2.setNimetus("P6drale seadus");
+		seadus2.setKehtiv_alates("T2nasest");
+		seadus2.setKehtiv_kuni("Homseni");
+		seadus2.setKommentaar("P6drale otsa ei tohi s6ita");
+		seadus2 = seadus2.merge();
+		
+		Seaduse_punkt punn = new Seaduse_punkt();
+		punn.setParagrahv("§12.34");
+		punn.setPais("lg1");
+		punn.setText("lg1_text");
+		punn.setKehtiv_alates("T2na");
+		punn.setKehtiv_kuni("Homme");
+		punn.setKommentaar("Jook ja rool");
+		punn.setSeadus(seadus);
+		punn.setYlem_seaduse_punkt_ID(punn);
+		punn = punn.merge();
+		
+		Seaduse_punkt punn2 = new Seaduse_punkt();
+		punn2.setParagrahv("§14.34");
+		punn2.setPais("lg2");
+		punn2.setText("lg2_text");
+		punn2.setKehtiv_alates("T2na");
+		punn2.setKehtiv_kuni("Homme");
+		punn2.setKommentaar("P6der ja auto");
+		punn2.setSeadus(seadus);
+		punn2.setYlem_seaduse_punkt_ID(punn);
+		punn2 = punn2.merge();
+		
+		Piirivalvuri_seadus_intsidendi psi = new Piirivalvuri_seadus_intsidendi();
+		psi.setSeaduse_punkt(punn);
+		psi.setPiirivalvur_intsidendis(pIntsidendis);
+		psi.setKirjeldus("blabla");
+		psi = psi.merge();
+		
+		Piirivalvuri_seadus_intsidendi psi2 = new Piirivalvuri_seadus_intsidendi();
+		psi2.setSeaduse_punkt(punn2);
+		psi2.setPiirivalvur_intsidendis(pIntsidendis);
+		psi2.setKirjeldus("blabla2");
+		psi2 = psi2.merge();
 	}
 }

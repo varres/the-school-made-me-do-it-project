@@ -79,6 +79,7 @@
             Not ment to be accessed directly, but as a redirect with id param
             <menu:item id="i_controller__intsidenteditindex_id" messageCode="global_generic" url="/intsidentedit/edit" z="CX6ZEmpQOfCyAoddVDBhz/MRH5g="/> 
             -->
+            <menu:item id="i_controller__piirivintsredaktorindex_id" messageCode="global_generic" url="/piirivintsredaktor/index" z="8j1kYdThQz0fQx/HxfkRYCimfQA="/>
         </menu:category>
         <menu:category id="c_piirivalvur_intsidendis" z="X2moFkxWn2BwxZnToZKocIKYHSs=">
             <menu:item id="i_piirivalvur_intsidendis_new" messageCode="global_menu_new" url="/piirivalvur_intsidendises?form" z="PEEX/EA7xPvEhkiUAdYoUPWkgQ8="/>
@@ -87,6 +88,14 @@
         <menu:category id="c_vahtkond_intsidendis" z="1X5BSVIFivD7S4iiBbVzk1FZBug=">
             <menu:item id="i_vahtkond_intsidendis_new" messageCode="global_menu_new" url="/vahtkond_intsidendises?form" z="OW4mBDVvLKMeQfVakGaYauGFx8A="/>
             <menu:item id="i_vahtkond_intsidendis_list" messageCode="global_menu_list" url="/vahtkond_intsidendises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EfrVisjXKArX/kryJWSntjx3o9w="/>
+        </menu:category>
+        <menu:category id="c_seaduse_punkt" z="Lr2awMkgJrpP8xJusXZcURQCguw=">
+            <menu:item id="i_seaduse_punkt_new" messageCode="global_menu_new" url="/seaduse_punkts?form" z="HvRBPwJZwRb/XrD/1Ijfhz1qvxY="/>
+            <menu:item id="i_seaduse_punkt_list" messageCode="global_menu_list" url="/seaduse_punkts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DZ0txEDf0QzznkE6o3li5PzRLX8="/>
+        </menu:category>
+        <menu:category id="c_piirivalvuri_seadus_intsidendi" z="q/sGomClve5UTToWFCDED5Hv8w4=">
+            <menu:item id="i_piirivalvuri_seadus_intsidendi_new" messageCode="global_menu_new" url="/piirivalvuri_seadus_intsidendis?form" z="Yc7NkBto1GPK/ZxMG2xK/ika0SA="/>
+            <menu:item id="i_piirivalvuri_seadus_intsidendi_list" messageCode="global_menu_list" url="/piirivalvuri_seadus_intsidendis?page=1&amp;size=${empty param.size ? 10 : param.size}" z="n85FdtIIhBqjnw65loofNqlYrDo="/>
         </menu:category>
     </menu:menu>
 </div>

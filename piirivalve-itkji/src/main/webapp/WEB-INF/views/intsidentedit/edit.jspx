@@ -20,12 +20,15 @@ Never gonna run around and desert you\n
 Never gonna make you cry\n
 Never gonna say goodbye\n
 Never gonna tell a lie and hurt you\n\n
-[Not implemented!]
+[NOT IMPLEMENTED EXCEPTION!]
 " 
 scope="page" />
 
 <div>
-<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong></div>
+<div>
+<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong><input type="button" value="Redigeeri intsident" class="muudaButtonExtended" onclick="alert('${notImplementedMessage}')" /></div>
+<div class="clear" />
+</div>
 <br />
 <div class="leftcolumn">
 <table>
@@ -92,9 +95,9 @@ scope="page" />
 	<td>
 	${piirivalvurInts.piirivalvur.eesnimed}, ${piirivalvurInts.piirivalvur.perekonnanimi}
 	<div class="right">
-		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
-		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
-	</div> <!--   onclick="location.href='/piirivalve-itkji/intsidentedit/edit/${intsident.intsident_ID}';" />-->
+		<input type="button" value="Info"  class="infoEemaldaButton" onclick="location.href='/piirivalve-itkji/piirivintsredaktor/edit/${piirivalvurInts.piirivalvur_intsidendis_ID}';" />
+		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
+	</div>
 	
 	</td>
 	</tr>

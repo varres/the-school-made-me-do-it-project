@@ -20,3 +20,9 @@ web mvc all --package ~.web
 web mvc controller --class ~.web.IntsidentEditController
 web mvc all --package ~.web
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 18:26:27
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 19:53:51
+web mvc controller --class ~.web.PiirivIntsRedaktor
+web mvc all --package ~.web
+entity --class ~.entities.Seaduse_punkt
+entity --class ~.entities.Piirivalvuri_seadus_intsidendi
+web mvc all --package ~.web

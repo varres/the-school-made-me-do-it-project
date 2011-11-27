@@ -1,6 +1,7 @@
 package ee.itcollege.i377.team29.entities;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -9,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -18,7 +21,6 @@ import org.springframework.roo.addon.tostring.RooToString;
 import ee.itcollege.i377.team29.generic.AbstractEntity;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 @RooEntity
 @RooToString
 public class Seadus extends AbstractEntity implements Serializable {
@@ -32,13 +34,28 @@ public class Seadus extends AbstractEntity implements Serializable {
 	private String kood;
 	@NotNull
 	private String nimetus;
+	@NotNull
 	private String kehtiv_alates;
+	@NotNull
 	private String kehtiv_kuni;
 	
-	public Seadus() {
-		super();
+	@OneToMany(mappedBy = "seadus")
+	private Collection<Seaduse_punkt> seaduse_punkt;
+
+	public Collection<Seaduse_punkt> getSeaduse_punkt() {
+		return seaduse_punkt;
 	}
 
+	public void setSeaduse_punkt(Collection<Seaduse_punkt> seaduse_punkt) {
+		this.seaduse_punkt = seaduse_punkt;
+	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	
 	public Long getSeadus_ID() {
 		return seadus_ID;
 	}

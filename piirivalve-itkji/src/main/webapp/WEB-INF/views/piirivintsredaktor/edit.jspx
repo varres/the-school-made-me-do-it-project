@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:springform="http://www.springframework.org/tags/form"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	version="2.0"
+	>
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+  <c:set var="notImplementedMessage" value=
+"
+Never gonna give you up\n
+Never gonna let you down\n
+Never gonna run around and desert you\n
+Never gonna make you cry\n
+Never gonna say goodbye\n
+Never gonna tell a lie and hurt you\n\n
+[NOT IMPLEMENTED EXCEPTION!]
+" 
+scope="page" />
+	
+<div><strong>${valvurIntsidendis.intsident.kood} - ${valvurIntsidendis.intsident.piiriloik.nimetus} - ${valvurIntsidendis.intsident.nimetus}</strong></div>
+<br />
+
+<div>
+	<div>
+	
+	<div class="leftcolumn">
+	<table>
+	<tr><td WIDTH="25%">Piirivalvur</td>	<td WIDTH="75%">${valvurIntsidendis.piirivalvur.eesnimed}, ${valvurIntsidendis.piirivalvur.perekonnanimi}</td></tr>
+	<tr><td WIDTH="25%">S6durikood</td>		<td WIDTH="75%">${valvurIntsidendis.piirivalvur.soduri_kood}</td></tr>
+	<tr><td WIDTH="25%">Sugu</td>			<td WIDTH="75%">${valvurIntsidendis.piirivalvur.sugu}</td></tr>
+	<tr><td WIDTH="25%">Kirjeldus</td>		<td WIDTH="75%">${valvurIntsidendis.kirjeldus}</td></tr>
+	<tr><td WIDTH="25%">Kommentaar</td>		<td WIDTH="75%">${valvurIntsidendis.kommentaar}</td></tr>
+	</table>
+	<div class="right">
+	<input type="button" value="Muuda" class="muudaButton" onclick="alert('${notImplementedMessage}')" />
+	</div>
+	</div>
+	
+	<div class="rightcolumn">
+	<table>
+	<tr><td><strong>Seadus</strong></td></tr>
+	<c:forEach var="piirivalvur_seadus" items="${valvurIntsidendis.piirivalvuri_seadus_intsidendi}">
+	<tr><td>${piirivalvur_seadus.seaduse_punkt.seadus.nimetus} ${piirivalvur_seadus.seaduse_punkt.paragrahv}
+		<div class="right">
+		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
+	</div>
+	</td></tr>
+	</c:forEach>
+	</table>
+	<div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')" /></div>
+	</div>
+	</div>
+	<div class="clear"></div>
+	<div class="right"><input type="button" value="Salvesta" class="muudaButton" onclick="alert('${notImplementedMessage}')" /><input type="button" value="Loobu" class="muudaButton" onclick="alert('${notImplementedMessage}')" /></div>
+	<div class="clear"></div>
+</div>
+
+
+	
+</div>

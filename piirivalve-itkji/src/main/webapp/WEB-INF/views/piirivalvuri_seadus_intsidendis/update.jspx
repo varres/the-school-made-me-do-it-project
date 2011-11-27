@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi" idField="piirivalvuri_seadus_intsidendi_ID" modelAttribute="piirivalvuri_seadus_intsidendi" path="/piirivalvuri_seadus_intsidendis" versionField="Version" z="bqUiPTFNmudrmLcVuokqz4/i1hY=">
+        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_kommentaar" z="mrkB5nTl3G0DUguF5yBIenOXRAw="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_avaja" required="true" z="+DwVsL7DoLxWjYokT7shQjdvpUA="/>
+        <field:datetime dateTimePattern="${piirivalvuri_seadus_intsidendi_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_avatud" required="true" z="iic4GMRaOeGoIU/O0F5Ni+whKN4="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_sulgeja" z="VRy4WgFkYj1KMVegSE9CIM7gWqo="/>
+        <field:datetime dateTimePattern="${piirivalvuri_seadus_intsidendi_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_suletud" required="true" z="dydvVZuPskDn6LdamWcNbXNzkLY="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_muutja" required="true" z="Jsqc8yyD2/8Ln/c58MjsQfbMlg0="/>
+        <field:datetime dateTimePattern="${piirivalvuri_seadus_intsidendi_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_muudetud" required="true" z="6p35tOFS0MKv1D2UvNoZJUg5L2c="/>
+        <field:datetime dateTimePattern="${piirivalvuri_seadus_intsidendi_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_alates" required="true" z="PRoBihBaVNKATa55tJdggmM/NSE="/>
+        <field:datetime dateTimePattern="${piirivalvuri_seadus_intsidendi_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_kuni" required="true" z="l/o8d2tfJYLWv4iryMQ4669JpNI="/>
+        <field:select field="seaduse_punkt" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_seaduse_punkt" itemValue="seaduse_punkt_ID" items="${seaduse_punkts}" path="/seaduse_punkts" required="true" z="QjmRWXprEZQSvxwG6wv1Yd+dG90="/>
+        <field:select field="piirivalvur_intsidendis" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_piirivalvur_intsidendis" itemValue="piirivalvur_intsidendis_ID" items="${piirivalvur_intsidendises}" path="/piirivalvur_intsidendises" required="true" z="RpAsJt4W9oti19HI3YKF1yEqZT4="/>
+        <field:textarea field="kirjeldus" id="c_ee_itcollege_i377_team29_entities_Piirivalvuri_seadus_intsidendi_kirjeldus" required="true" z="WFIeMPnimrAPMlad5FY7VOPw1RE="/>
+    </form:update>
+</div>

@@ -372,9 +372,12 @@ fieldset th {
 	width: 16px;
 }
 
+.muudaButtonExtended {width: 200px; height: 25px; float:right; }
+.muudaButton {width: 100px; height: 25px }
 .infoEemaldaButton {width: 50px; height: 25px }
 .lisaButton { width: 100px; height: 25px; float: right; margin: 3px }
-.right { float: right}
+.right { float: right; }
+.left { float: left; }
 .leftcolumn { width: 270px; float: left}
 .rightcolumn { width: 270px; float: right}
 .clear { clear: both;}

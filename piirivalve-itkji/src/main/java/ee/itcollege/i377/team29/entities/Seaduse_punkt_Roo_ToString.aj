@@ -5,24 +5,26 @@ package ee.itcollege.i377.team29.entities;
 
 import java.lang.String;
 
-privileged aspect Seadus_Roo_ToString {
+privileged aspect Seaduse_punkt_Roo_ToString {
     
-    public String Seadus.toString() {
+    public String Seaduse_punkt.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
         sb.append("Kehtiv_alates: ").append(getKehtiv_alates()).append(", ");
         sb.append("Kehtiv_kuni: ").append(getKehtiv_kuni()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
-        sb.append("Kood: ").append(getKood()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
-        sb.append("Nimetus: ").append(getNimetus()).append(", ");
-        sb.append("Seadus_ID: ").append(getSeadus_ID()).append(", ");
-        sb.append("Seaduse_punkt: ").append(getSeaduse_punkt() == null ? "null" : getSeaduse_punkt().size()).append(", ");
+        sb.append("Pais: ").append(getPais()).append(", ");
+        sb.append("Paragrahv: ").append(getParagrahv()).append(", ");
+        sb.append("Piirivalvuri_seadus_intsidendi: ").append(getPiirivalvuri_seadus_intsidendi() == null ? "null" : getPiirivalvuri_seadus_intsidendi().size()).append(", ");
+        sb.append("Seadus: ").append(getSeadus()).append(", ");
+        sb.append("Seaduse_punkt_ID: ").append(getSeaduse_punkt_ID()).append(", ");
         sb.append("Serialversionuid: ").append(getSerialversionuid()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
+        sb.append("Text: ").append(getText()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

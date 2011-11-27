@@ -10,10 +10,10 @@
         <field:datetime dateTimePattern="${piiririkkuja_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_suletud" required="true" z="o08cigH7qKIakmSg/e32zO22mnc="/>
         <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_muutja" required="true" z="Jla9cg2tJax/6cFW5ZntnkCVkaY="/>
         <field:datetime dateTimePattern="${piiririkkuja_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_muudetud" required="true" z="H7qNORQgSdXaVziLBFpMhbcsTI8="/>
-        <field:input field="isikukood" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_isikukood" z="S1ChLGzceh9FGOkcnLClKzEjlsE="/>
-        <field:input field="eesnimi" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_eesnimi" z="6tjATeIaFSCWQHRtazf0oKicRqQ="/>
-        <field:input field="perek_nimi" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_perek_nimi" z="iivjc5Bsm1IzWaIxVvwim6ZWRqM="/>
-        <field:input field="sugu" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_sugu" z="HDlh/QPGJePckaXX4FGambBt5Uw="/>
+        <field:input field="isikukood" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_isikukood" required="true" z="P6SMWtcrSX0wb9ug8DZPxOKd220="/>
+        <field:input field="eesnimi" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_eesnimi" required="true" z="adwvVd+UzpU+AbX5S+5uekGOizs="/>
+        <field:input field="perek_nimi" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_perek_nimi" required="true" z="Uo7ZH6YvbEssGVOceiaRFZXIHhM="/>
+        <field:input field="sugu" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_sugu" required="true" z="rwUBf4pyEcaaZjlXH4pgHTy2bXI="/>
         <field:datetime dateTimePattern="${piiririkkuja_synniaeg_date_format}" field="synniaeg" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_synniaeg" z="JKPh5h0eSJnPBtHRlyvq5lBKZhw="/>
         <field:select field="objekt" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_objekt" itemValue="objekt_ID" items="${objekts}" path="/objekts" z="jkPBGcxmW8CVC39wF0rGZFvR4Eg="/>
         <field:simple field="isik_intsidendis" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_isik_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Isik_intsidendis" z="btVWz2JffJFl6gXbHLvYSRH87IY="/>

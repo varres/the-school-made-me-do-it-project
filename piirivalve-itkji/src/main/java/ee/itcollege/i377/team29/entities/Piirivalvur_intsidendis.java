@@ -1,6 +1,7 @@
 package ee.itcollege.i377.team29.entities;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Query;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
@@ -43,6 +45,18 @@ public class Piirivalvur_intsidendis extends HistoricalEntity implements Seriali
 	
 	@ManyToOne
 	private Vahtkond_intsidendis vahtkond_intsidendis;
+	
+	public Collection<Piirivalvuri_seadus_intsidendi> getPiirivalvuri_seadus_intsidendi() {
+		return piirivalvuri_seadus_intsidendi;
+	}
+
+	public void setPiirivalvuri_seadus_intsidendi(
+			Collection<Piirivalvuri_seadus_intsidendi> piirivalvuri_seadus_intsidendi) {
+		this.piirivalvuri_seadus_intsidendi = piirivalvuri_seadus_intsidendi;
+	}
+
+	@OneToMany(mappedBy = "piirivalvur_intsidendis")
+	private Collection<Piirivalvuri_seadus_intsidendi> piirivalvuri_seadus_intsidendi;
 	
 	public static List<Piirivalvur_intsidendis> findAllPiirivalvurIntsidendis(Intsident i) {
 		return entityManager()

@@ -23,6 +23,8 @@
         <class>ee.itcollege.i377.team29.entities.Vahtkond_piiriloigul</class>
         <class>ee.itcollege.i377.team29.entities.Piiririkkuja</class>
         <class>ee.itcollege.i377.team29.entities.Isik_intsidendis</class>
+        <class>ee.itcollege.i377.team29.entities.Piirivalvuri_seadus_intsidendi</class>
+        <class>ee.itcollege.i377.team29.entities.Seaduse_punkt</class>
         
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>

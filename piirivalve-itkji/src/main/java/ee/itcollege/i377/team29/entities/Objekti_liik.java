@@ -34,10 +34,6 @@ public class Objekti_liik extends AbstractEntity implements Serializable {
 	@OneToMany(mappedBy = "objekti_liik")
 	private Collection<Objekt> objekt;
 
-	public Objekti_liik() {
-		super();
-	}
-
 	public Long getObjekt_liik_ID() {
 		return objekt_liik_ID;
 	}
