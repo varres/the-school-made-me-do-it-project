@@ -2,6 +2,8 @@ package ee.itcollege.i377.team29.generic;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import ee.itcollege.i377.team29.entities.Intsidendi_liik;
@@ -154,9 +156,17 @@ public class Common {
 		piiriloik2.setNimetus("V6ru");
 		piiriloik2 = piiriloik2.merge();
 		
+		Calendar c = Calendar.getInstance();
+		c.set(1990, 11, 11);
+		
 		Intsident ints = new Intsident();
 		ints.setPiiriloik(piiriloik);
-		ints.setIntsidendi_liik(intsLiik);
+		ints.setIntsidendi_liik(intsLiik); 
+		ints.setToimumise_algus(c.getTime());
+		
+		c.set(2010, 11, 11);
+		
+		ints.setToimumise_lopp(c.getTime());
 		ints.setKood("ints007");
 		ints.setNimetus("P6der sai kylgpeegliga vastu vahtimist");
 		ints = ints.merge();
@@ -177,6 +187,14 @@ public class Common {
 		valvur2.setSoduri_kood("SK99921csa2rd");
 		valvur2 = valvur2.merge();
 		
+		Piirivalvur valvur3 = new Piirivalvur();
+		valvur3.setIsikukood("55003124123");
+		valvur3.setEesnimed("Cocaine Heroine");
+		valvur3.setPerekonnanimi("Weedy");
+		valvur3.setSugu('M');
+		valvur3.setSoduri_kood("SK12921cfa2rd");
+		valvur3 = valvur3.merge();
+		
 		Piirivalvur_intsidendis pIntsidendis2 = new Piirivalvur_intsidendis();
 		pIntsidendis2.setPiirivalvur(valvur2);
 		pIntsidendis2.setIntsident(ints);
@@ -186,7 +204,7 @@ public class Common {
 		Piirivalvur_intsidendis pIntsidendis = new Piirivalvur_intsidendis();
 		pIntsidendis.setPiirivalvur(valvur);
 		pIntsidendis.setIntsident(ints);
-		pIntsidendis.setKirjeldus("Mingi loll p6der j2i mulle ette, kuid selle on k6ik OK! Kuna ma olen k6ik senised Dexteri hooajad usinalt 2ra vaadanud, siis polnud laibast lahti saamisega mingeid probleeme. P6der on Soome lahes ja seitsmes tykis.");
+		pIntsidendis.setKirjeldus("Mingi loll p6der j2i mulle ette, kuid sellega on k6ik OK! Kuna ma olen k6ik senised Dexteri hooajad usinalt 2ra vaadanud, siis polnud laibast lahti saamisega mingeid probleeme. P6der on Soome lahes ja seitsmes tykis.");
 		pIntsidendis = pIntsidendis.merge();
 		
 		Objekti_liik oLiik = new Objekti_liik();
@@ -197,7 +215,7 @@ public class Common {
 		Objekt obj = new Objekt();
 		obj.setNimetus("Bemm");
 		obj.setObjekti_liik(oLiik);
-		obj = obj.merge();
+		obj = obj.merge(); 
 		
 		Objekt_intsidendis oInts = new Objekt_intsidendis();
 		oInts.setObjekt(obj);

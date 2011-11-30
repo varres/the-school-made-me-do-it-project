@@ -9,7 +9,7 @@
 	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
 	version="2.0"
 	>
-	
+
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
 
@@ -19,21 +19,15 @@
   </c:if>
   </div>
 
-  
   <springform:form method="GET" commandName="intsidentViewAllCommand">
 	    <div>
 		  <table>
 		  <tr>
-		  <td>Alates</td>
-		  <td>Kuni</td>
-		  <td>Piiriloik</td>
-		  <td></td>
-		  </tr>
-		  <tr>
-		  <td><springform:input path="begin" /></td>
-		  <td><springform:input path="end" /></td>
+		  <td>Alates: <br /><field:datetime dateTimePattern="yyyy-MM-dd" field="begin" id="begin"/></td>
+		  <td>Kuni: <br /><field:datetime dateTimePattern="yyyy-MM-dd" field="end" id="end" /></td>
 		  <td>
-		  <springform:select path="piiriloikSelectedId">
+		  
+		  <springform:select path="piiriloikSelectedId" cssClass="topSelect">
 		  <springform:option value="0" label="--- Kõik ---" />
 		  <springform:options items="${piiriloikList}" itemLabel="nimetus" itemValue="piiriloik_ID" />
 		  </springform:select>
@@ -47,7 +41,6 @@
 	 
 
 	<c:forEach var="intsidentTuple" items="${intsidentList}">
-	<!--  <springform:form method="POST" action=""> -->
 	  <div>
 	  <table>
 		<tr>

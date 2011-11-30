@@ -80,6 +80,7 @@
             <menu:item id="i_controller__intsidenteditindex_id" messageCode="global_generic" url="/intsidentedit/edit" z="CX6ZEmpQOfCyAoddVDBhz/MRH5g="/> 
             -->
             <menu:item id="i_controller__piirivintsredaktorindex_id" messageCode="global_generic" url="/piirivintsredaktor/index" z="8j1kYdThQz0fQx/HxfkRYCimfQA="/>
+            <menu:item id="i_controller__intsidentcreateindex_id" messageCode="global_generic" url="/intsidentcreate/index" z="AHVtzRMwZIT3w++Gc7ARYD0h0yk="/>
         </menu:category>
         <menu:category id="c_piirivalvur_intsidendis" z="X2moFkxWn2BwxZnToZKocIKYHSs=">
             <menu:item id="i_piirivalvur_intsidendis_new" messageCode="global_menu_new" url="/piirivalvur_intsidendises?form" z="PEEX/EA7xPvEhkiUAdYoUPWkgQ8="/>

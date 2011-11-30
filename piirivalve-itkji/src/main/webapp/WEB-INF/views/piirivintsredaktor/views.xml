@@ -4,4 +4,7 @@
     <definition extends="default" name="piirivintsredaktor/edit">
         <put-attribute name="body" value="/WEB-INF/views/piirivintsredaktor/edit.jspx"/>
     </definition>
+    <definition extends="default" name="piirivintsredaktor/updatePiirivalvur">
+        <put-attribute name="body" value="/WEB-INF/views/piirivintsredaktor/updatePiirivalvur.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -1,4 +1,4 @@
-package ee.itcollege.i377.team29.commands.intsidentviewall;
+package ee.itcollege.i377.team29.commands;
 
 import java.util.Date;
 import java.util.Set;

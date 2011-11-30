@@ -26,3 +26,8 @@ web mvc all --package ~.web
 entity --class ~.entities.Seaduse_punkt
 entity --class ~.entities.Piirivalvuri_seadus_intsidendi
 web mvc all --package ~.web
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-28 01:03:36
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-30 20:24:31
+web mvc controller --class ~.IntsidentCreate
+web mvc all --package ~.web
+web mvc controller --class ~.web.IntsidentCreate

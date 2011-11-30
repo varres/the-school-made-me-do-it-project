@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ee.itcollege.i377.team29.commands.intsidentviewall.FilterPiiriloikCommand;
+import ee.itcollege.i377.team29.commands.FilterPiiriloikCommand;
+import ee.itcollege.i377.team29.entities.Intsidendi_liik;
 import ee.itcollege.i377.team29.entities.Intsident;
 import ee.itcollege.i377.team29.entities.Piiriloik;
 import ee.itcollege.i377.team29.generic.Common;

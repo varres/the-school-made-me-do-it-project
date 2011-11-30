@@ -372,6 +372,13 @@ fieldset th {
 	width: 16px;
 }
 
+.koordinaadid1 { width: 80px; }
+.koordinaadid2 { width: 80px; margin-left: 3px; }
+.textboxCustom { width: 180px; }
+.koodInput { width: 50px; }
+.selectDropBoxLiik { width: 100px; margin-left: 5px; }
+.selectDropBoxValvurid { width: 180px; margin-left: 5px; }
+.redaktorTextArea { width: 200px; height: 70px; }
 .muudaButtonExtended {width: 200px; height: 25px; float:right; }
 .muudaButton {width: 100px; height: 25px }
 .infoEemaldaButton {width: 50px; height: 25px }

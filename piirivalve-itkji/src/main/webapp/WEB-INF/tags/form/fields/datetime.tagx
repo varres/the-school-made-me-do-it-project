@@ -3,7 +3,6 @@
 
   <jsp:directive.attribute name="id" type="java.lang.String" required="true" rtexprvalue="true" description="The identifier for this tag (do not change!)" />
   <jsp:directive.attribute name="field" type="java.lang.String" required="true" rtexprvalue="true" description="The field exposed from the form backing object" />
-  
   <jsp:directive.attribute name="dateTimePattern" type="java.lang.String" required="true" rtexprvalue="true" description="The format accepted in this field" />
   <jsp:directive.attribute name="label" type="java.lang.String" required="false" rtexprvalue="true" description="The label used for this field, will default to a message bundle if not supplied" />
   <jsp:directive.attribute name="required" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Indicates if this field is required (default false)" />
@@ -37,11 +36,10 @@
     <div id="_${sec_id}_id">
       <label for="_${sec_field}_id">
         <c:out value="${label}" />
-        :
       </label>
       <c:choose>
         <c:when test="${disableFormBinding}">
-          <input id="_${sec_field}_id" name="${sec_field}" />
+          <input id="_${sec_field}_id" name="${sec_field}" class="roflroflrofl" />
         </c:when>
         <c:otherwise>
           <form:input id="_${sec_field}_id" path="${sec_field}" disabled="${disabled}" />

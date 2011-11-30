@@ -3,12 +3,14 @@ package ee.itcollege.i377.team29.entities;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Query;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -41,10 +43,17 @@ public class Piirivalvur extends AbstractEntity implements Serializable {
 	@OneToMany(mappedBy = "piirivalvur")
 	private Collection<Vahtkonna_liige> vahtkonna_liige;
 
-	public Piirivalvur() {
-		super();
-	}
-
+	@OneToMany(mappedBy = "piirivalvur")
+	private Collection<Piirivalvur_intsidendis> piirivalvur_intsidendis;
+	
+	public static List<Piirivalvur> findPiirivalvurListByNotInIntsident(Long intsident_ID) {
+		return entityManager().createQuery("SELECT o FROM Piirivalvur o WHERE o NOT IN " +
+						"(SELECT o1 FROM Piirivalvur o1 JOIN o1.piirivalvur_intsidendis pi WHERE pi.intsident=:ints)",
+							Piirivalvur.class)
+							.setParameter("ints", Intsident.findIntsident(intsident_ID))
+							.getResultList();
+    }
+	
 	public Long getPiirivalvur_ID() {
 		return this.piirivalvur_ID;
 	}

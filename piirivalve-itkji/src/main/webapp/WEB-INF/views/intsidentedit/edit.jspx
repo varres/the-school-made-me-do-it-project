@@ -14,21 +14,25 @@
   <jsp:output omit-xml-declaration="yes"/>
   <c:set var="notImplementedMessage" value=
 "
-Never gonna give you up\n
-Never gonna let you down\n
-Never gonna run around and desert you\n
-Never gonna make you cry\n
-Never gonna say goodbye\n
-Never gonna tell a lie and hurt you\n\n
-[NOT IMPLEMENTED EXCEPTION!]
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+NOT IMPLEMENTED 
 " 
 scope="page" />
 
 <div>
 <div>
-<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong><input type="button" value="Redigeeri intsident" class="muudaButtonExtended" onclick="alert('${notImplementedMessage}')" /></div>
+<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="location.href='/piirivalve-itkji/intsidentcreate/create';" /></div>
 <div class="clear" />
 </div>
+<br />
+
+<br />
 <br />
 <div class="leftcolumn">
 <table>
@@ -91,20 +95,28 @@ scope="page" />
 <table>
 	<tr><td><strong>Piirivalvurid</strong></td></tr>
 	<c:forEach var="piirivalvurInts" items="${intsident.piirivalvur_intsidendis}">
-	<tr>
-	<td>
-	${piirivalvurInts.piirivalvur.eesnimed}, ${piirivalvurInts.piirivalvur.perekonnanimi}
-	<div class="right">
-		<input type="button" value="Info"  class="infoEemaldaButton" onclick="location.href='/piirivalve-itkji/piirivintsredaktor/edit/${piirivalvurInts.piirivalvur_intsidendis_ID}';" />
-		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
-	</div>
+
+	<jsp:useBean id="now" class="java.util.Date" />
+	<c:if test="${piirivalvurInts.kuni gt now}">
 	
-	</td>
+	<tr>
+		<td>
+		${piirivalvurInts.piirivalvur.eesnimed}, ${piirivalvurInts.piirivalvur.perekonnanimi}
+		<div class="right">
+			<input type="button" value="Info"  class="infoEemaldaButton" onclick="location.href='/piirivalve-itkji/piirivintsredaktor/edit/${piirivalvurInts.piirivalvur_intsidendis_ID}';" />
+			<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
+		</div>
+		
+		</td>
 	</tr>
+		
+	</c:if>
+
 	</c:forEach>
 </table>
 <div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')"/></div>
 </div>
 <div class="clear"></div>
+<div>[Debug] :: <br /> Avaja = ${intsident.avaja} <br /> Avatud = ${intsident.avatud} <br /> Muutja = ${intsident.muutja} <br /> Muudetud = ${intsident.muudetud} <br /> Sulgeja = ${intsident.sulgeja} <br /> Suletud = ${intsident.suletud}</div>
 </div>
 </div>

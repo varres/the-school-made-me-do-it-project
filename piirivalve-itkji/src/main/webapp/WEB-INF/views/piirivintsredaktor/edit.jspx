@@ -13,35 +13,38 @@
   <jsp:output omit-xml-declaration="yes"/>
   <c:set var="notImplementedMessage" value=
 "
-Never gonna give you up\n
-Never gonna let you down\n
-Never gonna run around and desert you\n
-Never gonna make you cry\n
-Never gonna say goodbye\n
-Never gonna tell a lie and hurt you\n\n
-[NOT IMPLEMENTED EXCEPTION!]
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+NOT IMPLEMENTED 
 " 
 scope="page" />
-	
 <div><strong>${valvurIntsidendis.intsident.kood} - ${valvurIntsidendis.intsident.piiriloik.nimetus} - ${valvurIntsidendis.intsident.nimetus}</strong></div>
 <br />
 
+<springform:form method="PUT" commandName="valvurIntsidendis">
 <div>
 	<div>
+	<input type="button" value="Muuda" class="muudaButton" onclick="location.href='/piirivalve-itkji/piirivintsredaktor/updatePiirivalvur/${valvurIntsidendis.piirivalvur_intsidendis_ID}';" />
+	<div class="clear" />
+	
+	
 	
 	<div class="leftcolumn">
+	
 	<table>
 	<tr><td WIDTH="25%">Piirivalvur</td>	<td WIDTH="75%">${valvurIntsidendis.piirivalvur.eesnimed}, ${valvurIntsidendis.piirivalvur.perekonnanimi}</td></tr>
 	<tr><td WIDTH="25%">S6durikood</td>		<td WIDTH="75%">${valvurIntsidendis.piirivalvur.soduri_kood}</td></tr>
 	<tr><td WIDTH="25%">Sugu</td>			<td WIDTH="75%">${valvurIntsidendis.piirivalvur.sugu}</td></tr>
-	<tr><td WIDTH="25%">Kirjeldus</td>		<td WIDTH="75%">${valvurIntsidendis.kirjeldus}</td></tr>
-	<tr><td WIDTH="25%">Kommentaar</td>		<td WIDTH="75%">${valvurIntsidendis.kommentaar}</td></tr>
+	<tr><td WIDTH="25%" style="vertical-align: top;">Kirjeldus</td>		<td WIDTH="75%"><springform:textarea path="kirjeldus" cssClass="redaktorTextArea" /></td></tr>
+	<tr><td WIDTH="25%" style="vertical-align: top;">Kommentaar</td>		<td WIDTH="75%"><springform:textarea path="kommentaar" cssClass="redaktorTextArea" /></td></tr>
 	</table>
-	<div class="right">
-	<input type="button" value="Muuda" class="muudaButton" onclick="alert('${notImplementedMessage}')" />
+
 	</div>
-	</div>
-	
 	<div class="rightcolumn">
 	<table>
 	<tr><td><strong>Seadus</strong></td></tr>
@@ -58,10 +61,34 @@ scope="page" />
 	</div>
 	</div>
 	<div class="clear"></div>
-	<div class="right"><input type="button" value="Salvesta" class="muudaButton" onclick="alert('${notImplementedMessage}')" /><input type="button" value="Loobu" class="muudaButton" onclick="alert('${notImplementedMessage}')" /></div>
-	<div class="clear"></div>
-</div>
-
-
 	
+	<div class="right">
+	<input type="submit" value="Salvesta" class="muudaButton"  />
+	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='/piirivalve-itkji/intsidentedit/edit/${valvurIntsidendis.intsident.intsident_ID}';" />
+	</div>
+	
+	
+	<div class="clear"></div>															
+
+</div>
+<springform:hidden path="alates" />
+<springform:hidden path="kuni" />
+
+<springform:hidden path="avatud" />
+<springform:hidden path="avaja" />
+
+<springform:hidden path="muudetud" />
+<springform:hidden path="muutja" />
+
+<springform:hidden path="suletud" />
+<springform:hidden path="sulgeja" />
+
+<springform:hidden path="intsident" />
+<springform:hidden path="piirivalvur" />
+<springform:hidden path="piirivalvur_intsidendis_ID" />
+<springform:hidden path="piirivalvuri_seadus_intsidendi" />
+<springform:hidden path="vahtkond_intsidendis" />
+<springform:hidden path="version" />
+</springform:form>
+	<div>[Debug] :: <br /> Avaja = ${valvurIntsidendis.avaja} <br /> Avatud = ${valvurIntsidendis.avatud} <br /> Muutja = ${valvurIntsidendis.muutja} <br /> Muudetud = ${valvurIntsidendis.muudetud} <br /> Sulgeja = ${valvurIntsidendis.sulgeja} <br /> Suletud = ${valvurIntsidendis.suletud}</div>
 </div>

@@ -2,6 +2,7 @@ package ee.itcollege.i377.team29.entities;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -43,9 +44,9 @@ public class Intsident extends AbstractEntity implements Serializable {
 	private Date toimumise_lopp;
 	@Size(min = 0, max = 255)
 	private String kirjeldus;
-	@Digits(integer=9, fraction=0)
+	@Digits(integer=9, fraction=5)
 	private BigDecimal GPS_longituud;
-	@Digits(integer=9, fraction=0)
+	@Digits(integer=9, fraction=5)
 	private BigDecimal GPS_latituud;
 
 	
@@ -147,42 +148,6 @@ public class Intsident extends AbstractEntity implements Serializable {
 		return serialVersionUID;
 	}
 	
-	/*
-    public static List<Intsident> findAllIntsidents(Long piiriloikId, Date begin, Date end) {
-    	boolean isWhereUsed = false;
-    	StringBuilder sb = new StringBuilder(300);
-    	sb.append("SELECT o FROM Intsident o");
-    	
-    	if(piiriloikId > 0) {
-    		isWhereUsed = true;
-    		sb.append(" WHERE o.piiriloik = ");
-    		sb.append(piiriloikId);
-    	}
-    	
-    	if(begin != null) {
-    		if(isWhereUsed) {
-    			sb.append(" AND o.toimumise_algus >= ");
-    		} else {
-    			sb.append(" WHERE o.toimumise_algus >= ");
-    			isWhereUsed = true;
-    		}
-    		sb.append(Common.getPersistenceFormattedDate(begin));
-    	}
-    	
-    	if(end != null) {
-    		if(isWhereUsed) {
-    			sb.append(" AND o.toimumise_lopp <= ");
-    		} else {
-    			sb.append(" WHERE o.toimumise_lopp <= ");
-    		}
-    		sb.append(Common.getPersistenceFormattedDate(end));
-    	}
-    	
-    	return entityManager().createQuery(sb.toString(), Intsident.class).getResultList();
-    }
-	*/
-	
-	
 	public Long getIntsident_ID() {
 		return intsident_ID;
 	}
@@ -257,6 +222,15 @@ public class Intsident extends AbstractEntity implements Serializable {
 
 	public void setIntsidendi_liik(Intsidendi_liik param) {
 		this.intsidendi_liik = param;
+		
+		Collection<Intsident> intsidents = param.getIntsident();
+		if(intsidents == null) {
+			intsidents = new ArrayList<Intsident>();
+		}
+		
+		if(!intsidents.contains(this)) {
+			intsidents.add(this);
+		}
 	}
 
 	public Intsidendi_liik getIntsidendi_liik() {

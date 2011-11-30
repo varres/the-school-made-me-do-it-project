@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:springform="http://www.springframework.org/tags/form"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	version="2.0"
+	>
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+
+<springform:form method="POST" commandName="intsident">
+<div>
+	<div class="leftcolumn">
+	
+	<table>
+	<tr><td WIDTH="25%">Kood</td><td><springform:input path="kood" cssClass="koodInput" /> Liik
+
+		  <springform:select path="intsidendi_liik.intsidendi_liik_ID" cssClass="selectDropBoxLiik">
+		  <springform:options items="${intsidendiLiikList}" itemLabel="nimetus" itemValue="intsidendi_liik_ID" />
+		  </springform:select>
+	
+	</td></tr>
+	<tr><td WIDTH="25%">Nimetus</td>  		<td WIDTH="75%"><springform:input cssClass="textboxCustom" path="nimetus"/></td></tr>
+	<tr><td WIDTH="25%">Piiril6ik</td>		<td WIDTH="75%">
+	
+	<springform:select path="piiriloik.piiriloik_ID" cssClass="selectDropBoxLiik">
+		  <springform:options items="${piiriloikList}" itemLabel="nimetus" itemValue="piiriloik_ID" />
+	</springform:select>
+	
+	</td></tr>
+	<tr><td WIDTH="25%">Koordinaadid</td>	<td WIDTH="75%"><springform:input cssClass="koordinaadid1" path="GPS_longituud"/><springform:input cssClass="koordinaadid2" path="GPS_latituud"/></td></tr>
+	<tr><td WIDTH="25%">Algus</td>			<td WIDTH="75%"><field:datetime dateTimePattern="yyyy-MM-dd" field="toimumise_algus" required="true" id="toimumise_algus" /></td></tr>
+	<tr><td WIDTH="25%">Lõpp</td>			<td WIDTH="75%"><field:datetime dateTimePattern="yyyy-MM-dd" field="toimumise_lopp" required="true" id="toimumise_lopp" /></td></tr>
+	</table>
+
+<!-- <springform:textarea path="kommentaar" cssClass="redaktorTextArea" /> -->
+
+	</div>
+	<div class="rightcolumn">
+	Kirjeldus: <br />
+	<springform:textarea path="kirjeldus" cssClass="redaktorTextArea" /><br /><br />
+	Kommentaar:
+	<springform:textarea path="kommentaar" cssClass="redaktorTextArea" /><br /><br />
+	<input type="submit" value="Salvesta" class="muudaButton"  />
+	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='/piirivalve-itkji/intsidentedit/edit/';" />
+	</div>
+	<div class="clear" />
+</div>
+
+</springform:form>
+
+<div class="clear" />
+</div>

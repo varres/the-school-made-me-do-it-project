@@ -12,7 +12,8 @@
         <field:datetime dateTimePattern="${seadus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Seadus_muudetud" required="true" z="StrG3RXhA5VlotzUBmtkkzk3UVM="/>
         <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Seadus_kood" required="true" z="Xck2btv/9QY1EiGMfq7rc7dxBf0="/>
         <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Seadus_nimetus" required="true" z="y980AYiq9tFwpAFH13rFyQ3YYg4="/>
-        <field:input field="kehtiv_alates" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_alates" z="+HfUXbrz+8Yhy2k+DrDRFv8nzFs="/>
-        <field:input field="kehtiv_kuni" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_kuni" z="qo16iyf643p2oRgANQnB41O6YTc="/>
+        <field:input field="kehtiv_alates" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_alates" required="true" z="yM6RiXKw5Qk3aDd+sngeys5bJOs="/>
+        <field:input field="kehtiv_kuni" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_kuni" required="true" z="sWv29YWAjaSHCrVHm4GFWCNXp40="/>
+        <field:simple field="seaduse_punkt" id="c_ee_itcollege_i377_team29_entities_Seadus_seaduse_punkt" messageCode="entity_reference_not_managed" messageCodeAttribute="Seaduse_punkt" z="+h10yVyTz5dGfO9qHEZNMEIW6kA="/>
     </form:update>
 </div>

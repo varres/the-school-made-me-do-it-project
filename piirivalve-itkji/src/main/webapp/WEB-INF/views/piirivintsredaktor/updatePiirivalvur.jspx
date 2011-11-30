@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:springform="http://www.springframework.org/tags/form"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	version="2.0"
+	>
+	
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+
+<springform:form method="PUT" commandName="command">
+
+<c:forEach items="${piirivalvurList}" var="piirivalvur">
+	<p><springform:radiobutton path="piirivalvurID" value="${piirivalvur.piirivalvur_ID}" id="${piirivalvur.piirivalvur_ID}" itemLabel="${piirivalvur.eesnimed}" /><label for="${piirivalvur.piirivalvur_ID}">${piirivalvur.eesnimed}, ${piirivalvur.perekonnanimi}</label></p>
+</c:forEach>
+
+<input id="taiesti_savi_debugtest" type="submit" value="Vali" class="muudaButton" />
+</springform:form>
+
+</div>
