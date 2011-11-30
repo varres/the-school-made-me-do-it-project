@@ -72,13 +72,8 @@
                 <menu:item id="i_seadus_new" messageCode="global_menu_new" url="/seaduses?form" z="4Jdd5BARV+OT8Uj2TLUOFslVvcM="/>
                 <menu:item id="i_seadus_list" messageCode="global_menu_list" url="/seaduses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="bMv8uFCmOcQ1zI32wJeLWi5W6bc="/>
             </menu:category>
-        </sec:authorize>
-        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
-            <menu:item id="i_controller__intsidentviewallindex_id" messageCode="global_generic" url="/intsidentviewall/index" z="MHNyEZNiaABQETHcHsaZyi8L12I="/>
-            <!-- 
-            Not ment to be accessed directly, but as a redirect with id param
-            <menu:item id="i_controller__intsidenteditindex_id" messageCode="global_generic" url="/intsidentedit/edit" z="CX6ZEmpQOfCyAoddVDBhz/MRH5g="/> 
-            -->
+                <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+           
             <menu:item id="i_controller__piirivintsredaktorindex_id" messageCode="global_generic" url="/piirivintsredaktor/index" z="8j1kYdThQz0fQx/HxfkRYCimfQA="/>
             <menu:item id="i_controller__intsidentcreateindex_id" messageCode="global_generic" url="/intsidentcreate/index" z="AHVtzRMwZIT3w++Gc7ARYD0h0yk="/>
         </menu:category>
@@ -98,5 +93,9 @@
             <menu:item id="i_piirivalvuri_seadus_intsidendi_new" messageCode="global_menu_new" url="/piirivalvuri_seadus_intsidendis?form" z="Yc7NkBto1GPK/ZxMG2xK/ika0SA="/>
             <menu:item id="i_piirivalvuri_seadus_intsidendi_list" messageCode="global_menu_list" url="/piirivalvuri_seadus_intsidendis?page=1&amp;size=${empty param.size ? 10 : param.size}" z="n85FdtIIhBqjnw65loofNqlYrDo="/>
         </menu:category>
+        </sec:authorize>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+         <menu:item id="i_controller__intsidentviewallindex_id" messageCode="global_generic" url="/intsidentviewall/index" z="MHNyEZNiaABQETHcHsaZyi8L12I="/>
+         </menu:category>
     </menu:menu>
 </div>
