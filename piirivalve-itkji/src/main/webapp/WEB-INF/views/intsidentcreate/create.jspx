@@ -46,7 +46,7 @@
 	Kommentaar:
 	<springform:textarea path="kommentaar" cssClass="redaktorTextArea" /><br /><br />
 	<input type="submit" value="Salvesta" class="muudaButton"  />
-	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='/piirivalve-itkji/intsidentedit/edit/';" />
+	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='/piirivalve-itkji/intsidentviewall';" />
 	</div>
 	<div class="clear" />
 </div>

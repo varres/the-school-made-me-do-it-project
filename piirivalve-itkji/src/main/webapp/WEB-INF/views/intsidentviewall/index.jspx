@@ -18,7 +18,7 @@
   <c:out value="Test Data Initialized. Please refresh .." />
   </c:if>
   </div>
-
+<p><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="location.href='/piirivalve-itkji/intsidentcreate/create';" /> <br /></p>
   <springform:form method="GET" commandName="intsidentViewAllCommand">
 	    <div>
 		  <table>

@@ -27,7 +27,7 @@ scope="page" />
 
 <div>
 <div>
-<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="location.href='/piirivalve-itkji/intsidentcreate/create';" /></div>
+<div><strong>${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</strong></div>
 <div class="clear" />
 </div>
 <br />
