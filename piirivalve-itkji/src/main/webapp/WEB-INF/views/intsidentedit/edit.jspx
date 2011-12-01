@@ -58,7 +58,7 @@ scope="page" />
 	<c:forEach var="objekt" items="${intsident.objekt_intsidendis}">
 	<tr>
 	<td>
-	Objekt intsidendis
+	
 	<div class="right">
 		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
 		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
