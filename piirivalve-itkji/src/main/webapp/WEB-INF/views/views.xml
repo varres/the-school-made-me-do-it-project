@@ -13,7 +13,7 @@
   <definition extends="public" name="resourceNotFound">
     <put-attribute name="body" value="/WEB-INF/views/resourceNotFound.jspx"/>
   </definition>
-<!-- Test -->
+
   <definition extends="public" name="uncaughtException">
     <put-attribute name="body" value="/WEB-INF/views/uncaughtException.jspx"/>
   </definition>
