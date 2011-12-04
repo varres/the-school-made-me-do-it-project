@@ -48,9 +48,10 @@ public class Piirivalvur extends AbstractEntity implements Serializable {
 	
 	public static List<Piirivalvur> findPiirivalvurListByNotInIntsident(Long intsident_ID) {
 		return entityManager().createQuery("SELECT o FROM Piirivalvur o WHERE o NOT IN " +
-						"(SELECT o1 FROM Piirivalvur o1 JOIN o1.piirivalvur_intsidendis pi WHERE pi.intsident=:ints)",
+						"(SELECT o1 FROM Piirivalvur o1 JOIN o1.piirivalvur_intsidendis pi WHERE pi.intsident=:ints AND pi.kuni > :now)",
 							Piirivalvur.class)
 							.setParameter("ints", Intsident.findIntsident(intsident_ID))
+							.setParameter("now", new Date())
 							.getResultList();
     }
 	

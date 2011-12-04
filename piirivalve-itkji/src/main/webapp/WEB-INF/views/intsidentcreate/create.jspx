@@ -51,7 +51,11 @@
 	</div>
 	<div class="clear" />
 </div>
-
+<springform:hidden path="avaja" />
+<springform:hidden path="avatud" />
+<springform:hidden path="muudetud" />
+<springform:hidden path="muutja" />
+<springform:hidden path="suletud" />
 </springform:form>
 
 <div class="clear" />

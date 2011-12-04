@@ -46,11 +46,14 @@ public class IntsidentViewAllController {
     		_log.debug("begin: " + command.getBegin());
     		_log.debug("end: " + command.getEnd());
     		
+    		boolean dontSelectSuletud = true;
     		List<PiirivalvurIntsidentsTuple> tuple = 
     				Intsident.findAllGroupByPiirivalvur(Intsident.findAllIntsidents(
     						command.getPiiriloikSelectedId(), 
     						command.getBegin(), 
-    						command.getEnd()));
+    						command.getEnd(),
+    						dontSelectSuletud),
+    						dontSelectSuletud);
     		
     		uiModel.addAttribute("intsidentList", tuple);
     	}

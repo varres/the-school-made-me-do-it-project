@@ -23,6 +23,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
 import ee.itcollege.i377.team29.generic.AbstractEntity;
+import ee.itcollege.i377.team29.generic.Common;
 import ee.itcollege.i377.team29.generic.PiirivalvurIntsidentsTuple;
 
 @Entity
@@ -30,20 +31,26 @@ import ee.itcollege.i377.team29.generic.PiirivalvurIntsidentsTuple;
 @RooEntity
 public class Intsident extends AbstractEntity implements Serializable {
 
+	private static final org.slf4j.Logger _log = org.slf4j.LoggerFactory.getLogger(Intsident.class);
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long intsident_ID;
 	@Size(min = 0, max = 20)
+	@NotNull
 	private String kood;
 	@Size(min = 0, max = 100)
+	@NotNull
 	private String nimetus;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@NotNull
 	private Date toimumise_algus;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@NotNull
 	private Date toimumise_lopp;
-	@Size(min = 0, max = 255)
+	@Size(min = 1, max = 255)
+	@NotNull
 	private String kirjeldus;
 	@Digits(integer=9, fraction=5)
 	private BigDecimal GPS_longituud;
@@ -72,8 +79,8 @@ public class Intsident extends AbstractEntity implements Serializable {
 
 
 	@SuppressWarnings("unchecked")
-	public static List<Intsident> findAllIntsidents(Long piiriloikId, Date begin, Date end) {
-    	Query query = findAllConstructQuery(piiriloikId, begin, end);
+	public static List<Intsident> findAllIntsidents(Long piiriloikId, Date begin, Date end, boolean dontSelectSuletud) {
+    	Query query = findAllConstructQuery(piiriloikId, begin, end, dontSelectSuletud);
     	return query.getResultList();
     }
 	
@@ -85,7 +92,7 @@ public class Intsident extends AbstractEntity implements Serializable {
 	 * @param intsidents Intsidents to group by Piirivalvur
 	 * @return
 	 */
-	public static List<PiirivalvurIntsidentsTuple> findAllGroupByPiirivalvur(List<Intsident> intsidents) {
+	public static List<PiirivalvurIntsidentsTuple> findAllGroupByPiirivalvur(List<Intsident> intsidents, boolean dontSelectSuletud) {
 		List<PiirivalvurIntsidentsTuple> tupleList = new ArrayList<PiirivalvurIntsidentsTuple>();
 		
 		for(Intsident i : intsidents) {
@@ -107,6 +114,7 @@ public class Intsident extends AbstractEntity implements Serializable {
 		
 		for(Piirivalvur valvur : valvuridIntsidendist) 
 		{
+			
 			List<Piirivalvur> valvuridOlemas = extractValvurid(tupleList);
 			if(valvuridOlemas.contains(valvur)) 
 			{
@@ -129,7 +137,7 @@ public class Intsident extends AbstractEntity implements Serializable {
 	private static void insertIntsToExistingPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident newIntsident, Piirivalvur existingValvur) {
 		for(PiirivalvurIntsidentsTuple tuple : tupleList) {
 			if(tuple.getPiirivalvur() == existingValvur) {
-				tuple.getIntsidents().add(newIntsident);
+						tuple.getIntsidents().add(newIntsident);
 			}
 		}
 	}
@@ -142,14 +150,15 @@ public class Intsident extends AbstractEntity implements Serializable {
 	 * @param v
 	 */
 	private static void insertNewPiirIntsTuple(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i, Piirivalvur v) {
-		PiirivalvurIntsidentsTuple newTuple = new PiirivalvurIntsidentsTuple();
-		List<Intsident> intsidentList = new ArrayList<Intsident>();
-		intsidentList.add(i);
-		
-		newTuple.setPiirivalvur(v);
-		newTuple.setIntsidents(intsidentList);
-		
-		tupleList.add(newTuple);
+
+				PiirivalvurIntsidentsTuple newTuple = new PiirivalvurIntsidentsTuple();
+				List<Intsident> intsidentList = new ArrayList<Intsident>();
+				intsidentList.add(i);
+				
+				newTuple.setPiirivalvur(v);
+				newTuple.setIntsidents(intsidentList);
+				
+				tupleList.add(newTuple);
 	}
 	
 	/**
@@ -178,8 +187,8 @@ public class Intsident extends AbstractEntity implements Serializable {
 		return v2rdjad;
 	}
     
-    private static Query findAllConstructQuery(Long piiriloikId, Date begin, Date end) {
-    	Query query = entityManager().createQuery(findAllConstructQueryString(piiriloikId, begin, end), Intsident.class);
+    private static Query findAllConstructQuery(Long piiriloikId, Date begin, Date end, boolean dontSelectSuletud) {
+    	Query query = entityManager().createQuery(findAllConstructQueryString(piiriloikId, begin, end, dontSelectSuletud), Intsident.class);
     	if(begin != null) {
     		query.setParameter("begin", begin);
     	}
@@ -189,11 +198,14 @@ public class Intsident extends AbstractEntity implements Serializable {
     	if(piiriloikId > 0) {
     		query.setParameter("piiriloikID", Piiriloik.findPiiriloik(piiriloikId));
     	}
+    	if(dontSelectSuletud) {
+    		query.setParameter("current", new Date());
+    	}
     	
     	return query;
     }
     
-    private static String findAllConstructQueryString(Long piiriloikId, Date begin, Date end) {
+    private static String findAllConstructQueryString(Long piiriloikId, Date begin, Date end, boolean dontSelectSuletud) {
     	boolean isWhereUsed = false;
     	StringBuilder sb = new StringBuilder(300);
     	sb.append("SELECT o FROM Intsident o");
@@ -222,6 +234,16 @@ public class Intsident extends AbstractEntity implements Serializable {
     		}
     		sb.append(":end");
     	}
+    	
+    	if(dontSelectSuletud) {
+    		if(isWhereUsed) {
+    			sb.append(" AND o.suletud > ");
+    		} else {
+    			sb.append(" WHERE o.suletud > ");
+    		}
+    		sb.append(":current");
+    	}
+    	
     	
     	_log.debug("SQL Query: " + sb.toString(), ":begin=" + begin + ":end=" + end + "id=" + piiriloikId);
     	

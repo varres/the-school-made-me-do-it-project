@@ -31,7 +31,7 @@ public class Common {
 	public static Date getSurrogateDate() {
 		if(SURROGATE_DATE == null) {
 	        Calendar surrogate = Calendar.getInstance();
-	        surrogate.set(9999, Calendar.DECEMBER, 30);
+	        surrogate.set(9999, Calendar.DECEMBER, 31);
 	        SURROGATE_DATE = surrogate.getTime();
 		}
 		
@@ -48,10 +48,7 @@ public class Common {
 		TEST_DATA1();
 	}
 	
-	
-	// Oleks pidanud eraldi meetodid olemite loomiseks tegema.
-	// lubjakas
-	public static void TEST_DATA1() {
+	private static void TEST_DATA1() {
 		Intsidendi_liik intsLiik = new Intsidendi_liik();
 		intsLiik.setKood("il007");
 		intsLiik.setNimetus("Liiklusõnnetus");
@@ -80,6 +77,7 @@ public class Common {
 		ints.setToimumise_lopp(c.getTime());
 		ints.setKood("ints007");
 		ints.setNimetus("P6der sai kylgpeegliga vastu vahtimist");
+		ints.setKirjeldus("Juhtus 6nnetus");
 		ints = ints.merge();
 		
 		Piirivalvur valvur = new Piirivalvur();

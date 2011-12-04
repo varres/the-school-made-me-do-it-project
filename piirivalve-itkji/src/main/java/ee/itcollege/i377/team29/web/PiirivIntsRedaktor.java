@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import ee.itcollege.i377.team29.commands.UpdatePiirivalvurCommand;
 import ee.itcollege.i377.team29.entities.Piirivalvur;
 import ee.itcollege.i377.team29.entities.Piirivalvur_intsidendis;
+import ee.itcollege.i377.team29.entities.Piirivalvuri_seadus_intsidendi;
 
 @RequestMapping("/piirivintsredaktor/**")
 @Controller
@@ -34,9 +35,15 @@ public class PiirivIntsRedaktor {
     
     @RequestMapping(method = RequestMethod.PUT, value = "edit/{piirivalvurIntsidendisId}")
     public String put(@PathVariable Long piirivalvurIntsidendisId, Model uiModel, @Valid Piirivalvur_intsidendis valvurIntsidendis, BindingResult binding) {
+    	
+    	// boolean isWrong = binding.hasErrors();
+    	// Entity refide alleshoidmisega jama. Isegi kui pathid refidele talletada view-s l2bi n2htamatute fieldide,
+    	// saadakse tagasi (vist) roo toString() tulem refereeritud entity asemel ja vastav attribuut s2testatakse nulliks. 
+    	
     	if(valvurIntsidendis != null && valvurIntsidendis.getKirjeldus() != null && !valvurIntsidendis.getKirjeldus().trim().equals("")) { // good enuff
     		boolean isUpdate = true;
     		Piirivalvur_intsidendis newValvurIntsidendis = (Piirivalvur_intsidendis) valvurIntsidendis.updateDeleteHistoricalEntity(isUpdate);
+    		mapSeadusEntities(newValvurIntsidendis);
     		return "redirect:/intsidentedit/edit/" + newValvurIntsidendis.getIntsident().getIntsident_ID();
     	}
     	
@@ -65,11 +72,33 @@ public class PiirivIntsRedaktor {
     			command.getPiirivalvurID() > 0 && 
     			command.getPiirivalvurID() != pIntsidendis.getPiirivalvur().getPiirivalvur_ID()) // good enuff
     	{
-        	pIntsidendis.setPiirivalvur(Piirivalvur.findPiirivalvur(command.getPiirivalvurID()));
-        	pIntsidendis.merge();
+    		pIntsidendis.setPiirivalvur(Piirivalvur.findPiirivalvur(command.getPiirivalvurID()));
+    		boolean isUpdate = true;
+    		Piirivalvur_intsidendis pi = (Piirivalvur_intsidendis) pIntsidendis.updateDeleteHistoricalEntity(isUpdate);
+    		
+    		mapSeadusEntities(pi);
+    		
+    		piirivalvurIntsidentId = pi.getIdHistoricalWrapper();
+    		
+    		
     	}
-    
+    	
     	return "redirect:/piirivintsredaktor/edit/" + piirivalvurIntsidentId;
+    }
+    
+    /**
+     * See ebaloogiline loogika mapib (jah, kontrolleri meetodi sees isegi) uue piirivalvur_intsidendi seadustega.
+     * Vist peaks ka uued seaduse jmt olemid tegema kuid aus6na - lihtsalt ei ole jaksu enam jamada.
+     */
+    private void mapSeadusEntities(Piirivalvur_intsidendis pi) {
+		for(Piirivalvuri_seadus_intsidendi psi : pi.getPiirivalvuri_seadus_intsidendi()) {
+			Piirivalvur_intsidendis oldPi = psi.getPiirivalvur_intsidendis();
+			oldPi.setPiirivalvuri_seadus_intsidendi(null);
+			oldPi.merge();
+			
+			psi.setPiirivalvur_intsidendis(pi);
+			psi.merge();
+		}
     }
     
 }

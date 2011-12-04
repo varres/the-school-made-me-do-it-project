@@ -89,6 +89,7 @@
 	<div class="clear"></div>															
 
 </div>
+
 <springform:hidden path="alates" />
 <springform:hidden path="kuni" />
 

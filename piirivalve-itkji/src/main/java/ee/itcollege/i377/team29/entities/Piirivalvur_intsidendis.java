@@ -11,15 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Query;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
-import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 import ee.itcollege.i377.team29.generic.HistoricalEntity;
 
@@ -50,7 +45,7 @@ public class Piirivalvur_intsidendis extends HistoricalEntity implements Seriali
 	public Collection<Piirivalvuri_seadus_intsidendi> getPiirivalvuri_seadus_intsidendi() {
 		return piirivalvuri_seadus_intsidendi;
 	}
-
+	
 	public void setPiirivalvuri_seadus_intsidendi(
 			Collection<Piirivalvuri_seadus_intsidendi> piirivalvuri_seadus_intsidendi) {
 		this.piirivalvuri_seadus_intsidendi = piirivalvuri_seadus_intsidendi;
@@ -59,17 +54,40 @@ public class Piirivalvur_intsidendis extends HistoricalEntity implements Seriali
 	@OneToMany(mappedBy = "piirivalvur_intsidendis")
 	private Collection<Piirivalvuri_seadus_intsidendi> piirivalvuri_seadus_intsidendi;
 	
+	/**
+	 * Filters out deleted entities
+	 * @param i
+	 * @return
+	 */
 	public static List<Piirivalvur_intsidendis> findAllPiirivalvurIntsidendis(Intsident i) {
 		return entityManager()
-				.createQuery("SELECT o FROM Piirivalvur_intsidendis o WHERE o.intsident = :ints", 
+				.createQuery("SELECT o FROM Piirivalvur_intsidendis o WHERE o.intsident = :ints AND o.kuni > :now", 
 						Piirivalvur_intsidendis.class)
 						.setParameter("ints", i)
+						.setParameter("now", new Date())
 						.getResultList(); 
+	}
+	
+	/**
+	 * Does not select deleted entities
+	 * @param i
+	 * @param p
+	 * @return
+	 */
+	public static Collection<Piirivalvur_intsidendis> findByPiirivalvurAndIntsident(Intsident i, Piirivalvur p) {
+		return entityManager()
+				.createQuery("SELECT o FROM Piirivalvur_intsidendis o WHERE o.intsident = :ints AND o.piirivalvur = :pv AND o.kuni > :now",
+						Piirivalvur_intsidendis.class)
+						.setParameter("ints", i)
+						.setParameter("pv", p)
+						.setParameter("now", new Date())
+						.getResultList();
 	}
 	
 	public Long getPiirivalvur_intsidendis_ID() {
 		return piirivalvur_intsidendis_ID;
 	}
+	
 
 	public void setPiirivalvur_intsidendis_ID(Long piirivalvur_intsidendis_ID) {
 		this.piirivalvur_intsidendis_ID = piirivalvur_intsidendis_ID;
@@ -163,5 +181,6 @@ public class Piirivalvur_intsidendis extends HistoricalEntity implements Seriali
 		if(this.getPiirivalvur() != null) {
 			newPvInts.setPiirivalvur(this.getPiirivalvur());
 		}
+		
 	}
 }

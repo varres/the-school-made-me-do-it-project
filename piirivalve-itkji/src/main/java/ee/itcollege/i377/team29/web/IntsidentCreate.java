@@ -1,9 +1,8 @@
 package ee.itcollege.i377.team29.web;
 
 import java.util.Collection;
+import java.util.Date;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -38,8 +36,13 @@ public class IntsidentCreate {
     @RequestMapping(method = RequestMethod.GET)
     public String get(Model uiModel) {
     	Intsident ints = new Intsident();
-    	ints.setIntsidendi_liik(new Intsidendi_liik());
-    	ints.setPiiriloik(new Piiriloik());
+
+    	// Et valideeritavust mitte 2ra solkida, v2ljad not nullid ning autom. sisestatakse neid alles talletamise faasi eel
+    	ints.setAvaja("dummy");
+    	ints.setAvatud(new Date());
+    	ints.setSuletud(new Date());
+    	ints.setMuudetud(new Date());
+    	ints.setMuutja("dummy");
     	
     	uiModel.addAttribute("intsident", ints);
     	
@@ -49,27 +52,15 @@ public class IntsidentCreate {
     @RequestMapping(method = RequestMethod.POST)
     public String post(ModelMap modelMap, @Valid Intsident intsident, BindingResult binding) {
     	
-    	// Fakk ei, ausalt ei viitsi jamada sinuga Spring - põle maha
-    	// if(binding.hasErrors()) {
-    		//return "intsidentcreate/create";
-    	//}
-    	int debug = 3;
-    	if(intsident == null || 
-    			intsident.getKirjeldus() == null || 
-    			intsident.getKirjeldus().trim().equals("") ||
-    			intsident.getNimetus() == null || 
-    			intsident.getNimetus().trim().equals("") ||
-    			intsident.getKood() == null || 
-    			intsident.getKood().trim().equals("") ||
-    			intsident.getPiiriloik().getPiiriloik_ID() == null ||
-    			intsident.getPiiriloik().getPiiriloik_ID() <  1) { // good enuff 
-    															   
+    	if(binding.hasErrors()) {
     		return "intsidentcreate/create";
     	}
     	
     	try {
     		Intsident ints = new Intsident();
     		ints.setKirjeldus(intsident.getKirjeldus());
+    		ints.setToimumise_algus(intsident.getToimumise_algus());
+    		ints.setToimumise_lopp(intsident.getToimumise_lopp());
     		ints.setNimetus(intsident.getNimetus());
     		ints.setKood(intsident.getKood());
     		ints.setPiiriloik(Piiriloik.findPiiriloik(intsident.getPiiriloik().getPiiriloik_ID()));

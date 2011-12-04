@@ -76,7 +76,7 @@ public abstract class HistoricalEntity extends AbstractEntity {
     public abstract void copyUpdatedValuesHistoricalWrapper(HistoricalEntity copyTo);
     
     /**
-     * This method requires the true implementation of all the abstract methods with the sufix "HistoricalWrapper". <br />
+     * This method requires the true implementation of all the abstract methods with the "HistoricalWrapper" sufix. <br />
      * Proper implementation of overrides is not required, if you don't intent to use this method.
      * 
      * @param isUpdate Do you want to persist the current, updated entity ?
@@ -84,8 +84,10 @@ public abstract class HistoricalEntity extends AbstractEntity {
      */
     public HistoricalEntity updateDeleteHistoricalEntity(boolean isUpdate) {
 		HistoricalEntity old = findByIdHistoricalWrapper(this.getIdHistoricalWrapper());
-		old.setSuletud(new Date());
+		Date now = new Date();
+		old.setSuletud(now);
 		old.setSulgeja(SecurityContextHolder.getContext().getAuthentication().getName());
+		old.setKuni(now);
 		old.mergeHistoricalWrapper();
 		
 		if(!isUpdate) {
@@ -94,7 +96,7 @@ public abstract class HistoricalEntity extends AbstractEntity {
 		
 		old.detatchHistoricalWrapper();
 		old.setIdHistoricalWrapper(null);
-		
+		old.setSulgeja(null);
 		this.copyUpdatedValuesHistoricalWrapper(old);
 		
 		return old.persistHistoricalWrapper();

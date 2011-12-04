@@ -17,6 +17,7 @@
 	See funktsionaalsus on implementeerimata
 	" 
 	scope="page" />
+	<jsp:useBean id="now" class="java.util.Date" />
 
 <div>
 <div>
@@ -31,6 +32,8 @@
 <table>
 	<tr><td><strong>Isikud</strong></td></tr>
 	<c:forEach var="isik" items="${intsident.isik_intsidendis}">
+	<c:if test="${piirivalvurInts.kuni gt now}">
+	
 	<tr>
 	<td>
 	${isik.piiririkkuja.perek_nimi}, ${isik.piiririkkuja.eesnimi}
@@ -40,6 +43,7 @@
 	</div>
 	</td>
 	</tr>
+	</c:if>
 	</c:forEach>
 </table>
 <div><input type="button" value="Lisa" class="lisaButton"  onclick="alert('${notImplementedMessage}')" /></div>
@@ -49,6 +53,8 @@
 <table>
 	<tr><td><strong>Objektid</strong></td></tr>
 	<c:forEach var="objekt" items="${intsident.objekt_intsidendis}">
+	<c:if test="${objekt.kuni gt now}">
+	
 	<tr>
 	<td>
 	${objekt.objekt.nimetus}
@@ -58,6 +64,7 @@
 	</div>
 	</td>
 	</tr>
+	</c:if>
 	</c:forEach>
 </table>
 <div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')" /></div>
@@ -70,6 +77,8 @@
 <table>
 	<tr><td><strong>Vahtkonnad</strong></td></tr>
 	<c:forEach var="vahtkond" items="${intsident.vahtkond_intsidendis}">
+	<c:if test="${vahtkond.kuni gt now}">
+	
 	<tr>
 	<td>
 	${vahtkond.vahtkond.nimetus}
@@ -79,6 +88,7 @@
 	</div>
 	</td>
 	</tr>
+	</c:if>
 	</c:forEach>
 </table>
 <div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')" /></div>
@@ -88,8 +98,6 @@
 <table>
 	<tr><td><strong>Piirivalvurid</strong></td></tr>
 	<c:forEach var="piirivalvurInts" items="${intsident.piirivalvur_intsidendis}">
-
-	<jsp:useBean id="now" class="java.util.Date" />
 	<c:if test="${piirivalvurInts.kuni gt now}">
 	
 	<tr>
