@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis" items="${piirivalvur_intsidendises}" z="TqhJ2WAdWbLAX6brLR97c1twfXg=">
         <table:table data="${piirivalvur_intsidendises}" id="l_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis" path="/piirivalvur_intsidendises" typeIdFieldName="piirivalvur_intsidendis_ID" z="2H+89s0c2dW0TSzhpk60cf+bIEI=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_kommentaar" property="kommentaar" z="v9cVehsVm+nzLMq4y79u/CZT2Y4="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_avaja" property="avaja" z="k6tjTM0cNOU075nviBHST5p48Kc="/>
-            <table:column date="true" dateTimePattern="${piirivalvur_intsidendis_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_avatud" property="avatud" z="z8zlZNXyOOU9UboC2RQSNUpgYB4="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_sulgeja" property="sulgeja" z="UwO4dcku9xvUZjWaxjrJEMWpNQo="/>
-            <table:column date="true" dateTimePattern="${piirivalvur_intsidendis_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_suletud" property="suletud" z="A/dLezSXpIEn7/HizHFfizDbFLo="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_muutja" property="muutja" z="yRYLb+ax2FQ3JLubx7qjXds8lvE="/>
+            <table:column date="true" dateTimePattern="${piirivalvur_intsidendis_alates_date_format}" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_alates" property="alates" z="vwj31fTweGVOgpWX4e77WKQdd+g="/>
+            <table:column date="true" dateTimePattern="${piirivalvur_intsidendis_kuni_date_format}" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_kuni" property="kuni" z="qGS8Ja/mxTGHsTpRlDoYKEM9nj4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_piirivalvuri_seadus_intsidendi" property="piirivalvuri_seadus_intsidendi" z="7OtOj9sirJdQgRbhjVa5joJZ1M4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_kirjeldus" property="kirjeldus" z="DHI6PS5Z0WimzfDHj2YduTMRVQg="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_intsident" property="intsident" z="reMtgu4aNU2q22/KyjnBeBrtrrU="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_intsidendis_piirivalvur" property="piirivalvur" z="tK06ejaE+jJamiA02T7/WQox3m4="/>
         </table:table>
     </page:list>
 </div>

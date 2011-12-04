@@ -1,6 +1,4 @@
 package ee.itcollege.i377.team29.generic;
-import java.io.Serializable;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.MappedSuperclass;
@@ -10,10 +8,10 @@ import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-@MappedSuperclass
-public abstract class HistoricalEntity extends AbstractEntity implements Serializable {
+import ee.itcollege.i377.team29.entities.Piirivalvur_intsidendis;
 
-	private static final long serialVersionUID = 1L;
+@MappedSuperclass
+public abstract class HistoricalEntity extends AbstractEntity {
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull
@@ -26,12 +24,80 @@ public abstract class HistoricalEntity extends AbstractEntity implements Seriali
     public void recordCreated() {
     	Date currentDate = new Date();
         setAlates(currentDate);
-
-        Calendar surrogate = Calendar.getInstance();
-        surrogate.set(9999, Calendar.JANUARY, 1);
-        setKuni(surrogate.getTime());
+        setKuni(Common.getSurrogateDate());
         
         super.recordCreated();
+    }
+    
+    
+    /**
+     * Wrapper around the obvious. Required for updateDeleteHistoricalEntity().
+     * @param id
+     * @return
+     */
+    public abstract HistoricalEntity findByIdHistoricalWrapper(Long id);
+    /**
+     * Wrapper around the obvious. Required for updateDeleteHistoricalEntity().
+     * @param id
+     * @return
+     */
+    public abstract HistoricalEntity persistHistoricalWrapper();
+    /**
+     * Wrapper around the obvious. Required for updateDeleteHistoricalEntity().
+     * @param id
+     * @return
+     */
+    public abstract HistoricalEntity mergeHistoricalWrapper();
+    /**
+     * Wrapper around the obvious. Required for updateDeleteHistoricalEntity().
+     * @param id
+     * @return
+     */
+    public abstract void setIdHistoricalWrapper(Long id);
+    /**
+     * Wrapper around the obvious. Required for updateDeleteHistoricalEntity().
+     * @param id
+     * @return
+     */
+    public abstract Long getIdHistoricalWrapper();
+    /**
+     * Wrapper around the obvious. Required for updateDeleteHistoricalEntity().
+     * @param id
+     * @return
+     */
+    public abstract void detatchHistoricalWrapper();
+    
+    /**
+     * Required for deleteHistoricalEntity().
+     * @param copyTo Set the values you wish to be updated. 
+     * All values which are provided by user input should be copied. 
+     * Values not copied are received from the last known persistant unit.
+     */
+    public abstract void copyUpdatedValuesHistoricalWrapper(HistoricalEntity copyTo);
+    
+    /**
+     * This method requires the true implementation of all the abstract methods with the sufix "HistoricalWrapper". <br />
+     * Proper implementation of overrides is not required, if you don't intent to use this method.
+     * 
+     * @param isUpdate Do you want to persist the current, updated entity ?
+     * @return Null or updated entity, if isUpdate == true.
+     */
+    public HistoricalEntity updateDeleteHistoricalEntity(boolean isUpdate) {
+		HistoricalEntity old = findByIdHistoricalWrapper(this.getIdHistoricalWrapper());
+		old.setSuletud(new Date());
+		old.setSulgeja(SecurityContextHolder.getContext().getAuthentication().getName());
+		old.mergeHistoricalWrapper();
+		
+		if(!isUpdate) {
+			return null;
+		}
+		
+		old.detatchHistoricalWrapper();
+		old.setIdHistoricalWrapper(null);
+		
+		this.copyUpdatedValuesHistoricalWrapper(old);
+		
+		return old.persistHistoricalWrapper();
     }
 	
 	public Date getAlates() {

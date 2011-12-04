@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis" modelAttribute="vahtkond_intsidendis" path="/vahtkond_intsidendises" render="${empty dependencies}" z="LXiOffZrc/WKj2RWmz62cNhtlpU=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kommentaar" z="rMztitqz/WkYAT9SrE/o0NvVCjI="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_avaja" required="true" z="xWThNr7yQmjxpZEjCLPAo/o2Oa4="/>
-        <field:datetime dateTimePattern="${vahtkond_intsidendis_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_avatud" required="true" z="u48ANRmqBTN0GdUL1LVGRn5ivBs="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_sulgeja" z="Lv+VezeKzaEheQohcGDrQyvL0NI="/>
-        <field:datetime dateTimePattern="${vahtkond_intsidendis_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_suletud" required="true" z="iMgOclCbKk9PJqmFxFz9WKUnuB8="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_muutja" required="true" z="o4XtGUCuy2iYZp3l5LKME3r8K94="/>
-        <field:datetime dateTimePattern="${vahtkond_intsidendis_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_muudetud" required="true" z="Q9fn5t9MFpUtIfQ+qdKRH7XBl7s="/>
         <field:datetime dateTimePattern="${vahtkond_intsidendis_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_alates" required="true" z="He6uJxhYz0wJDzaAAa+xZjFH2Uw="/>
         <field:datetime dateTimePattern="${vahtkond_intsidendis_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kuni" required="true" z="SYAgeXvsXTtEWp+fILAcwN9dp/8="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kirjeldus" required="true" z="W3UZYq7tdCUWBvO85/YiZc0Hik4="/>

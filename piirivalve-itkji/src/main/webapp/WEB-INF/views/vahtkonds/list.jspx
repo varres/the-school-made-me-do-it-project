@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Vahtkond" items="${vahtkonds}" z="ZgrpcesZrOC/QwPwfIHkhrbJTv0=">
         <table:table data="${vahtkonds}" id="l_ee_itcollege_i377_team29_entities_Vahtkond" path="/vahtkonds" typeIdFieldName="vahtkond_ID" z="L7cRHUjF90cBGY6o7vvVB8YDjk4=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_kommentaar" property="kommentaar" z="5bS4KaSjwS9z7Pz0ITOjY+6d2CA="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_avaja" property="avaja" z="1FGJ3J8zTEn6Ba5mM9NVERiCXPo="/>
-            <table:column date="true" dateTimePattern="${vahtkond_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_avatud" property="avatud" z="0UJZDX+w3eN8NVkJYc7ktLzJ9fQ="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_sulgeja" property="sulgeja" z="JQ3FntX4agXS/yjvxKOzTWhPH+s="/>
-            <table:column date="true" dateTimePattern="${vahtkond_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_suletud" property="suletud" z="rH+hmh4WR//Ksv0Kw0neLNfBrok="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_muutja" property="muutja" z="UzgHPFHgUo6MOExzejfW9zRB45g="/>
+            <table:column date="true" dateTimePattern="${vahtkond_alates_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_alates" property="alates" z="ZWk6rPn6H9+C+WW/sFEObrH+szE="/>
+            <table:column date="true" dateTimePattern="${vahtkond_kuni_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_kuni" property="kuni" z="IHOwRgVLIxFHEgjmw4fro2i7zGQ="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_kood" property="kood" z="1YfyOv29SPHN7tiSU7i9x1i715Q="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_nimetus" property="nimetus" z="nbgZqWAsfWEsPBYj9UOtnAm4Czg="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_vahtkonna_liige" property="vahtkonna_liige" z="AOu6Cdmu+GO1w9DgbNR/qLueFg4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_vaeosa" property="vaeosa" z="eYg0m6UcYNcmKcl549bL8YApo6U="/>
         </table:table>
     </page:list>
 </div>

@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_i377_team29_entities_Vaeosa" modelAttribute="vaeosa" path="/vaeosas" render="${empty dependencies}" z="bTUYFjJVAiwBpKH9vPYkZYuf06c=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Vaeosa_kommentaar" z="lNOG90sUHGqxxbUiHqDB9H+5AP4="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Vaeosa_avaja" required="true" z="IMbWxUycqGJmTnZqQF/UZD3Atek="/>
-        <field:datetime dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Vaeosa_avatud" required="true" z="DsFnwyXAz07LWi8qO3io5mYOaIk="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Vaeosa_sulgeja" z="uJbo5AQQpKx8OreydaKfRaqQ2Rg="/>
-        <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Vaeosa_suletud" required="true" z="8H2uLEldgfpYe0CuEFryWAGuWAA="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Vaeosa_muutja" required="true" z="rjeispy7KnYHyznW3X4R+c0dhj4="/>
-        <field:datetime dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Vaeosa_muudetud" required="true" z="NDR/mvL0LtxTyznrN5c3Jip1HpM="/>
         <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Vaeosa_alates" required="true" z="baFWS0nZKU7Te9jpc/HlggQapI8="/>
         <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Vaeosa_kuni" required="true" z="SIZjt4usT/dQgdcmdKd3nUhaELs="/>
         <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Vaeosa_kood" required="true" z="BsSYOd9HgmumU74H5NNWgh2D06U="/>

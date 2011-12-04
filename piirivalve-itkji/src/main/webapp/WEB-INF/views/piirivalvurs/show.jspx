@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Piirivalvur" object="${piirivalvur}" path="/piirivalvurs" z="2jC4qeWxWEorheOh5h+Zbp5Z1so=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_kommentaar" object="${piirivalvur}" z="gT/FRhb6gHGwgjCzY2UGCgKwagY="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_avaja" object="${piirivalvur}" z="3YhN9KhxxiyaVWnMu7/RANR5YdQ="/>
-        <field:display date="true" dateTimePattern="${piirivalvur_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_avatud" object="${piirivalvur}" z="7OHRmYATEaKHn1UeLBl274A7qUg="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_sulgeja" object="${piirivalvur}" z="UfWf9D9wHOvN5lhxwt5Nj4YK/NI="/>
-        <field:display date="true" dateTimePattern="${piirivalvur_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_suletud" object="${piirivalvur}" z="EW0vfHgFt1fqq4UUTxPQSPeovwk="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_muutja" object="${piirivalvur}" z="OLpVhQI8wMocYFjYq0wuK7tJq3w="/>
-        <field:display date="true" dateTimePattern="${piirivalvur_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_muudetud" object="${piirivalvur}" z="0Vw7zTakfcOAgS8o1FWY/x2WTk0="/>
         <field:display field="isikukood" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_isikukood" object="${piirivalvur}" z="ZPGd547K8HrQ+guo3vnYI7T9vFw="/>
         <field:display field="eesnimed" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_eesnimed" object="${piirivalvur}" z="Axgsb/BkF152fxcAcNb9fAkRqBg="/>
         <field:display field="perekonnanimi" id="s_ee_itcollege_i377_team29_entities_Piirivalvur_perekonnanimi" object="${piirivalvur}" z="P6ebBcrjIt5QH4ky8Z5hebK91wI="/>

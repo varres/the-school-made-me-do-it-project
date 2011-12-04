@@ -12,18 +12,11 @@
 	
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <c:set var="notImplementedMessage" value=
-"
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-NOT IMPLEMENTED 
-" 
-scope="page" />
+	<c:set var="notImplementedMessage" value=
+	"
+	See funktsionaalsus on implementeerimata
+	" 
+	scope="page" />
 
 <div>
 <div>
@@ -40,7 +33,7 @@ scope="page" />
 	<c:forEach var="isik" items="${intsident.isik_intsidendis}">
 	<tr>
 	<td>
-	Isik intsidendis
+	${isik.piiririkkuja.perek_nimi}, ${isik.piiririkkuja.eesnimi}
 	<div class="right">
 		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert(${notImplementedMessage})" />
 		<input type="button" value="X" class="infoEemaldaButton"  onclick="alert('${notImplementedMessage}')"  />
@@ -52,13 +45,13 @@ scope="page" />
 <div><input type="button" value="Lisa" class="lisaButton"  onclick="alert('${notImplementedMessage}')" /></div>
 </div>
 
-<div class="rightcolumn"> <!-- hazz no webdesigner skillz -->
+<div class="rightcolumn"> 
 <table>
 	<tr><td><strong>Objektid</strong></td></tr>
 	<c:forEach var="objekt" items="${intsident.objekt_intsidendis}">
 	<tr>
 	<td>
-	
+	${objekt.objekt.nimetus}
 	<div class="right">
 		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
 		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
@@ -79,7 +72,7 @@ scope="page" />
 	<c:forEach var="vahtkond" items="${intsident.vahtkond_intsidendis}">
 	<tr>
 	<td>
-	Vahtkond intsidendis
+	${vahtkond.vahtkond.nimetus}
 	<div class="right">
 		<input type="button" value="Info"  class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
 		<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')"  />
@@ -103,7 +96,8 @@ scope="page" />
 		<td>
 		${piirivalvurInts.piirivalvur.eesnimed}, ${piirivalvurInts.piirivalvur.perekonnanimi}
 		<div class="right">
-			<input type="button" value="Info"  class="infoEemaldaButton" onclick="location.href='/piirivalve-itkji/piirivintsredaktor/edit/${piirivalvurInts.piirivalvur_intsidendis_ID}';" />
+		<spring:url var = "piirivalvurEditURL" value='/piirivintsredaktor/edit/${piirivalvurInts.piirivalvur_intsidendis_ID}' />
+			<input type="button" value="Info"  class="infoEemaldaButton" onclick="location.href='${piirivalvurEditURL}';" />
 			<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
 		</div>
 		
@@ -117,6 +111,6 @@ scope="page" />
 <div><input type="button" value="Lisa" class="lisaButton" onclick="alert('${notImplementedMessage}')"/></div>
 </div>
 <div class="clear"></div>
-<div>[Debug] :: <br /> Avaja = ${intsident.avaja} <br /> Avatud = ${intsident.avatud} <br /> Muutja = ${intsident.muutja} <br /> Muudetud = ${intsident.muudetud} <br /> Sulgeja = ${intsident.sulgeja} <br /> Suletud = ${intsident.suletud}</div>
+<div>Avaja = ${intsident.avaja} <br /> Avatud = ${intsident.avatud} <br /> Muutja = ${intsident.muutja} <br /> Muudetud = ${intsident.muudetud} <br /> Sulgeja = ${intsident.sulgeja} <br /> Suletud = ${intsident.suletud}</div>
 </div>
 </div>

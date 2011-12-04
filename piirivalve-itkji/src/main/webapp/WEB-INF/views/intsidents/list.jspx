@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Intsident" items="${intsidents}" z="VP0wVDbhH5Gx88iu4PxZZ9Y8wZk=">
         <table:table data="${intsidents}" id="l_ee_itcollege_i377_team29_entities_Intsident" path="/intsidents" typeIdFieldName="intsident_ID" z="GSXtF6XOvk/RauwvweMyAVqHots=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_kommentaar" property="kommentaar" z="6jeoLieolLiOvl6hIbCxI4kp9PM="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_avaja" property="avaja" z="+LKHQBjztNv68kVGsqgnGhlPQV8="/>
-            <table:column date="true" dateTimePattern="${intsident_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Intsident_avatud" property="avatud" z="RuuO5xjU2xHqrCYW6GQDAwbOUvc="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_sulgeja" property="sulgeja" z="NfwBiFB2OFsU+P6mKd+4o+Cf2vk="/>
-            <table:column date="true" dateTimePattern="${intsident_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Intsident_suletud" property="suletud" z="wPcYhKy6IPMOm6/ZSeEoallq4XI="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_muutja" property="muutja" z="qL2Ecmlysp2Ndkskr31TCjlyI70="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_kood" property="kood" z="hvFbBxAHoX3/1oozRlbaC4Xh/XE="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_nimetus" property="nimetus" z="IXO3d5L7fFM0BYHFROob3mLBKSM="/>
+            <table:column date="true" dateTimePattern="${intsident_toimumise_algus_date_format}" id="c_ee_itcollege_i377_team29_entities_Intsident_toimumise_algus" property="toimumise_algus" z="Y+831InzuuYrOyifKFeyX4WA6AA="/>
+            <table:column date="true" dateTimePattern="${intsident_toimumise_lopp_date_format}" id="c_ee_itcollege_i377_team29_entities_Intsident_toimumise_lopp" property="toimumise_lopp" z="R/QuuPG/NUtez1PTwF27sDrsOcs="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_kirjeldus" property="kirjeldus" z="HhZkDLoV0xJtihT/u8VdnVX6T4A="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsident_GPS_longituud" property="GPS_longituud" z="8xhvhicO9Mc7UGGOPj0Dk/NeRLc="/>
         </table:table>
     </page:list>
 </div>

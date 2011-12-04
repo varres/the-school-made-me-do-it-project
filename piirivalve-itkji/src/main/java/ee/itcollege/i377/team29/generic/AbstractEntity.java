@@ -1,6 +1,4 @@
 package ee.itcollege.i377.team29.generic;
-import java.io.Serializable;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.MappedSuperclass;
@@ -14,11 +12,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 @MappedSuperclass
-public abstract class AbstractEntity implements Serializable {
+public abstract class AbstractEntity {
 	
 	protected static org.slf4j.Logger _log = org.slf4j.LoggerFactory.getLogger(AbstractEntity.class);
-	
-	private static final long serialVersionUID = 1L;
 	
 	@Size(min = 0, max = 255)
 	private String kommentaar;
@@ -56,9 +52,7 @@ public abstract class AbstractEntity implements Serializable {
         setAvaja(author);
         setMuutja(author);
         
-        Calendar surrogate = Calendar.getInstance();
-        surrogate.set(9999, Calendar.JANUARY, 1);
-        setSuletud(surrogate.getTime());
+        setSuletud(Common.getSurrogateDate());
     }
 
     @PreUpdate
@@ -69,7 +63,7 @@ public abstract class AbstractEntity implements Serializable {
 
     @PreRemove
     public void preventRemove() {
-        throw new SecurityException("Permanent deletion of entities is not permitted! Didn't you read the requirements @Moodle ??");
+        throw new SecurityException("True removal of entities is not permitted!");
     }
     
 	public String getKommentaar() {

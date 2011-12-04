@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik" object="${riigi_admin_yksuse_liik}" path="/riigi_admin_yksuse_liiks" z="IdfqqXoTGNFfAovDLnyLiehBZ5w=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_kommentaar" object="${riigi_admin_yksuse_liik}" z="Dyx75T9n4N/R2ab8BwNnyks9Ntc="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_avaja" object="${riigi_admin_yksuse_liik}" z="8+X0vlsP4CphW8ZKypECpWta8Tw="/>
-        <field:display date="true" dateTimePattern="${riigi_admin_yksuse_liik_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_avatud" object="${riigi_admin_yksuse_liik}" z="EzrpvVqWCNmeSVkcDfQZsq0aT5E="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_sulgeja" object="${riigi_admin_yksuse_liik}" z="kje87RTZUl4TEHwi2zrnCe2/c5w="/>
-        <field:display date="true" dateTimePattern="${riigi_admin_yksuse_liik_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_suletud" object="${riigi_admin_yksuse_liik}" z="eHywyLe4l/mPq7UTYXS6J9OozO0="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_muutja" object="${riigi_admin_yksuse_liik}" z="T89LCugXo9JLxk/QllgcZVkgdF0="/>
-        <field:display date="true" dateTimePattern="${riigi_admin_yksuse_liik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_muudetud" object="${riigi_admin_yksuse_liik}" z="i/+qE7DaAZnufA+gSR1qNitavt8="/>
         <field:display date="true" dateTimePattern="${riigi_admin_yksuse_liik_alates_date_format}" field="alates" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_alates" object="${riigi_admin_yksuse_liik}" z="KuLpC3o50YytVUYVC1QD5rnePaI="/>
         <field:display date="true" dateTimePattern="${riigi_admin_yksuse_liik_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_kuni" object="${riigi_admin_yksuse_liik}" z="2NnQH0rAaQaFVjyVHZnPwaFl/4I="/>
         <field:display field="kood" id="s_ee_itcollege_i377_team29_entities_Riigi_admin_yksuse_liik_kood" object="${riigi_admin_yksuse_liik}" z="a2z5nJA0+8ukL2QzM6moQ7VlUqA="/>

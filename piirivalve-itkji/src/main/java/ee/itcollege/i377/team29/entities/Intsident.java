@@ -23,6 +23,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
 import ee.itcollege.i377.team29.generic.AbstractEntity;
+import ee.itcollege.i377.team29.generic.PiirivalvurIntsidentsTuple;
 
 @Entity
 @RooToString
@@ -75,6 +76,107 @@ public class Intsident extends AbstractEntity implements Serializable {
     	Query query = findAllConstructQuery(piiriloikId, begin, end);
     	return query.getResultList();
     }
+	
+
+	/**
+	 * Returns a tuple list of each piirivalvur being associated
+	 * to a given number of Intsidents.
+	 * 
+	 * @param intsidents Intsidents to group by Piirivalvur
+	 * @return
+	 */
+	public static List<PiirivalvurIntsidentsTuple> findAllGroupByPiirivalvur(List<Intsident> intsidents) {
+		List<PiirivalvurIntsidentsTuple> tupleList = new ArrayList<PiirivalvurIntsidentsTuple>();
+		
+		for(Intsident i : intsidents) {
+			addIntsidentByPiirivalvur(tupleList, i);
+		}
+		
+		return tupleList;
+	}
+	
+	/**
+	 * Chooses the correct association logic for the new Intsident and the existing
+	 * tuples of Piirivalvur :: IntsidentList.
+	 * 
+	 * @param tupleList
+	 * @param i
+	 */
+	private static void addIntsidentByPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i) {
+		List<Piirivalvur> valvuridIntsidendist = extractValvurid(i);
+		
+		for(Piirivalvur valvur : valvuridIntsidendist) 
+		{
+			List<Piirivalvur> valvuridOlemas = extractValvurid(tupleList);
+			if(valvuridOlemas.contains(valvur)) 
+			{
+				insertIntsToExistingPiirivalvur(tupleList, i, valvur);
+			} 
+			else 
+			{
+				insertNewPiirIntsTuple(tupleList, i, valvur);
+			}
+		}
+	}
+	
+	/**
+	 * Adds a new Intsident to the existing Intsident list, already associated with 'Piirivalvur' entity.
+	 * 
+	 * @param tupleList
+	 * @param newIntsident
+	 * @param existingValvur
+	 */
+	private static void insertIntsToExistingPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident newIntsident, Piirivalvur existingValvur) {
+		for(PiirivalvurIntsidentsTuple tuple : tupleList) {
+			if(tuple.getPiirivalvur() == existingValvur) {
+				tuple.getIntsidents().add(newIntsident);
+			}
+		}
+	}
+	
+	/**
+	 * Inserts a new tuple to the tuple list.
+	 * 
+	 * @param tupleList
+	 * @param i
+	 * @param v
+	 */
+	private static void insertNewPiirIntsTuple(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i, Piirivalvur v) {
+		PiirivalvurIntsidentsTuple newTuple = new PiirivalvurIntsidentsTuple();
+		List<Intsident> intsidentList = new ArrayList<Intsident>();
+		intsidentList.add(i);
+		
+		newTuple.setPiirivalvur(v);
+		newTuple.setIntsidents(intsidentList);
+		
+		tupleList.add(newTuple);
+	}
+	
+	/**
+	 * Gets all associated PValvur entities from the Intsident entity
+	 * @param i
+	 * @return
+	 */
+	private static List<Piirivalvur> extractValvurid(Intsident i) {
+		List<Piirivalvur> v2rdjad = new ArrayList<Piirivalvur>();
+		for(Piirivalvur_intsidendis valvur : Piirivalvur_intsidendis.findAllPiirivalvurIntsidendis(i)) {
+			v2rdjad.add(valvur.getPiirivalvur());
+		}
+		return v2rdjad;
+	}
+	
+	/**
+	 * Gets all associated PValvur entities from the tuplelist
+	 * @param tupleList
+	 * @return
+	 */
+	private static List<Piirivalvur> extractValvurid(List<PiirivalvurIntsidentsTuple> tupleList) {
+		List<Piirivalvur> v2rdjad = new ArrayList<Piirivalvur>();
+		for(PiirivalvurIntsidentsTuple valvur : tupleList) {
+			v2rdjad.add(valvur.getPiirivalvur());
+		}
+		return v2rdjad;
+	}
     
     private static Query findAllConstructQuery(Long piiriloikId, Date begin, Date end) {
     	Query query = entityManager().createQuery(findAllConstructQueryString(piiriloikId, begin, end), Intsident.class);

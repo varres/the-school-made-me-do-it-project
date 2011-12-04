@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_i377_team29_entities_Seadus" idField="seadus_ID" modelAttribute="seadus" path="/seaduses" versionField="Version" z="r0QHtRajn5RInDz6Cft4Cy2bte4=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Seadus_kommentaar" z="BwYyU3fMdMgZ7BM3t99sUQhZsuU="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Seadus_avaja" required="true" z="fuaK2EKoehw0KDLYA2CfSUIfEVY="/>
-        <field:datetime dateTimePattern="${seadus_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Seadus_avatud" required="true" z="baDxptQBGawkceyYWrfvtl5ovEs="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Seadus_sulgeja" z="W/zgodwnwqXj1zztVc/7x4NgMAI="/>
-        <field:datetime dateTimePattern="${seadus_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Seadus_suletud" required="true" z="tYlEXz3We+YMhrUjl7JtHlp97nM="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Seadus_muutja" required="true" z="8Weskw4KdahC0CwiC0MHgjdqM9k="/>
-        <field:datetime dateTimePattern="${seadus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Seadus_muudetud" required="true" z="StrG3RXhA5VlotzUBmtkkzk3UVM="/>
         <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Seadus_kood" required="true" z="Xck2btv/9QY1EiGMfq7rc7dxBf0="/>
         <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Seadus_nimetus" required="true" z="y980AYiq9tFwpAFH13rFyQ3YYg4="/>
         <field:input field="kehtiv_alates" id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_alates" required="true" z="yM6RiXKw5Qk3aDd+sngeys5bJOs="/>

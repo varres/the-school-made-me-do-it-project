@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Seaduse_punkt" object="${seaduse_punkt}" path="/seaduse_punkts" z="pg1ae/zxVAuufjY4W0bRcJdsupY=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_kommentaar" object="${seaduse_punkt}" z="pHxH5sJ/dSrn2CktjD/LdJXuB2o="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_avaja" object="${seaduse_punkt}" z="kiNRNWAnMFFzYXTFARGIZsclmR4="/>
-        <field:display date="true" dateTimePattern="${seaduse_punkt_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_avatud" object="${seaduse_punkt}" z="klxV+qgs4KVJNJgZCFhmUuknuLc="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_sulgeja" object="${seaduse_punkt}" z="LZIp585noXNlFVhrR87dQKKw5Cs="/>
-        <field:display date="true" dateTimePattern="${seaduse_punkt_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_suletud" object="${seaduse_punkt}" z="G1X+BxNEgc0pXcHN9hz+6bb3ZhA="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_muutja" object="${seaduse_punkt}" z="FRlwo1Ouj9qq4qGIa+3W8KebW98="/>
-        <field:display date="true" dateTimePattern="${seaduse_punkt_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_muudetud" object="${seaduse_punkt}" z="QyvHqZla1lWi4kHKvd24ony/D1U="/>
         <field:display field="seadus" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_seadus" object="${seaduse_punkt}" z="ihkP9VxtQqeCNxFsyFKdU53Axfk="/>
         <field:display field="paragrahv" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_paragrahv" object="${seaduse_punkt}" z="BULvdouuz7e1EGpleATjf8L8d7I="/>
         <field:display field="pais" id="s_ee_itcollege_i377_team29_entities_Seaduse_punkt_pais" object="${seaduse_punkt}" z="ZuRf6ze5WZwdcp/ekF3fVd6XR9A="/>

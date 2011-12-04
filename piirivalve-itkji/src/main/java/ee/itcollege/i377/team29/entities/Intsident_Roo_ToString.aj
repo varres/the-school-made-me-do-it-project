@@ -30,7 +30,8 @@ privileged aspect Intsident_Roo_ToString {
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("Toimumise_algus: ").append(getToimumise_algus()).append(", ");
         sb.append("Toimumise_lopp: ").append(getToimumise_lopp()).append(", ");
-        sb.append("Vahtkond_intsidendis: ").append(getVahtkond_intsidendis() == null ? "null" : getVahtkond_intsidendis().size());
+        sb.append("Vahtkond_intsidendis: ").append(getVahtkond_intsidendis() == null ? "null" : getVahtkond_intsidendis().size()).append(", ");
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

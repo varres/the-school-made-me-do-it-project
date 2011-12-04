@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_i377_team29_entities_Vahtkond" idField="vahtkond_ID" modelAttribute="vahtkond" path="/vahtkonds" versionField="Version" z="r7/eUpxE6/YffwQEl2qXP+/U/Lc=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Vahtkond_kommentaar" z="/QASTt+K69wQBC9PXU3mJO9EKiw="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Vahtkond_avaja" required="true" z="uH7t5E/httO89U5H51UrkpgNkVE="/>
-        <field:datetime dateTimePattern="${vahtkond_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Vahtkond_avatud" required="true" z="9S3RLlwIw3QgngO0xnfy9p6epBU="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Vahtkond_sulgeja" z="8YjKnz90aXMtYBv/LfXiN0pTMUM="/>
-        <field:datetime dateTimePattern="${vahtkond_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Vahtkond_suletud" required="true" z="8gIfORhYpVapYv5cXHsjpDsugnk="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Vahtkond_muutja" required="true" z="sTzyTmTKF3/IJkNgRE2PUpVCbRE="/>
-        <field:datetime dateTimePattern="${vahtkond_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Vahtkond_muudetud" required="true" z="XsLc+JhvqkZY0qN8OtZStnMXPq0="/>
         <field:datetime dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Vahtkond_alates" required="true" z="vIGD7CIDW2pkjCQd9hG6ZjxNwEM="/>
         <field:datetime dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Vahtkond_kuni" required="true" z="tiyrp6O6V7HHBNaiDWn4Ua5xJa8="/>
         <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Vahtkond_kood" z="C8XdqTyQODwjG7oeKEcq8zUoYfY="/>

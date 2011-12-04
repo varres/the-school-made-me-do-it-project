@@ -97,6 +97,48 @@ public class Piiripunkt extends HistoricalEntity implements Serializable {
 
 	public void setVahtkond(Collection<Vahtkond> param) {
 	    this.vahtkond = param;
+	}
+
+	@Override
+	public HistoricalEntity findByIdHistoricalWrapper(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HistoricalEntity mergeHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setIdHistoricalWrapper(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Long getIdHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HistoricalEntity persistHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void detatchHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void copyUpdatedValuesHistoricalWrapper(HistoricalEntity copyTo) {
+		// TODO Auto-generated method stub
+		
 	}   
 	
    

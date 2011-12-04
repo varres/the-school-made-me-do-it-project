@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Piiririkkuja" items="${piiririkkujas}" z="sieNn2LdKax21eUvhVoE51TQfO4=">
         <table:table data="${piiririkkujas}" id="l_ee_itcollege_i377_team29_entities_Piiririkkuja" path="/piiririkkujas" typeIdFieldName="piiririkkuja_ID" z="z51hIY6ukW1hU0fvLqX3RuhiJBI=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_kommentaar" property="kommentaar" z="/JX7lPWJFVVzgoAJH3dFhrx0W/E="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_avaja" property="avaja" z="N637/+7h329woewRevJ6Y8AG8Hk="/>
-            <table:column date="true" dateTimePattern="${piiririkkuja_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_avatud" property="avatud" z="APQT0oAusyGyy7elEuLAFrgkwzo="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_sulgeja" property="sulgeja" z="nBuKOlvkiNWWKygP/kPACZ0XH90="/>
-            <table:column date="true" dateTimePattern="${piiririkkuja_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_suletud" property="suletud" z="2evjOXrU9DlG5/f9pX4CqJan+Wk="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_muutja" property="muutja" z="YCrHRn4TkTETRemULQBXLXsVTbM="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_isikukood" property="isikukood" z="zyd12bnQve2KnbRPpTf7mB+mwJo="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_eesnimi" property="eesnimi" z="qIn3TSnD9aOUnm+U1Yb+JkPWMMA="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_perek_nimi" property="perek_nimi" z="rubXhQEwFAL8L9FKp4lN91JfVDY="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_sugu" property="sugu" z="y56gL6vskghOCd+7nDE8NSoORXE="/>
+            <table:column date="true" dateTimePattern="${piiririkkuja_synniaeg_date_format}" id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_synniaeg" property="synniaeg" z="TDg7ChFo0o9t78PfStRn032kM3Y="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiririkkuja_objekt" property="objekt" z="L5F4Ct04HV88tZ+7GrhdoHmALmA="/>
         </table:table>
     </page:list>
 </div>

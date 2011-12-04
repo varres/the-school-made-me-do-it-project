@@ -12,6 +12,7 @@ privileged aspect Riigi_admin_yksus_Roo_ToString {
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
+        sb.append("IdHistoricalWrapper: ").append(getIdHistoricalWrapper()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kood: ").append(getKood()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
@@ -22,8 +23,7 @@ privileged aspect Riigi_admin_yksus_Roo_ToString {
         sb.append("Riigi_admin_yksuse_liik: ").append(getRiigi_admin_yksuse_liik()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vaeosa: ").append(getVaeosa() == null ? "null" : getVaeosa().size()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Vaeosa: ").append(getVaeosa() == null ? "null" : getVaeosa().size());
         return sb.toString();
     }
     

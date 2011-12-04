@@ -4,12 +4,10 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Objekt" items="${objekts}" z="oSDaYfi6y5ihy8ELkqZBmgGFLs4=">
         <table:table data="${objekts}" id="l_ee_itcollege_i377_team29_entities_Objekt" path="/objekts" typeIdFieldName="objekt_ID" z="AOyOheQ42VNBdt2l8FmLUG4E/m0=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_kommentaar" property="kommentaar" z="RzNGEr3ri9j7Q9AD+KvhzHICA1w="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_avaja" property="avaja" z="ONHhTbQ0FYARumNYwecieY7VIJs="/>
-            <table:column date="true" dateTimePattern="${objekt_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Objekt_avatud" property="avatud" z="nWVCoG/xt/pBRFr435FfDOr1Ghk="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_sulgeja" property="sulgeja" z="PTstvbRxYMBTiFjCsywPDkh6N14="/>
-            <table:column date="true" dateTimePattern="${objekt_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Objekt_suletud" property="suletud" z="wWZpx6YgHdY9WVk9CYICYL5ac+4="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_muutja" property="muutja" z="Xv2i4mIynHDHunV+S+IzhXR17j8="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_nimetus" property="nimetus" z="seSkDjL+L+uQVQIhN9VB7TVbEfQ="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_objekti_liik" property="objekti_liik" z="5Sq8izrIEpppGpzLc1QM4IeN9hc="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_objekt_intsidendis" property="objekt_intsidendis" z="T2/rZ2mx34jjyQvL63MYpdTGBMM="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Objekt_piiririkkuja" property="piiririkkuja" z="HJPSazHdU9G5Ypii6v5LST2tHpY="/>
         </table:table>
     </page:list>
 </div>

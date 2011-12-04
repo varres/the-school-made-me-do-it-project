@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Vaeosa" object="${vaeosa}" path="/vaeosas" z="xCCMgPqMKsYCadlgZ0RlZ5enXqc=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Vaeosa_kommentaar" object="${vaeosa}" z="/R5yPvzXKI/pCxFZJAal1jb6bts="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Vaeosa_avaja" object="${vaeosa}" z="A4A/1jT+70fc2Iipu+jAwaJ781g="/>
-        <field:display date="true" dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Vaeosa_avatud" object="${vaeosa}" z="Oksw2XEm8VEvb6ycdCRqm7viu3w="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Vaeosa_sulgeja" object="${vaeosa}" z="xwctjwSao2V/dSCiwDKPHo+fTSA="/>
-        <field:display date="true" dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Vaeosa_suletud" object="${vaeosa}" z="rFn4VQOS1DI1JQbkeagwMx5ZFgo="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Vaeosa_muutja" object="${vaeosa}" z="8FvCEIvhyWZVRcjMShFYbwKoGG0="/>
-        <field:display date="true" dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Vaeosa_muudetud" object="${vaeosa}" z="472lcKncT1ENzt0VC7mX75iS29c="/>
         <field:display date="true" dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="s_ee_itcollege_i377_team29_entities_Vaeosa_alates" object="${vaeosa}" z="uiGNSGx81Ro8ETkhZlAOGBOZY8A="/>
         <field:display date="true" dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_team29_entities_Vaeosa_kuni" object="${vaeosa}" z="jWc8phrs8LcHzyvZU6fpWSDTW/g="/>
         <field:display field="kood" id="s_ee_itcollege_i377_team29_entities_Vaeosa_kood" object="${vaeosa}" z="Zjx++9VuISy4QcjYngYgrq0aTU8="/>

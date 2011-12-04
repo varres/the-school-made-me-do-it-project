@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Intsidendi_liik" object="${intsidendi_liik}" path="/intsidendi_liiks" z="g34rRbeJaBCsgnOBM+zwurIsenk=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_kommentaar" object="${intsidendi_liik}" z="v0UqYJpRgNAl27YSvg99rK0dmfw="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_avaja" object="${intsidendi_liik}" z="L/8/qwLxeza3RCf9hoaT2fyxshs="/>
-        <field:display date="true" dateTimePattern="${intsidendi_liik_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_avatud" object="${intsidendi_liik}" z="xatcTnUmcmrYCA5aWYif/RA5cZs="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_sulgeja" object="${intsidendi_liik}" z="Kt16ruxKdIfMKsjW00SvBnuWP8s="/>
-        <field:display date="true" dateTimePattern="${intsidendi_liik_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_suletud" object="${intsidendi_liik}" z="ldVftF4ZxhyCiFUYy7Y9se+PgZU="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_muutja" object="${intsidendi_liik}" z="rAZqfPG4f04BDe1Y4FKFaP0Gx74="/>
-        <field:display date="true" dateTimePattern="${intsidendi_liik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_muudetud" object="${intsidendi_liik}" z="tco+Pb1D839p+5z2wuN2cPMMD4M="/>
         <field:display field="kood" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_kood" object="${intsidendi_liik}" z="0O6Zn+3oHIHlvw0QE9dPcSIHfK8="/>
         <field:display field="nimetus" id="s_ee_itcollege_i377_team29_entities_Intsidendi_liik_nimetus" object="${intsidendi_liik}" z="hbuA2mXOGXvLyxQ9aZ9fWDN7gi8="/>
     </page:show>

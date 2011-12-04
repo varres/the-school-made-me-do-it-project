@@ -19,6 +19,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import ee.itcollege.i377.team29.generic.HistoricalEntity;
 
@@ -63,7 +64,7 @@ public class Piirivalvur_intsidendis extends HistoricalEntity implements Seriali
 				.createQuery("SELECT o FROM Piirivalvur_intsidendis o WHERE o.intsident = :ints", 
 						Piirivalvur_intsidendis.class)
 						.setParameter("ints", i)
-						.getResultList();
+						.getResultList(); 
 	}
 	
 	public Long getPiirivalvur_intsidendis_ID() {
@@ -108,5 +109,59 @@ public class Piirivalvur_intsidendis extends HistoricalEntity implements Seriali
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	@Override
+	public HistoricalEntity findByIdHistoricalWrapper(Long id) {
+		return Piirivalvur_intsidendis.findPiirivalvur_intsidendis(id);
+	}
+	
+	
+
+	@Override
+	public HistoricalEntity mergeHistoricalWrapper() {
+		return this.merge();
+	}
+
+	@Override
+	public void setIdHistoricalWrapper(Long id) {
+		setPiirivalvur_intsidendis_ID(id);
+	}
+
+	@Override
+	public Long getIdHistoricalWrapper() {
+		return getPiirivalvur_intsidendis_ID();
+	}
+
+	@Override
+	public HistoricalEntity persistHistoricalWrapper() {
+		this.persist();
+		return this;
+	}
+
+	@Override
+	public void detatchHistoricalWrapper() {
+		Piirivalvur_intsidendis.entityManager().detach(this);
+	}
+
+	@Override
+	public void copyUpdatedValuesHistoricalWrapper(HistoricalEntity copyTo) {
+		Piirivalvur_intsidendis newPvInts = (Piirivalvur_intsidendis)copyTo;
+		
+		if(this.getKirjeldus() != null) {
+			newPvInts.setKirjeldus(this.getKirjeldus());
+		}
+		if(this.getKommentaar() != null) {
+			newPvInts.setKommentaar(this.getKommentaar());
+		}
+		if(this.getIntsident() != null) {
+			newPvInts.setIntsident(this.getIntsident());
+		}
+		if(this.getVahtkond_intsidendis() != null) {
+			newPvInts.setVahtkond_intsidendis(this.getVahtkond_intsidendis());
+		}
+		if(this.getPiirivalvur() != null) {
+			newPvInts.setPiirivalvur(this.getPiirivalvur());
+		}
 	}
 }

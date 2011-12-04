@@ -4,12 +4,10 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul" items="${vahtkond_piiriloiguls}" z="xc86KSUTdBvcKIQtTmbXgEpmI28=">
         <table:table data="${vahtkond_piiriloiguls}" id="l_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul" path="/vahtkond_piiriloiguls" typeIdFieldName="vahtkond_piiriloigul_ID" z="DYJnJF4d2xtFvKTecDRp1wzI9G0=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_kommentaar" property="kommentaar" z="U3IrxvB78uEBG+sZgj4os86gSoA="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_avaja" property="avaja" z="DW8np0Xa5J667dR9OpA2ToBiyak="/>
-            <table:column date="true" dateTimePattern="${vahtkond_piiriloigul_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_avatud" property="avatud" z="Mzwn5jDjNO1GApTA2Pfl0cVz0Vw="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_sulgeja" property="sulgeja" z="plpMui56nDnImx2DBQZXkJEkJY8="/>
-            <table:column date="true" dateTimePattern="${vahtkond_piiriloigul_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_suletud" property="suletud" z="i6zuBAiAdISRQKmVAAL58HDjHJg="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_muutja" property="muutja" z="m0NmGdpf/NhJHVHSRIAfnzuP0/4="/>
+            <table:column date="true" dateTimePattern="${vahtkond_piiriloigul_alates_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_alates" property="alates" z="E6RaEeWUyas6TCE3F4oPvwiDjwU="/>
+            <table:column date="true" dateTimePattern="${vahtkond_piiriloigul_kuni_date_format}" id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_kuni" property="kuni" z="lXjbZQbubDfNNRV7ZeeS6KGcvCQ="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_piiriloik" property="piiriloik" z="X0Agd1/+BwW8QS6ZcdKtfeZt4zI="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Vahtkond_piiriloigul_vahtkond" property="vahtkond" z="j9JjouoeV9vJD3kKRu41fUXAaPA="/>
         </table:table>
     </page:list>
 </div>

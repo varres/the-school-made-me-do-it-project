@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Vahtkonna_liige" object="${vahtkonna_liige}" path="/vahtkonna_liiges" z="1nJGCnbJGlFRPSStwH7HOLMRA0s=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_kommentaar" object="${vahtkonna_liige}" z="vq6vPFIgudEXbkITcfjkRRQyFU8="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_avaja" object="${vahtkonna_liige}" z="5ZVJS52F7QZPPIP6tXDeGPBK0Ps="/>
-        <field:display date="true" dateTimePattern="${vahtkonna_liige_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_avatud" object="${vahtkonna_liige}" z="hSilVP21PnjKv0/j5cs8L7Dij2Q="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_sulgeja" object="${vahtkonna_liige}" z="480Sv63f/LW1lDJ6tEYN8/MZGX4="/>
-        <field:display date="true" dateTimePattern="${vahtkonna_liige_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_suletud" object="${vahtkonna_liige}" z="lNtErjcnJXs28WIh206PgJ6Ekuc="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_muutja" object="${vahtkonna_liige}" z="r68Up9/a7jWnrtjvWUB/eeG4/JA="/>
-        <field:display date="true" dateTimePattern="${vahtkonna_liige_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_muudetud" object="${vahtkonna_liige}" z="7/iatGohgNkB+aQNa2AvtnBjaqA="/>
         <field:display date="true" dateTimePattern="${vahtkonna_liige_alates_date_format}" field="alates" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_alates" object="${vahtkonna_liige}" z="YZLa/7E648b+k1jgIq1xLlpBzj0="/>
         <field:display date="true" dateTimePattern="${vahtkonna_liige_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_kuni" object="${vahtkonna_liige}" z="oBZuLwlE/qkNmXws02/L1o25KQg="/>
         <field:display field="vahtkond" id="s_ee_itcollege_i377_team29_entities_Vahtkonna_liige_vahtkond" object="${vahtkonna_liige}" z="YTMimvkD1Ns89Hhu63L4GVFbqr0="/>

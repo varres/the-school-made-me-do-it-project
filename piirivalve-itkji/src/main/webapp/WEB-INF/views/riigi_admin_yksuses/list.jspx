@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Riigi_admin_yksus" items="${riigi_admin_yksuses}" z="2Lti6rnvB2hQ0XBBCsyKRVEMGtM=">
         <table:table data="${riigi_admin_yksuses}" id="l_ee_itcollege_i377_team29_entities_Riigi_admin_yksus" path="/riigi_admin_yksuses" typeIdFieldName="riigi_admin_yksus_ID" z="XGPdKk0w1OkJcgd4zQlxFBDP57U=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_kommentaar" property="kommentaar" z="VbdB6vPDOqL4S8/0sfb/ifdfCq0="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_avaja" property="avaja" z="M7BAH6qeWRzs2s9Rgne5Sn3jEVM="/>
-            <table:column date="true" dateTimePattern="${riigi_admin_yksus_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_avatud" property="avatud" z="/oGdrr5gf6bvBi63tydz8MxS5nE="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_sulgeja" property="sulgeja" z="ZeevQDFkr8kWqMY0GMJ2UOvIbw8="/>
-            <table:column date="true" dateTimePattern="${riigi_admin_yksus_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_suletud" property="suletud" z="Zj3FIDVfHpFKptMgi/XeKNBEAYU="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_muutja" property="muutja" z="e7XrhJ5amEnVt12UjXvLnucu/TM="/>
+            <table:column date="true" dateTimePattern="${riigi_admin_yksus_alates_date_format}" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_alates" property="alates" z="WVbYFDwBuVNankOXU0CpyotDBwY="/>
+            <table:column date="true" dateTimePattern="${riigi_admin_yksus_kuni_date_format}" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_kuni" property="kuni" z="AIEIB2UKuofOLFI3ousu16MR/og="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_kood" property="kood" z="zeaZJIMY/rLsSm1YXjnHQwdTQ8g="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_nimetus" property="nimetus" z="I+iuoB12cZZhHqm63rPJF64XpZY="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_riigi_admin_yksuse_liik" property="riigi_admin_yksuse_liik" z="KvT63v1wV09Lh2m6Pm7pN/uYLIY="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_vaeosa" property="vaeosa" z="6VHXRFf6npkjzUVWUkeF0NVcEjw="/>
         </table:table>
     </page:list>
 </div>

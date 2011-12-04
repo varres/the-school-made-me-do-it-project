@@ -4,12 +4,11 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Seadus" items="${seaduses}" z="7GCiKnnVB2GRBWOTCVMmXr65FIw=">
         <table:table data="${seaduses}" id="l_ee_itcollege_i377_team29_entities_Seadus" path="/seaduses" typeIdFieldName="seadus_ID" z="WeBya8Yt379NlksUZn7uXRTLbYE=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_kommentaar" property="kommentaar" z="Mu3U74bOXXe8Dlczb2tZzieJ07A="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_avaja" property="avaja" z="WWuJVo/XvCzOrEN+O8/O941fKhs="/>
-            <table:column date="true" dateTimePattern="${seadus_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Seadus_avatud" property="avatud" z="uulzAzO8y9+fulEK+tMcEps3g6k="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_sulgeja" property="sulgeja" z="HdyuNKT1n7x9z564Slu5+egNTbI="/>
-            <table:column date="true" dateTimePattern="${seadus_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Seadus_suletud" property="suletud" z="uA+9NEJWDnNq1Lx0wuh8D+vB+QI="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_muutja" property="muutja" z="G7c5HbUNsYj7DcBMYaRlbfpHgHE="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_seaduse_punkt" property="seaduse_punkt" z="Rgdu6wl6tDnx+sdxF7K4dMiD58w="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_kood" property="kood" z="MI2J2R2WtSIzUeGsI37Zut7Wpp4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_nimetus" property="nimetus" z="TbjWD0sgJouju7xIf0bhpO5SwMA="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_alates" property="kehtiv_alates" z="yM7U7JaKZPc86K2HMgxI2h3qsj4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seadus_kehtiv_kuni" property="kehtiv_kuni" z="0l7jb3t3oS/U51FFA4Uj+R8zvLI="/>
         </table:table>
     </page:list>
 </div>

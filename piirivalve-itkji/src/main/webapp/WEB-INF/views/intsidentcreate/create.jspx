@@ -46,7 +46,8 @@
 	Kommentaar:
 	<springform:textarea path="kommentaar" cssClass="redaktorTextArea" /><br /><br />
 	<input type="submit" value="Salvesta" class="muudaButton"  />
-	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='/piirivalve-itkji/intsidentviewall';" />
+	<spring:url var = "intsidentViewAllURL" value='/intsidentviewall' />
+	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='${intsidentViewAllURL}';" />
 	</div>
 	<div class="clear" />
 </div>

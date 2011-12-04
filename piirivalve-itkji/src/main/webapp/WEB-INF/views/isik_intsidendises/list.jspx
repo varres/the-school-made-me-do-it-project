@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Isik_intsidendis" items="${isik_intsidendises}" z="zhAmKssJI7JeQD6Qy10Wdu5hBTY=">
         <table:table data="${isik_intsidendises}" id="l_ee_itcollege_i377_team29_entities_Isik_intsidendis" path="/isik_intsidendises" typeIdFieldName="isik_intsidendis_ID" z="PVbOgQI0dAmTcIPAeTWI7LyFCnc=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_kommentaar" property="kommentaar" z="CXaxl69FvrYSvDQ2cEP2hgejC+k="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_avaja" property="avaja" z="KE0jmzLr+PnwlPyx2fk/ktQbyxc="/>
-            <table:column date="true" dateTimePattern="${isik_intsidendis_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_avatud" property="avatud" z="ghA1xV5YChYfSr48CnhXDhr21cA="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_sulgeja" property="sulgeja" z="Dy3b9az3gkwXtlU0ZEBSs9bDxU0="/>
-            <table:column date="true" dateTimePattern="${isik_intsidendis_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_suletud" property="suletud" z="eQaBk0QKR+a06w/52aIqJA9eekA="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_muutja" property="muutja" z="uD4Pmx4teCA3wc+UhujUAeiFgiM="/>
+            <table:column date="true" dateTimePattern="${isik_intsidendis_alates_date_format}" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_alates" property="alates" z="WcctjjAFSNErGBaEyT0/LLcGaqw="/>
+            <table:column date="true" dateTimePattern="${isik_intsidendis_kuni_date_format}" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_kuni" property="kuni" z="oHYeaVqccXa5+M1N3hKchvvX128="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_kirjeldus" property="kirjeldus" z="Qf1Rjl9U3nAYFA6oN+8Uj+38sO0="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_intsident_ID" property="intsident_ID" z="XzaRohh1xPUqODg7uSa9vK4zpQI="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_piiririkkuja_ID" property="piiririkkuja_ID" z="p98rogrntTEjlglZjhSIcrcYcAU="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_intsident" property="intsident" z="AWJdLMTif6G1lp04UuDdbzGCqlE="/>
         </table:table>
     </page:list>
 </div>

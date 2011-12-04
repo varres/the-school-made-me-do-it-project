@@ -35,11 +35,9 @@ public class PiirivIntsRedaktor {
     @RequestMapping(method = RequestMethod.PUT, value = "edit/{piirivalvurIntsidendisId}")
     public String put(@PathVariable Long piirivalvurIntsidendisId, Model uiModel, @Valid Piirivalvur_intsidendis valvurIntsidendis, BindingResult binding) {
     	if(valvurIntsidendis != null && valvurIntsidendis.getKirjeldus() != null && !valvurIntsidendis.getKirjeldus().trim().equals("")) { // good enuff
-    		Piirivalvur_intsidendis attatched = Piirivalvur_intsidendis.findPiirivalvur_intsidendis(piirivalvurIntsidendisId);
-    		attatched.setKirjeldus(valvurIntsidendis.getKirjeldus());
-    		attatched.setKommentaar(valvurIntsidendis.getKommentaar());
-    		attatched.merge();
-    		return "redirect:/intsidentedit/edit/" + attatched.getIntsident().getIntsident_ID();
+    		boolean isUpdate = true;
+    		Piirivalvur_intsidendis newValvurIntsidendis = (Piirivalvur_intsidendis) valvurIntsidendis.updateDeleteHistoricalEntity(isUpdate);
+    		return "redirect:/intsidentedit/edit/" + newValvurIntsidendis.getIntsident().getIntsident_ID();
     	}
     	
     	return "redirect:/piirivintsredaktor/edit/" + piirivalvurIntsidendisId;

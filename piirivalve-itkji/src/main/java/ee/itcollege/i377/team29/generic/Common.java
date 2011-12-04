@@ -1,10 +1,8 @@
 package ee.itcollege.i377.team29.generic;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 import ee.itcollege.i377.team29.entities.Intsidendi_liik;
 import ee.itcollege.i377.team29.entities.Intsident;
@@ -27,8 +25,19 @@ import ee.itcollege.i377.team29.entities.Vahtkond_intsidendis;
 public class Common {
 	private static final SimpleDateFormat _yyyymmdd = new SimpleDateFormat("yyyy-MM-dd");
 	
-	protected static org.slf4j.Logger _log = org.slf4j.LoggerFactory.getLogger(Common.class);
+	private static final org.slf4j.Logger _log = org.slf4j.LoggerFactory.getLogger(Common.class);
+	private static Date SURROGATE_DATE = null;
 	
+	public static Date getSurrogateDate() {
+		if(SURROGATE_DATE == null) {
+	        Calendar surrogate = Calendar.getInstance();
+	        surrogate.set(9999, Calendar.DECEMBER, 30);
+	        SURROGATE_DATE = surrogate.getTime();
+		}
+		
+		return SURROGATE_DATE;
+	}
+
 	public static void ADD_TEST_DATA_IF_FIRST_RUN() {
 		
 		if(Intsidendi_liik.findIntsidendi_liik(new Long(1)) != null) { // too drunk, fix later
@@ -37,109 +46,11 @@ public class Common {
 		_log.error(" ** First run. Adding test data. Remove this method call in '''production''' ** ");
 		
 		TEST_DATA1();
-		
 	}
 	
-	/**
-	 * Returns a tuple list of each piirivalvur being associated
-	 * to a given number of Intsidents.
-	 * 
-	 * @param intsidents Intsidents to group by Piirivalvur
-	 * @return
-	 */
-	public static List<PiirivalvurIntsidentsTuple> groupByPiirivalvur(List<Intsident> intsidents) {
-		List<PiirivalvurIntsidentsTuple> tupleList = new ArrayList<PiirivalvurIntsidentsTuple>();
-		
-		for(Intsident i : intsidents) {
-			addIntsidentByPiirivalvur(tupleList, i);
-		}
-		
-		return tupleList;
-	}
 	
-	/**
-	 * Chooses correct association logic for the new Intsident and existing
-	 * tuples of Piirivalvur :: IntsidentList.
-	 * 
-	 * @param tupleList
-	 * @param i
-	 */
-	private static void addIntsidentByPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i) {
-		List<Piirivalvur> valvuridIntsidendist = extractValvurid(i);
-		
-		for(Piirivalvur valvur : valvuridIntsidendist) 
-		{
-			List<Piirivalvur> valvuridOlemas = extractValvurid(tupleList);
-			if(valvuridOlemas.contains(valvur)) 
-			{
-				insertIntsToExistingPiirivalvur(tupleList, i, valvur);
-			} 
-			else 
-			{
-				insertNewPiirIntsTuple(tupleList, i, valvur);
-			}
-		}
-	}
-	
-	/**
-	 * Adds a new Intsident to the existing Intsident list, already associated with 'Piirivalvur' entity.
-	 * 
-	 * @param tupleList
-	 * @param newIntsident
-	 * @param existingValvur
-	 */
-	private static void insertIntsToExistingPiirivalvur(List<PiirivalvurIntsidentsTuple> tupleList, Intsident newIntsident, Piirivalvur existingValvur) {
-		for(PiirivalvurIntsidentsTuple tuple : tupleList) {
-			if(tuple.getPiirivalvur() == existingValvur) {
-				tuple.getIntsidents().add(newIntsident);
-			}
-		}
-	}
-	
-	/**
-	 * Inserts a new tuple to the tuple list.
-	 * 
-	 * @param tupleList
-	 * @param i
-	 * @param v
-	 */
-	private static void insertNewPiirIntsTuple(List<PiirivalvurIntsidentsTuple> tupleList, Intsident i, Piirivalvur v) {
-		PiirivalvurIntsidentsTuple newTuple = new PiirivalvurIntsidentsTuple();
-		List<Intsident> intsidentList = new ArrayList<Intsident>();
-		intsidentList.add(i);
-		
-		newTuple.setPiirivalvur(v);
-		newTuple.setIntsidents(intsidentList);
-		
-		tupleList.add(newTuple);
-	}
-	
-	/**
-	 * Gets all associated PValvur entities from the Intsident entity
-	 * @param i
-	 * @return
-	 */
-	private static List<Piirivalvur> extractValvurid(Intsident i) {
-		List<Piirivalvur> v2rdjad = new ArrayList<Piirivalvur>();
-		for(Piirivalvur_intsidendis valvur : Piirivalvur_intsidendis.findAllPiirivalvurIntsidendis(i)) {
-			v2rdjad.add(valvur.getPiirivalvur());
-		}
-		return v2rdjad;
-	}
-	
-	/**
-	 * Gets all associated PValvur entities from the tuplelist
-	 * @param tupleList
-	 * @return
-	 */
-	private static List<Piirivalvur> extractValvurid(List<PiirivalvurIntsidentsTuple> tupleList) {
-		List<Piirivalvur> v2rdjad = new ArrayList<Piirivalvur>();
-		for(PiirivalvurIntsidentsTuple valvur : tupleList) {
-			v2rdjad.add(valvur.getPiirivalvur());
-		}
-		return v2rdjad;
-	}
-	
+	// Oleks pidanud eraldi meetodid olemite loomiseks tegema.
+	// lubjakas
 	public static void TEST_DATA1() {
 		Intsidendi_liik intsLiik = new Intsidendi_liik();
 		intsLiik.setKood("il007");
@@ -204,7 +115,7 @@ public class Common {
 		Piirivalvur_intsidendis pIntsidendis = new Piirivalvur_intsidendis();
 		pIntsidendis.setPiirivalvur(valvur);
 		pIntsidendis.setIntsident(ints);
-		pIntsidendis.setKirjeldus("Mingi loll p6der j2i mulle ette, kuid sellega on k6ik OK! Kuna ma olen k6ik senised Dexteri hooajad usinalt 2ra vaadanud, siis polnud laibast lahti saamisega mingeid probleeme. P6der on Soome lahes ja seitsmes tykis.");
+		pIntsidendis.setKirjeldus("Mingi loll p6der j2i mulle ette. Preili Kokteil aitas laiba ära peita - kõik on ok.");
 		pIntsidendis = pIntsidendis.merge();
 		
 		Objekti_liik oLiik = new Objekti_liik();

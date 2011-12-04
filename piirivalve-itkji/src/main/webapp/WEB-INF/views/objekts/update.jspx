@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_i377_team29_entities_Objekt" idField="objekt_ID" modelAttribute="objekt" path="/objekts" versionField="Version" z="8iK6ZhUdGWlS2cZzCyMJfTf+tkY=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Objekt_kommentaar" z="gQBqOkZxw+jNepwWiFfHTIk+Vas="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Objekt_avaja" required="true" z="AakFCb5xZmnAXSFlzAj7nva35mw="/>
-        <field:datetime dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Objekt_avatud" required="true" z="/5t/q6AubZAwp8ZsA1aoxaH2tEA="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Objekt_sulgeja" z="sWuX/CfPJqqHruVc3Kb3etLNBF8="/>
-        <field:datetime dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Objekt_suletud" required="true" z="r6qZttEmGX/ULzg95d2zTn0Hhkc="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Objekt_muutja" required="true" z="HRDZtFczRK1r7ultAQ+QrPpKl5g="/>
-        <field:datetime dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Objekt_muudetud" required="true" z="KBmaeRXw8NqgNDwKAJqAVeKV/AI="/>
         <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Objekt_nimetus" z="DtoSIrxorvpjWP2jxV6ZlAp35d0="/>
         <field:select field="objekti_liik" id="c_ee_itcollege_i377_team29_entities_Objekt_objekti_liik" itemValue="objekt_liik_ID" items="${objekti_liiks}" path="/objekti_liiks" required="true" z="1OicSYRLpWY7Mz2Voy8DrDFKQDg="/>
         <field:simple field="objekt_intsidendis" id="c_ee_itcollege_i377_team29_entities_Objekt_objekt_intsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt_intsidendis" z="jMLuORtYaAYsFRym+nkq8RjlWzk="/>

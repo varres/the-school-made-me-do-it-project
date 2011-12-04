@@ -18,7 +18,10 @@
   <c:out value="Test Data Initialized. Please refresh .." />
   </c:if>
   </div>
-<p><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="location.href='/piirivalve-itkji/intsidentcreate/create';" /> <br /></p>
+
+<spring:url var = "createURL" value='/intsidentcreate/create' />
+
+<p><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="location.href='${createURL}';" /> <br /></p>
   <springform:form method="GET" commandName="intsidentViewAllCommand">
 	    <div>
 		  <table>
@@ -48,10 +51,11 @@
 		</tr>
 		
 		<c:forEach var="intsident" items="${intsidentTuple.intsidents}">
+		<spring:url var = "viewIntsidentURL" value='/intsidentedit/edit/${intsident.intsident_ID}' />
 		<tr>
 		  <td>
 		  ${intsident.nimetus}
-		  <input id="vaata" type="button" value="Vaata" class="right" onclick="location.href='/piirivalve-itkji/intsidentedit/edit/${intsident.intsident_ID}';" />
+		  <input id="vaata" type="button" value="Vaata" class="right" onclick="location.href='${viewIntsidentURL}';" />
 		  </td>
 		</tr>
 		</c:forEach>

@@ -4,12 +4,11 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Piiriloik" items="${piiriloiks}" z="70Iv+egwHu30IbA70cJmmpDBN6I=">
         <table:table data="${piiriloiks}" id="l_ee_itcollege_i377_team29_entities_Piiriloik" path="/piiriloiks" typeIdFieldName="piiriloik_ID" z="RYDdEmMLqYlDEGzP1UPXGKyvVws=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_kommentaar" property="kommentaar" z="YXL6eqD4BtveVXdJ25TMmD+71x0="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_avaja" property="avaja" z="7KgUpAewiJzmQcFmK4BFMP7Tbco="/>
-            <table:column date="true" dateTimePattern="${piiriloik_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piiriloik_avatud" property="avatud" z="XpQM/azCN7NG7QeYhM3Vwj2spCg="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_sulgeja" property="sulgeja" z="lG4R5Zc6S1Z95l2QhEHLmTwXLTA="/>
-            <table:column date="true" dateTimePattern="${piiriloik_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piiriloik_suletud" property="suletud" z="aOOO0Xffd0X6AlFkJOX1x8EPsTw="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_muutja" property="muutja" z="DMJJQTduB7UidPt8eoEImubMGJk="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_kood" property="kood" z="RfeGT/b7Z0MKdXeIu76MWLRwPbQ="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_nimetus" property="nimetus" z="wYaqXcGFOchK/6GryxIzqyLuufg="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_GPS_koordinaadid" property="GPS_koordinaadid" z="mb1AnTh7FfAoq8nAK0IR76NeMUc="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_intsident" property="intsident" z="cARkKIxVVa90yQRomzuTQtf0DBc="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piiriloik_vahtkond_piiriloigul" property="vahtkond_piiriloigul" z="KTgoM1qvaoL3SYX6Kybgcj+DS4o="/>
         </table:table>
     </page:list>
 </div>

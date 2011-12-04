@@ -4,12 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Intsidendi_liik" items="${intsidendi_liiks}" z="F6PIZTSpA9NtK1LsJ15Mx8JYNDY=">
         <table:table data="${intsidendi_liiks}" id="l_ee_itcollege_i377_team29_entities_Intsidendi_liik" path="/intsidendi_liiks" typeIdFieldName="intsidendi_liik_ID" z="XuixAN0b4snR7psVS77zEoxHwQA=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_kommentaar" property="kommentaar" z="KcDEcFFQEB8rY9S9Orz6rDMwAnI="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_avaja" property="avaja" z="xkFZtent3LP2AOkBQ/TNec7roGI="/>
-            <table:column date="true" dateTimePattern="${intsidendi_liik_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_avatud" property="avatud" z="ezRn39YMOJMV+3qF1OUcNQpx80A="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_sulgeja" property="sulgeja" z="8VpMenO3vjWGThzwj37NPG1E6Jk="/>
-            <table:column date="true" dateTimePattern="${intsidendi_liik_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_suletud" property="suletud" z="beAkxZqRkCb8F2B48qdDnufJIJg="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_muutja" property="muutja" z="w3hK0FzbGx/ZdsRuvwIK28TsjkE="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_kood" property="kood" z="34zCvLmxrNPl42e+PcRMLXEZhII="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_nimetus" property="nimetus" z="76097n+KG48zdYGWevwCeA6BQVw="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Intsidendi_liik_intsident" property="intsident" z="T5nmikOLCeJUKuFDnDdsqWT0k7o="/>
         </table:table>
     </page:list>
 </div>

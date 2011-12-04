@@ -11,25 +11,42 @@
 	>
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <c:set var="notImplementedMessage" value=
-"
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-NOT IMPLEMENTED 
-" 
-scope="page" />
+	<c:set var="notImplementedMessage" value=
+	"
+	See funktsionaalsus on implementeerimata
+	" 
+	scope="page" />
+	<SCRIPT type="text/javascript">
+	function changeSex() {
+		var currentSex = document.getElementById("sex").innerHTML;
+		if(currentSex == 'M') {
+			document.getElementById("sex").innerHTML = "PUUDUB !";
+		} else if(currentSex == 'PUUDUB !') {
+			document.getElementById("sex").innerHTML = "Transa";
+		} else if(currentSex == 'Transa') {
+			document.getElementById("sex").innerHTML = "Ikka puudub ..";
+		} else if(currentSex == 'Ikka puudub ..') {
+			document.getElementById("sex").innerHTML = "Midagi vahepealset";
+		} else if(currentSex == 'Midagi vahepealset') {
+			document.getElementById("sex").innerHTML = "Kanye West";
+		} else if(currentSex == 'Kanye West') {
+			document.getElementById("sex").innerHTML = "Meenutab naist ..";
+		} else if(currentSex == 'Meenutab naist ..') {
+			document.getElementById("sex").innerHTML = "N";
+		} else {
+			document.getElementById("sex").innerHTML = "M";
+		}
+	}
+	</SCRIPT>
+	
 <div><strong>${valvurIntsidendis.intsident.kood} - ${valvurIntsidendis.intsident.piiriloik.nimetus} - ${valvurIntsidendis.intsident.nimetus}</strong></div>
 <br />
 
 <springform:form method="PUT" commandName="valvurIntsidendis">
 <div>
 	<div>
-	<input type="button" value="Muuda" class="muudaButton" onclick="location.href='/piirivalve-itkji/piirivintsredaktor/updatePiirivalvur/${valvurIntsidendis.piirivalvur_intsidendis_ID}';" />
+	<spring:url var = "switchValvurURL" value='/piirivintsredaktor/updatePiirivalvur/${valvurIntsidendis.piirivalvur_intsidendis_ID}' />
+	<input type="button" value="Muuda" class="muudaButton" onclick="location.href='${switchValvurURL}';" />
 	<div class="clear" />
 	
 	
@@ -39,7 +56,7 @@ scope="page" />
 	<table>
 	<tr><td WIDTH="25%">Piirivalvur</td>	<td WIDTH="75%">${valvurIntsidendis.piirivalvur.eesnimed}, ${valvurIntsidendis.piirivalvur.perekonnanimi}</td></tr>
 	<tr><td WIDTH="25%">S6durikood</td>		<td WIDTH="75%">${valvurIntsidendis.piirivalvur.soduri_kood}</td></tr>
-	<tr><td WIDTH="25%">Sugu</td>			<td WIDTH="75%">${valvurIntsidendis.piirivalvur.sugu}</td></tr>
+	<tr><td WIDTH="25%">Sugu</td>			<td WIDTH="75%"><div style="float: left;" id="sex">${valvurIntsidendis.piirivalvur.sugu}</div><input style="float: right;" value="Muuda" type="button" onclick="javascript:changeSex()" /></td></tr>
 	<tr><td WIDTH="25%" style="vertical-align: top;">Kirjeldus</td>		<td WIDTH="75%"><springform:textarea path="kirjeldus" cssClass="redaktorTextArea" /></td></tr>
 	<tr><td WIDTH="25%" style="vertical-align: top;">Kommentaar</td>		<td WIDTH="75%"><springform:textarea path="kommentaar" cssClass="redaktorTextArea" /></td></tr>
 	</table>
@@ -64,7 +81,8 @@ scope="page" />
 	
 	<div class="right">
 	<input type="submit" value="Salvesta" class="muudaButton"  />
-	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='/piirivalve-itkji/intsidentedit/edit/${valvurIntsidendis.intsident.intsident_ID}';" />
+	<spring:url var = "editIntsidentURL" value='/intsidentedit/edit/${valvurIntsidendis.intsident.intsident_ID}' />
+	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='${editIntsidentURL}';" />
 	</div>
 	
 	
@@ -90,5 +108,5 @@ scope="page" />
 <springform:hidden path="vahtkond_intsidendis" />
 <springform:hidden path="version" />
 </springform:form>
-	<div>[Debug] :: <br /> Avaja = ${valvurIntsidendis.avaja} <br /> Avatud = ${valvurIntsidendis.avatud} <br /> Muutja = ${valvurIntsidendis.muutja} <br /> Muudetud = ${valvurIntsidendis.muudetud} <br /> Sulgeja = ${valvurIntsidendis.sulgeja} <br /> Suletud = ${valvurIntsidendis.suletud}</div>
+	<div>Avaja = ${valvurIntsidendis.avaja} <br /> Avatud = ${valvurIntsidendis.avatud} <br /> Muutja = ${valvurIntsidendis.muutja} <br /> Muudetud = ${valvurIntsidendis.muudetud} <br /> Sulgeja = ${valvurIntsidendis.sulgeja} <br /> Suletud = ${valvurIntsidendis.suletud}</div>
 </div>

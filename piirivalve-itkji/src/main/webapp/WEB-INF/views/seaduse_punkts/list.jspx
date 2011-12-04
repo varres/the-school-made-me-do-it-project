@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Seaduse_punkt" items="${seaduse_punkts}" z="y0XARb3Um9e8kieQ2/E+phEyCH0=">
         <table:table data="${seaduse_punkts}" id="l_ee_itcollege_i377_team29_entities_Seaduse_punkt" path="/seaduse_punkts" typeIdFieldName="seaduse_punkt_ID" z="DsU6mtW77ZB7XGkqNnq1OYR+Tgw=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_kommentaar" property="kommentaar" z="lSzIh2TxfVweC1ISy/ROJGdIEf4="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_avaja" property="avaja" z="DPRxXD/LwME75ZyH52UEEkZbcAU="/>
-            <table:column date="true" dateTimePattern="${seaduse_punkt_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_avatud" property="avatud" z="X01U5WoQtsPzxosNxrqnZavBCPo="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_sulgeja" property="sulgeja" z="XSq3d/rH7Js68B1qStWgBttxFh8="/>
-            <table:column date="true" dateTimePattern="${seaduse_punkt_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_suletud" property="suletud" z="xPEBpJwHjLo6it+6ZY5KQB7VDzU="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_muutja" property="muutja" z="uEwbsj09/Yd79CfZh3H82i8b5Vo="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_seadus" property="seadus" z="1HZEkgUJMuh6iFd39tGdG1q9cTs="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_piirivalvuri_seadus_intsidendi" property="piirivalvuri_seadus_intsidendi" z="p7yD0qWpGXKydSl8bDMOYlvrpAk="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_paragrahv" property="paragrahv" z="9oiFUW5zufZ1/aA/CkJamcvMPo4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_pais" property="pais" z="pfEzDe6WY0Fk2dgaP4lPxK7MV18="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_text" property="text" z="uKVvheH0uyTv7E06ZHPcEK7ZhYc="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_kehtiv_alates" property="kehtiv_alates" z="Sfn2W80mITKDfvi+iwviVFvApCA="/>
         </table:table>
     </page:list>
 </div>

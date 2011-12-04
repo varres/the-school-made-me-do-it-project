@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_i377_team29_entities_Seaduse_punkt" modelAttribute="seaduse_punkt" path="/seaduse_punkts" render="${empty dependencies}" z="7KjeUSHONA6rYR+4BBZcqeXzjmg=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_kommentaar" z="c1zspahKGDXE+NoZaK2jcfGUOJA="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_avaja" required="true" z="aT9TWdA5cj/SOI01l0qaodEi6ic="/>
-        <field:datetime dateTimePattern="${seaduse_punkt_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_avatud" required="true" z="jGFFBIC5jjnSQcyWY7ZPvQ1v8GA="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_sulgeja" z="0GfoelxJgiaz8Kq3NY5feWSqYy0="/>
-        <field:datetime dateTimePattern="${seaduse_punkt_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_suletud" required="true" z="yPma3qrDn1kIQADhKBlWO1P7nOU="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_muutja" required="true" z="Ypod1g1BRNFuqi00f+4r0TaAC0o="/>
-        <field:datetime dateTimePattern="${seaduse_punkt_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_muudetud" required="true" z="SAb0Ujfs4JGQMz/UMbG7ViXKjto="/>
         <field:select field="seadus" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_seadus" itemValue="seadus_ID" items="${seaduses}" path="/seaduses" z="33CNgN0c1kYgWCy/TB/Nff8Nkp0="/>
         <field:simple field="piirivalvuri_seadus_intsidendi" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_piirivalvuri_seadus_intsidendi" messageCode="entity_reference_not_managed" messageCodeAttribute="Piirivalvuri_seadus_intsidendi" z="awP7wcG3XCxsPTfTU0k2oVCryWk="/>
         <field:input field="paragrahv" id="c_ee_itcollege_i377_team29_entities_Seaduse_punkt_paragrahv" max="20" min="0" required="true" z="sKAN0nHtIFwAjQ9wZ+GLlvf+tqE="/>

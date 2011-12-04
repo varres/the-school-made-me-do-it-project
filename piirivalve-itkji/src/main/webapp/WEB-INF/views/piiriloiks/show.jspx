@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Piiriloik" object="${piiriloik}" path="/piiriloiks" z="5eTxKicc/vhfbR9/W6+dgfNOPPk=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Piiriloik_kommentaar" object="${piiriloik}" z="C3PZIdKV29M9vvxZEz3CyRT8UEk="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Piiriloik_avaja" object="${piiriloik}" z="sKNGfVWfcxcvKzVppSH83TwWTcU="/>
-        <field:display date="true" dateTimePattern="${piiriloik_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Piiriloik_avatud" object="${piiriloik}" z="ELs8JMJvR1Xq4WF2nmGsND1IXAg="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Piiriloik_sulgeja" object="${piiriloik}" z="JbnYbFWnFgZveBLSt3HQGTYSnvI="/>
-        <field:display date="true" dateTimePattern="${piiriloik_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Piiriloik_suletud" object="${piiriloik}" z="DfwAbJ7a6l60FwP0eSzkOGP7hMQ="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Piiriloik_muutja" object="${piiriloik}" z="FWVtXiG3wD3Yg168sJld9YLdYQ8="/>
-        <field:display date="true" dateTimePattern="${piiriloik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Piiriloik_muudetud" object="${piiriloik}" z="4dJKvqNVdv2weBlpfMafkI5ROyE="/>
         <field:display field="kood" id="s_ee_itcollege_i377_team29_entities_Piiriloik_kood" object="${piiriloik}" z="HTtRu063YXLrbuQ/Pc2mjuUsBII="/>
         <field:display field="nimetus" id="s_ee_itcollege_i377_team29_entities_Piiriloik_nimetus" object="${piiriloik}" z="qbsP4NvWmBb8SXqq5jlj2pI0wLI="/>
         <field:display field="GPS_koordinaadid" id="s_ee_itcollege_i377_team29_entities_Piiriloik_GPS_koordinaadid" object="${piiriloik}" z="GcGBF8Z1EHcrbL3wIUVDA0Q/g68="/>

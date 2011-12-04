@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_i377_team29_entities_Objekt_intsidendis" idField="objekt_intsidendis_ID" modelAttribute="objekt_intsidendis" path="/objekt_intsidendises" versionField="Version" z="QdoiEpGthp687lqybqqUOF+K4UE=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_kommentaar" z="et0iQA845H36nzeBWF8mRY2K1GE="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_avaja" required="true" z="jfXc0S0wAqY26hwwVq8g+iUL3Os="/>
-        <field:datetime dateTimePattern="${objekt_intsidendis_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_avatud" required="true" z="soazis3CrqVse6logb5Y+Az84Ew="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_sulgeja" z="zu8devPpifH2zDtUwLXstlehxa4="/>
-        <field:datetime dateTimePattern="${objekt_intsidendis_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_suletud" required="true" z="q7xklslTCcIgW4sKswQtcHRbYsE="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_muutja" required="true" z="gK1w9XpstszOCJk+WnLHxPswobU="/>
-        <field:datetime dateTimePattern="${objekt_intsidendis_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_muudetud" required="true" z="yiyZw++kvfrjp3crJq04j1BlzO0="/>
         <field:datetime dateTimePattern="${objekt_intsidendis_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_alates" required="true" z="/hxvceW3o2J0KPrOZrsh1rtJUMI="/>
         <field:datetime dateTimePattern="${objekt_intsidendis_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_kuni" required="true" z="pxUB41cN3IJK43Q1qAYpQuebYX8="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_i377_team29_entities_Objekt_intsidendis_kirjeldus" z="IEYwLB8DT+mj53QCf8fFZWqxPlA="/>

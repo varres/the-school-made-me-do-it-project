@@ -12,6 +12,7 @@ privileged aspect Vahtkond_intsidendis_Roo_ToString {
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
+        sb.append("IdHistoricalWrapper: ").append(getIdHistoricalWrapper()).append(", ");
         sb.append("Intsident: ").append(getIntsident()).append(", ");
         sb.append("Kirjeldus: ").append(getKirjeldus()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
@@ -22,8 +23,7 @@ privileged aspect Vahtkond_intsidendis_Roo_ToString {
         sb.append("Piirivalvurid_intsidendis: ").append(getPiirivalvurid_intsidendis() == null ? "null" : getPiirivalvurid_intsidendis().size()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vahtkond: ").append(getVahtkond()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Vahtkond: ").append(getVahtkond());
         return sb.toString();
     }
     

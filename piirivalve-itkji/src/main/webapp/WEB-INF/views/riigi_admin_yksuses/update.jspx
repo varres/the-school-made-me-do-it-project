@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_i377_team29_entities_Riigi_admin_yksus" idField="riigi_admin_yksus_ID" modelAttribute="riigi_admin_yksus" path="/riigi_admin_yksuses" versionField="Version" z="GM8Va4MClj42Zos+yGsNwxoEHu8=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_kommentaar" z="BF6P2atfHI47h+uHbzjAmxUxpzg="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_avaja" required="true" z="58OFFvPjBIIYCPsJzN+Bkn1SNHY="/>
-        <field:datetime dateTimePattern="${riigi_admin_yksus_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_avatud" required="true" z="dBL25/Kpv4zZ/FKsVqw3SGhw20o="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_sulgeja" z="8KIqhqJ+34/AMLxudmzwzqpRZzI="/>
-        <field:datetime dateTimePattern="${riigi_admin_yksus_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_suletud" required="true" z="dmsbiqLPp/6ueB2wbbjYunqXJf8="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_muutja" required="true" z="QnyDC/kj+L3jnGoKFdVVot+cLYQ="/>
-        <field:datetime dateTimePattern="${riigi_admin_yksus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_muudetud" required="true" z="eKzgEFiDvOwp7Q44yg5uAShJ+ZM="/>
         <field:datetime dateTimePattern="${riigi_admin_yksus_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_alates" required="true" z="UmyAqEKMEyuHXVlWmyq8XVYNVkA="/>
         <field:datetime dateTimePattern="${riigi_admin_yksus_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_kuni" required="true" z="T/1122tnX6gn7sjn24VrCE8OidA="/>
         <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Riigi_admin_yksus_kood" z="DM+hFbso5DFA7Ftpw+c8BhzeZBE="/>

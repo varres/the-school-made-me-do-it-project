@@ -79,4 +79,46 @@ public class Vahtkond_intsidendis extends HistoricalEntity implements Serializab
 	public void setPiirivalvurid_intsidendis(Collection<Piirivalvur_intsidendis> piirivalvurid_intsidendis) {
 		this.piirivalvurid_intsidendis = piirivalvurid_intsidendis;
 	}
+
+	@Override
+	public HistoricalEntity findByIdHistoricalWrapper(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HistoricalEntity mergeHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setIdHistoricalWrapper(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Long getIdHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HistoricalEntity persistHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void detatchHistoricalWrapper() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void copyUpdatedValuesHistoricalWrapper(HistoricalEntity copyTo) {
+		// TODO Auto-generated method stub
+		
+	}
 }

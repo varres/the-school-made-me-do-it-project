@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_i377_team29_entities_Isik_intsidendis" idField="isik_intsidendis_ID" modelAttribute="isik_intsidendis" path="/isik_intsidendises" versionField="Version" z="6cUXc3MUhk/1pWoVRUtyRWh7dpw=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_kommentaar" z="5fmnuJZ7oOBDdpXFJ8Ppj3TzKIc="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_avaja" required="true" z="b5HxSyugZWlpW1ezicV4UAgnWkY="/>
-        <field:datetime dateTimePattern="${isik_intsidendis_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_avatud" required="true" z="QSxwVbTO24sWnMXwudPgYgTPy2c="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_sulgeja" z="wFoEqTgCC7nja20AEEOrqIsBSwQ="/>
-        <field:datetime dateTimePattern="${isik_intsidendis_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_suletud" required="true" z="cwcu/OlCkTfxEo+9AXlHealk0ow="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_muutja" required="true" z="YeofB/LO6ACucXszJtZUC5LynUg="/>
-        <field:datetime dateTimePattern="${isik_intsidendis_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_muudetud" required="true" z="Et9wCZnbrD/y0DTDf+lvFucCxW8="/>
         <field:datetime dateTimePattern="${isik_intsidendis_alates_date_format}" field="alates" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_alates" required="true" z="JrVX+AJlBVU17EWbZ6ApsyPsPyQ="/>
         <field:datetime dateTimePattern="${isik_intsidendis_kuni_date_format}" field="kuni" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_kuni" required="true" z="887KGQIe6iVIghlekz12L6+k3cY="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_i377_team29_entities_Isik_intsidendis_kirjeldus" required="true" z="3MZ6yA4efrmfOWDAYz5H3Mz9Ylk="/>

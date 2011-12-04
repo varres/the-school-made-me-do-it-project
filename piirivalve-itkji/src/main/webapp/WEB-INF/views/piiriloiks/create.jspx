@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_i377_team29_entities_Piiriloik" modelAttribute="piiriloik" path="/piiriloiks" render="${empty dependencies}" z="YVZ+yyI0pO+cX7CI0Pit45+PkAQ=">
-        <field:textarea field="kommentaar" id="c_ee_itcollege_i377_team29_entities_Piiriloik_kommentaar" z="JH5R2GYlqZBfih/T/sDhFD5iYvw="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_i377_team29_entities_Piiriloik_avaja" required="true" z="v+FZOOR9FBTpt0qQs1d3S6pfIks="/>
-        <field:datetime dateTimePattern="${piiriloik_avatud_date_format}" field="avatud" id="c_ee_itcollege_i377_team29_entities_Piiriloik_avatud" required="true" z="JtRVMFeuMCyUUsaRJBE6KdxlcCY="/>
-        <field:textarea field="sulgeja" id="c_ee_itcollege_i377_team29_entities_Piiriloik_sulgeja" z="l760LY420egiuZ1DnGnylcxTeeQ="/>
-        <field:datetime dateTimePattern="${piiriloik_suletud_date_format}" field="suletud" id="c_ee_itcollege_i377_team29_entities_Piiriloik_suletud" required="true" z="DixIKBzuoqI8fLYduABbKbMPLLE="/>
-        <field:textarea field="muutja" id="c_ee_itcollege_i377_team29_entities_Piiriloik_muutja" required="true" z="erlkDBxJOQ3aWjnrKxoVvq/ABO0="/>
-        <field:datetime dateTimePattern="${piiriloik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_i377_team29_entities_Piiriloik_muudetud" required="true" z="GOtrNesgjGHqGWlb57hE6Pv1OMc="/>
         <field:input field="kood" id="c_ee_itcollege_i377_team29_entities_Piiriloik_kood" z="Wbg/IwhRTSqPk6XWFvL8+rjJK5I="/>
         <field:input field="nimetus" id="c_ee_itcollege_i377_team29_entities_Piiriloik_nimetus" z="/5zeKBF3WxYaahVFZGYX0a4h4rg="/>
         <field:input field="GPS_koordinaadid" id="c_ee_itcollege_i377_team29_entities_Piiriloik_GPS_koordinaadid" z="s/3UUddA4JqLemBUU7relHlUUmE="/>

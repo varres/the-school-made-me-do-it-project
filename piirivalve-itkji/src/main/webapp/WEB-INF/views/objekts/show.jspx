@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Objekt" object="${objekt}" path="/objekts" z="WuR+AwOJ4b33MR8FZhp49HrVpUg=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Objekt_kommentaar" object="${objekt}" z="gyeM0lb9pMgNY0KKnjjEosWl4eU="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Objekt_avaja" object="${objekt}" z="z/ezeW9aEMlrWf5njOqP9re6wkM="/>
-        <field:display date="true" dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Objekt_avatud" object="${objekt}" z="NHSVQRWFni1xF4W7cgh1SYYZX/o="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Objekt_sulgeja" object="${objekt}" z="FKBAu96pNGjECR/Sr/kEGZDYiTs="/>
-        <field:display date="true" dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Objekt_suletud" object="${objekt}" z="6mVyKU2ChvAecPcfeRY8otrwcJs="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Objekt_muutja" object="${objekt}" z="UUEEDhiGG+nN9A1JgPHKhwTyvss="/>
-        <field:display date="true" dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Objekt_muudetud" object="${objekt}" z="9FqAhlY+2j5pY/lIV4xS5lUQI+Y="/>
         <field:display field="nimetus" id="s_ee_itcollege_i377_team29_entities_Objekt_nimetus" object="${objekt}" z="PmqpYhoaTJFGb60YcJ5LdewlzFU="/>
         <field:display field="objekti_liik" id="s_ee_itcollege_i377_team29_entities_Objekt_objekti_liik" object="${objekt}" z="hGB2jsaeq6cXGFnZdSxO7JIZVto="/>
     </page:show>

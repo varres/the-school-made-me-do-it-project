@@ -38,8 +38,7 @@ public class IntsidentViewAllController {
 	
 	@RequestMapping(method = RequestMethod.GET)
     public String get(Model uiModel, @Valid FilterPiiriloikCommand command, BindingResult binding) {
-		
-		Common.ADD_TEST_DATA_IF_FIRST_RUN(); // REMOVE IN "PRODUCTION" 
+		Common.ADD_TEST_DATA_IF_FIRST_RUN(); 
 		
     	if(command != null && command.getPiiriloikSelectedId() != null) {
     		
@@ -48,7 +47,7 @@ public class IntsidentViewAllController {
     		_log.debug("end: " + command.getEnd());
     		
     		List<PiirivalvurIntsidentsTuple> tuple = 
-    				Common.groupByPiirivalvur(Intsident.findAllIntsidents(
+    				Intsident.findAllGroupByPiirivalvur(Intsident.findAllIntsidents(
     						command.getPiiriloikSelectedId(), 
     						command.getBegin(), 
     						command.getEnd()));

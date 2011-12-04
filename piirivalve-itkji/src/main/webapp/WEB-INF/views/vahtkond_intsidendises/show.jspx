@@ -3,13 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis" object="${vahtkond_intsidendis}" path="/vahtkond_intsidendises" z="NYvF8rZkuo9JaNfOh64Au42pPC8=">
-        <field:display field="kommentaar" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kommentaar" object="${vahtkond_intsidendis}" z="FdEkDeny8TIjzDjkT9GGTlA96/8="/>
-        <field:display field="avaja" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_avaja" object="${vahtkond_intsidendis}" z="Q9nhNo89wRC8+Bwr89a7y1t2Pc8="/>
-        <field:display date="true" dateTimePattern="${vahtkond_intsidendis_avatud_date_format}" field="avatud" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_avatud" object="${vahtkond_intsidendis}" z="DpeFCQnCmtN9PgU6/3Wsfo0C7Tg="/>
-        <field:display field="sulgeja" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_sulgeja" object="${vahtkond_intsidendis}" z="n8XJ0A9oXawdslbbqsi7IU064Jo="/>
-        <field:display date="true" dateTimePattern="${vahtkond_intsidendis_suletud_date_format}" field="suletud" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_suletud" object="${vahtkond_intsidendis}" z="UM3qomu4cJM1lZpehZo/lUMMsJ0="/>
-        <field:display field="muutja" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_muutja" object="${vahtkond_intsidendis}" z="e8bZ8T73L/SpoCyK59bPfgdLHgk="/>
-        <field:display date="true" dateTimePattern="${vahtkond_intsidendis_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_muudetud" object="${vahtkond_intsidendis}" z="U7bPEr4AauwvN5cdlJLXKEPqZ2U="/>
         <field:display date="true" dateTimePattern="${vahtkond_intsidendis_alates_date_format}" field="alates" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_alates" object="${vahtkond_intsidendis}" z="UjB1eAy4ZAVAXr3rqhDGrvRd6NU="/>
         <field:display date="true" dateTimePattern="${vahtkond_intsidendis_kuni_date_format}" field="kuni" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kuni" object="${vahtkond_intsidendis}" z="9WTr4u+BUcHLXpWzeRleqxJlAIA="/>
         <field:display field="kirjeldus" id="s_ee_itcollege_i377_team29_entities_Vahtkond_intsidendis_kirjeldus" object="${vahtkond_intsidendis}" z="SyRp735sYB4AHVuaN6Y0yL/aOaY="/>

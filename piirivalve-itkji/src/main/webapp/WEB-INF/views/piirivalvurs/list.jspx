@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_i377_team29_entities_Piirivalvur" items="${piirivalvurs}" z="hvGT2kRXSg42T+z55SOuGTA9BJc=">
         <table:table data="${piirivalvurs}" id="l_ee_itcollege_i377_team29_entities_Piirivalvur" path="/piirivalvurs" typeIdFieldName="piirivalvur_ID" z="aj9+A7l3UudnuXOJXEF635Cu2tw=">
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_kommentaar" property="kommentaar" z="WIdE/qTGvHxSLE+Fft70bnZwZP0="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_avaja" property="avaja" z="7C9AHl5tbdlN6TnTbYvpD/HMOK0="/>
-            <table:column date="true" dateTimePattern="${piirivalvur_avatud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_avatud" property="avatud" z="h7KyjxVrx26jRkMflxW7uY61PXk="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_sulgeja" property="sulgeja" z="Lt9cIi1AL8pSn6alPwg9BLQrWkY="/>
-            <table:column date="true" dateTimePattern="${piirivalvur_suletud_date_format}" id="c_ee_itcollege_i377_team29_entities_Piirivalvur_suletud" property="suletud" z="lQiVtJvxeBx9p3StvBWxH0krFz8="/>
-            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_muutja" property="muutja" z="0mC4PHvg/JBz7MUkldzq0siK1oU="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_isikukood" property="isikukood" z="O2LCZKF8nNpH2cKN1RVHYdTw1ac="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_eesnimed" property="eesnimed" z="Zmpn6Vlq3bioOQuF/AYvZpZ9Lu0="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_perekonnanimi" property="perekonnanimi" z="J0KueMnUQNdf7TOkzZYO1HFCWNw="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_sugu" property="sugu" z="jTZDML7SkUqLkCBzAS+RdvxNmAs="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_soduri_kood" property="soduri_kood" z="+PpRhqy4ACQ2KlCuwnXNkkuPvG4="/>
+            <table:column id="c_ee_itcollege_i377_team29_entities_Piirivalvur_vahtkonna_liige" property="vahtkonna_liige" z="EiWtfVnwHbXTP/vkErPx3rnhlqA="/>
         </table:table>
     </page:list>
 </div>
