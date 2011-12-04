@@ -56,10 +56,6 @@
                 <menu:item id="i_isik_intsidendis_new" messageCode="global_menu_new" url="/isik_intsidendises?form" z="O1ulyw5H0703wFheEZoYgB6QjTI="/>
                 <menu:item id="i_isik_intsidendis_list" messageCode="global_menu_list" url="/isik_intsidendises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="dBsCzAfWNdU5lOaGWcafH1XJYYY="/>
             </menu:category>
-            <menu:category id="c_intsident" z="kwTJaHl5VF4ahaSorWL0R46/LTM=">
-                <menu:item id="i_intsident_new" messageCode="global_menu_new" url="/intsidents?form" z="PoAgtQFn6iVS32mKUjyI3kM2khc="/>
-                <menu:item id="i_intsident_list" messageCode="global_menu_list" url="/intsidents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kHeRRwTb9AVfs3A2YRAPSkAX64k="/>
-            </menu:category>
             <menu:category id="c_objekt_intsidendis" z="I8Nh7gN3mQ6BJloSoYS2QvaDPsA=">
                 <menu:item id="i_objekt_intsidendis_new" messageCode="global_menu_new" url="/objekt_intsidendises?form" z="SKxsLBmu7Kdfbk5WSipMP8OYmvQ="/>
                 <menu:item id="i_objekt_intsidendis_list" messageCode="global_menu_list" url="/objekt_intsidendises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oWviJa3ppu/48A1ZnAAfJbFF11w="/>
@@ -94,8 +90,15 @@
             <menu:item id="i_piirivalvuri_seadus_intsidendi_list" messageCode="global_menu_list" url="/piirivalvuri_seadus_intsidendis?page=1&amp;size=${empty param.size ? 10 : param.size}" z="n85FdtIIhBqjnw65loofNqlYrDo="/>
         </menu:category>
         </sec:authorize>
+        
+        <sec:authorize access="hasRole('ROLE_USER')">
+        <menu:category id="c_intsident" z="kwTJaHl5VF4ahaSorWL0R46/LTM=">
+        <menu:item id="i_intsident_new" messageCode="global_menu_new" url="/intsidents?form" z="PoAgtQFn6iVS32mKUjyI3kM2khc="/>
+        <menu:item id="i_intsident_list" messageCode="global_menu_list" url="/intsidents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kHeRRwTb9AVfs3A2YRAPSkAX64k="/>
+        </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
          <menu:item id="i_controller__intsidentviewallindex_id" messageCode="global_generic" url="/intsidentviewall/index" z="MHNyEZNiaABQETHcHsaZyi8L12I="/>
          </menu:category>
+         </sec:authorize>
     </menu:menu>
 </div>
