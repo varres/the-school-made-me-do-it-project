@@ -46,7 +46,7 @@
 <div>
 	<div>
 	<spring:url var = "switchValvurURL" value='/piirivintsredaktor/updatePiirivalvur/${valvurIntsidendis.piirivalvur_intsidendis_ID}' />
-	<input type="button" value="Muuda" class="muudaButton" onclick="location.href='${switchValvurURL}';" />
+	<input type="button" value="Muuda" class="muudaButton" onclick="window.location='${switchValvurURL}';" />
 	<div class="clear" />
 	
 	
@@ -82,7 +82,7 @@
 	<div class="right">
 	<input type="submit" value="Salvesta" class="muudaButton"  />
 	<spring:url var = "editIntsidentURL" value='/intsidentedit/edit/${valvurIntsidendis.intsident.intsident_ID}' />
-	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='${editIntsidentURL}';" />
+	<input type="button" value="Loobu" class="muudaButton" onclick="window.location='${editIntsidentURL}';" />
 	</div>
 	
 	

@@ -105,7 +105,7 @@
 		${piirivalvurInts.piirivalvur.eesnimed}, ${piirivalvurInts.piirivalvur.perekonnanimi}
 		<div class="right">
 		<spring:url var = "piirivalvurEditURL" value='/piirivintsredaktor/edit/${piirivalvurInts.piirivalvur_intsidendis_ID}' />
-			<input type="button" value="Info"  class="infoEemaldaButton" onclick="location.href='${piirivalvurEditURL}';" />
+			<input type="button" value="Info"  class="infoEemaldaButton" onclick="window.location='${piirivalvurEditURL}';" />
 			<input type="button" value="X" class="infoEemaldaButton" onclick="alert('${notImplementedMessage}')" />
 		</div>
 		

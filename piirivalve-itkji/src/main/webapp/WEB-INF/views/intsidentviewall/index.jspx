@@ -21,7 +21,7 @@
 
 <spring:url var = "createURL" value='/intsidentcreate/create' />
 
-<p><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="location.href='${createURL}';" /> <br /></p>
+<p><input type="button" value="Lisa intsident" class="muudaButtonExtended" onclick="window.location='${createURL}';" /> <br /></p>
   <springform:form method="GET" commandName="intsidentViewAllCommand">
 	    <div>
 		  <table>
@@ -55,7 +55,7 @@
 		<tr>
 		  <td>
 		  ${intsident.nimetus}
-		  <input id="vaata" type="button" value="Vaata" class="right" onclick="location.href='${viewIntsidentURL}';" />
+		  <input id="vaata" type="button" value="Vaata" class="right" onclick="window.location='${viewIntsidentURL}';" />
 		  </td>
 		</tr>
 		</c:forEach>

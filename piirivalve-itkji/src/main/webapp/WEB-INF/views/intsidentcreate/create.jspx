@@ -47,7 +47,7 @@
 	<springform:textarea path="kommentaar" cssClass="redaktorTextArea" /><br /><br />
 	<input type="submit" value="Salvesta" class="muudaButton"  />
 	<spring:url var = "intsidentViewAllURL" value='/intsidentviewall' />
-	<input type="button" value="Loobu" class="muudaButton" onclick="location.href='${intsidentViewAllURL}';" />
+	<input type="button" value="Loobu" class="muudaButton" onclick="window.location='${intsidentViewAllURL}';" />
 	</div>
 	<div class="clear" />
 </div>
